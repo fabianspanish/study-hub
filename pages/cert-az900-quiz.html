@@ -1,0 +1,109 @@
+<div class="quiz-page" data-i18n-scope>
+
+<header class="quiz-hero">
+  <div class="quiz-hero-inner">
+    <a href="#/cert/az900" class="quiz-back" data-i18n="quiz.back_link">← Voltar para AZ-900</a>
+    <h1 data-i18n="quiz.title">Banco de questões · AZ-900</h1>
+    <p class="subtitle" data-i18n="quiz.subtitle">Questões no estilo do exame, divididas por domínio.</p>
+    <div id="quiz-lang-mount"></div>
+  </div>
+</header>
+
+<main class="quiz-main">
+
+  <!-- Tela inicial · Setup -->
+  <div id="quiz-setup">
+
+    <!-- Stats -->
+    <section class="quiz-panel">
+      <div class="quiz-panel-title" data-i18n="quiz.stats_label">Estatísticas</div>
+      <div class="quiz-stats">
+        <div class="quiz-stat">
+          <div class="quiz-stat-label" data-i18n="quiz.stats_total">Questões</div>
+          <div class="quiz-stat-value" id="stat-total">65</div>
+        </div>
+        <div class="quiz-stat">
+          <div class="quiz-stat-label" data-i18n="quiz.stats_answered">Respondidas</div>
+          <div class="quiz-stat-value" id="stat-answered">0</div>
+        </div>
+        <div class="quiz-stat">
+          <div class="quiz-stat-label" data-i18n="quiz.stats_correct">Acertos</div>
+          <div class="quiz-stat-value" id="stat-correct">0</div>
+        </div>
+        <div class="quiz-stat">
+          <div class="quiz-stat-label" data-i18n="quiz.stats_rate">Taxa</div>
+          <div class="quiz-stat-value" id="stat-rate">—<span class="pct">%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modo + filtro -->
+    <section class="quiz-panel">
+      <div class="quiz-setup">
+        <div class="quiz-setup-block">
+          <label data-i18n="quiz.mode_label">Modo</label>
+          <div class="quiz-radio-group">
+            <label class="quiz-radio">
+              <input type="radio" name="quiz-mode" value="study" checked>
+              <div>
+                <div class="quiz-radio-title" data-i18n="quiz.mode_study">Estudo</div>
+                <div class="quiz-radio-desc" data-i18n="quiz.mode_study_desc">Resposta imediata.</div>
+              </div>
+            </label>
+            <label class="quiz-radio">
+              <input type="radio" name="quiz-mode" value="exam">
+              <div>
+                <div class="quiz-radio-title" data-i18n="quiz.mode_exam">Simulado</div>
+                <div class="quiz-radio-desc" data-i18n="quiz.mode_exam_desc">60 questões, 65 minutos.</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="quiz-setup-block">
+          <label data-i18n="quiz.filter_label">Filtrar por domínio</label>
+          <select id="quiz-filter" class="quiz-select">
+            <option value="all" data-i18n="quiz.filter_all">Todos os domínios</option>
+            <option value="d1" data-i18n="quiz.filter_d1">Domínio 1 · Conceitos</option>
+            <option value="d2" data-i18n="quiz.filter_d2">Domínio 2 · Arquitetura</option>
+            <option value="d3" data-i18n="quiz.filter_d3">Domínio 3 · Governança</option>
+          </select>
+          <p style="margin-top:14px;font-size:13px;color:var(--clay);line-height:1.5" id="quiz-filter-info">
+            <span id="quiz-filter-count">65</span> <span data-i18n="quiz.stats_total">questões</span>
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top:24px;display:flex;justify-content:flex-end">
+        <button id="quiz-start" class="quiz-btn quiz-btn-primary" data-i18n="quiz.start">Iniciar</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Tela ativa · Questão atual -->
+  <div id="quiz-active" style="display:none">
+    <div class="quiz-panel">
+      <div class="quiz-progress">
+        <span id="quiz-progress-text">1 / 60</span>
+        <span class="quiz-timer" id="quiz-timer" style="display:none">65:00</span>
+      </div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-progress-fill" style="width:0%"></div></div>
+    </div>
+
+    <div class="quiz-question" id="quiz-question-card">
+      <!-- preenchido dinamicamente -->
+    </div>
+
+    <div class="quiz-actions" id="quiz-actions">
+      <!-- botões dinâmicos -->
+    </div>
+  </div>
+
+  <!-- Tela de resultados -->
+  <div id="quiz-results" style="display:none">
+    <!-- preenchido dinamicamente -->
+  </div>
+
+</main>
+
+</div>

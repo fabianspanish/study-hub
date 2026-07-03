@@ -1,0 +1,304 @@
+<div class="calc-page">
+
+<header class="calc-hero">
+  <div class="calc-hero-inner">
+    <div>
+      <div class="kicker">Cultivo · Calculadora 02/03</div>
+      <h1>
+        <span class="b">Calculadora</span>
+        <span class="a">de Rega.</span>
+      </h1>
+      <p class="subtitle">
+        Field Capacity, Shot Size e Dryback — os 3 parâmetros do crop steering profissional. Reproduz a planilha completa de irrigação da Cultlight, incluindo a tabela de fases (stretch, bulking, finalização) com volumes e tempos de irrigação.
+      </p>
+    </div>
+    <div class="meta">
+      <strong>FC</strong> 55–60%<br>
+      <strong>Shot</strong> 3–6%<br>
+      <strong>Dryback</strong> 10–50%
+    </div>
+  </div>
+</header>
+
+<main class="calc-main">
+
+  <!-- ============ FIELD CAPACITY ============ -->
+  <section class="calc-section">
+    <div class="calc-section-head">
+      <div class="calc-section-tag">Cálculo 1 · Field Capacity</div>
+      <h2>Field <em>Capacity</em></h2>
+      <p class="desc">Capacidade máxima do substrato de reter água antes do run-off. Cada substrato tem um FC diferente — fibra de coco geralmente 55–60%. <strong>Precisa medir antes de iniciar o cultivo</strong>.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-inputs">
+        <div class="calc-input">
+          <label for="fc-substrato">Volume do substrato</label>
+          <div class="with-unit">
+            <input type="number" id="fc-substrato" value="5" min="0.1" step="0.1">
+            <span class="unit">L</span>
+          </div>
+        </div>
+        <div class="calc-input">
+          <label for="fc-aplicada">Volume de água aplicada</label>
+          <div class="with-unit">
+            <input type="number" id="fc-aplicada" value="3" min="0" step="0.1">
+            <span class="unit">L</span>
+          </div>
+          <span class="hint">Adicione água lentamente até o ponto de run-off.</span>
+        </div>
+        <div class="calc-input">
+          <label for="fc-runoff">Volume de run-off</label>
+          <div class="with-unit">
+            <input type="number" id="fc-runoff" value="0.2" min="0" step="0.1">
+            <span class="unit">L</span>
+          </div>
+          <span class="hint">Quanto saiu do fundo do vaso.</span>
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <div class="calc-result">
+          <div class="label">Água retida no substrato</div>
+          <div class="value" id="fc-out-retida">2,8<span class="unit">L</span></div>
+          <div class="sub">Aplicada − run-off</div>
+        </div>
+        <div class="calc-result highlight">
+          <div class="label">Field Capacity</div>
+          <div class="value" id="fc-out-pct">56<span class="unit">%</span></div>
+          <div class="sub">Use esse valor nos próximos cálculos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-note">
+      <span class="label">Antes de medir</span>
+      <p>Certifique-se que o substrato (coco, lã de rocha, solo) esteja <strong>totalmente seco</strong>. Registre o peso seco em gramas. Deixe o excesso drenar completamente antes de medir o run-off.</p>
+    </div>
+  </section>
+
+  <!-- ============ SHOT SIZE ============ -->
+  <section class="calc-section">
+    <div class="calc-section-head">
+      <div class="calc-section-tag">Cálculo 2 · Shot Size</div>
+      <h2>Shot <em>Size</em></h2>
+      <p class="desc">Volume de cada irrigação. <strong>Não pode ser muito grande</strong> ou ocorre canalização (água passa direto sem ser absorvida). Recomendação: 3–6% do volume do vaso.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-inputs">
+        <div class="calc-input">
+          <label for="ss-volume">Volume do substrato</label>
+          <div class="with-unit">
+            <input type="number" id="ss-volume" value="5000" min="100" step="100">
+            <span class="unit">mL</span>
+          </div>
+          <span class="hint">5L = 5.000 mL.</span>
+        </div>
+        <div class="calc-input">
+          <label for="ss-vazao">Vazão dos gotejadores</label>
+          <div class="with-unit">
+            <input type="number" id="ss-vazao" value="60" min="1" step="1">
+            <span class="unit">mL/min</span>
+          </div>
+          <span class="hint">Netafim 4L/h = ~66 mL/min. Meça no seu sistema.</span>
+        </div>
+      </div>
+
+      <table class="calc-table">
+        <thead>
+          <tr><th>Shot %</th><th>Volume (mL)</th><th>Tempo bomba (s)</th></tr>
+        </thead>
+        <tbody id="ss-tabela">
+          <!-- preenchida via JS -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ DRYBACK ============ -->
+  <section class="calc-section">
+    <div class="calc-section-head">
+      <div class="calc-section-tag">Cálculo 3 · Dryback</div>
+      <h2>Dryback <em>(secagem noturna)</em></h2>
+      <p class="desc">Quantidade de água que o substrato perde entre a última irrigação do dia e a primeira do dia seguinte. Principal alavanca do crop steering: dryback baixo = vegetativo, alto = floração.</p>
+    </div>
+
+    <div class="calc-tabs">
+      <button class="calc-tab active" data-tab="precisa">Fórmula precisa (volume)</button>
+      <button class="calc-tab" data-tab="simples">Fórmula simples (peso)</button>
+    </div>
+
+    <!-- TAB 1: PRECISA -->
+    <div data-tab-content="precisa">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <div class="calc-input">
+            <label for="db-volume">Volume total do substrato</label>
+            <div class="with-unit">
+              <input type="number" id="db-volume" value="5" min="0.1" step="0.1">
+              <span class="unit">L</span>
+            </div>
+          </div>
+          <div class="calc-input">
+            <label for="db-wc">Water Capacity</label>
+            <div class="with-unit">
+              <input type="number" id="db-wc" value="55" min="20" max="100" step="1">
+              <span class="unit">%</span>
+            </div>
+            <span class="hint">FC do substrato (calculado acima).</span>
+          </div>
+          <div class="calc-input">
+            <label for="db-pmax">Peso inicial (máximo)</label>
+            <div class="with-unit">
+              <input type="number" id="db-pmax" value="2.8" min="0" step="0.01">
+              <span class="unit">kg</span>
+            </div>
+            <span class="hint">Peso do vaso na última rega do dia (P2), após escorrer.</span>
+          </div>
+          <div class="calc-input">
+            <label for="db-pmin">Peso final (mínimo)</label>
+            <div class="with-unit">
+              <input type="number" id="db-pmin" value="2.0" min="0" step="0.01">
+              <span class="unit">kg</span>
+            </div>
+            <span class="hint">Peso do vaso antes da P1 da manhã seguinte.</span>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="calc-result">
+            <div class="label">Água inicial no vaso</div>
+            <div class="value" id="db-out-aguaIni">2,75<span class="unit">L</span></div>
+            <div class="sub">Volume × Water Capacity</div>
+          </div>
+          <div class="calc-result">
+            <div class="label">Água perdida na noite</div>
+            <div class="value" id="db-out-perdida">0,8<span class="unit">L</span></div>
+            <div class="sub">P. inicial − P. final</div>
+          </div>
+          <div class="calc-result highlight">
+            <div class="label">Dryback noturno</div>
+            <div class="value" id="db-out-pct">29,1<span class="unit">%</span></div>
+            <div class="sub" id="db-out-estimulo">Estímulo: <strong>generativo</strong> (floração)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: SIMPLES -->
+    <div data-tab-content="simples" style="display:none">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <div class="calc-input">
+            <label for="dbs-pseco">Peso do substrato seco</label>
+            <div class="with-unit">
+              <input type="number" id="dbs-pseco" value="786" min="0" step="1">
+              <span class="unit">g</span>
+            </div>
+            <span class="hint">Peso da planta com sede.</span>
+          </div>
+          <div class="calc-input">
+            <label for="dbs-pmax">Peso inicial (máximo)</label>
+            <div class="with-unit">
+              <input type="number" id="dbs-pmax" value="2150" min="0" step="1">
+              <span class="unit">g</span>
+            </div>
+            <span class="hint">Vaso na última rega do dia (P2).</span>
+          </div>
+          <div class="calc-input">
+            <label for="dbs-pmin">Peso final (mínimo)</label>
+            <div class="with-unit">
+              <input type="number" id="dbs-pmin" value="1947" min="0" step="1">
+              <span class="unit">g</span>
+            </div>
+            <span class="hint">Vaso antes da P1 da manhã.</span>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="calc-result">
+            <div class="label">Água retida</div>
+            <div class="value" id="dbs-out-retida">1.364<span class="unit">g</span></div>
+          </div>
+          <div class="calc-result">
+            <div class="label">Água perdida</div>
+            <div class="value" id="dbs-out-perdida">203<span class="unit">g</span></div>
+          </div>
+          <div class="calc-result highlight">
+            <div class="label">Dryback noturno</div>
+            <div class="value" id="dbs-out-pct">14,9<span class="unit">%</span></div>
+            <div class="sub" id="dbs-out-estimulo">Estímulo: <strong>vegetativo</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-note">
+      <span class="label">Como ler o dryback</span>
+      <p><strong>5–15%</strong> = estímulo vegetativo (mais regas, planta cresce). <strong>20–30%</strong> = bulking (engorda das flores). <strong>30–50%</strong> = generativo (estímulo de floração e produção de resina). Ajuste com mais regas no P2 (menos dryback) ou rega tardia.</p>
+    </div>
+  </section>
+
+  <!-- ============ TABELA DE IRRIGAÇÃO POR FASE ============ -->
+  <section class="calc-section">
+    <div class="calc-section-head">
+      <div class="calc-section-tag">Referência · Crop Steering Cultlight</div>
+      <h2>Irrigação por <em>fase do ciclo</em></h2>
+      <p class="desc">Tabela completa da apostila com volumes (P1 e P2), run-off e dryback por fase. Use após calibrar seu shot size e dryback acima.</p>
+    </div>
+
+    <table class="calc-table">
+      <thead>
+        <tr>
+          <th>Fase</th>
+          <th>Dias</th>
+          <th>P1 freq.</th>
+          <th>P1 shot (mL)</th>
+          <th>P2 freq.</th>
+          <th>P2 shot (mL)</th>
+          <th>Run-off</th>
+          <th>Dryback</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3"><strong>Stretch</strong></td>
+          <td>1–5</td><td>1–3 ×</td><td>200–400</td>
+          <td>—</td><td>—</td>
+          <td>30–50%</td><td>20–30%</td>
+        </tr>
+        <tr>
+          <td>6–10</td><td>3–4 ×</td><td>300–400</td>
+          <td>1 ×</td><td>100–200</td>
+          <td>30–50%</td><td>20–30%</td>
+        </tr>
+        <tr>
+          <td>11–21</td><td>4 ×</td><td>350–400</td>
+          <td>1–3 ×</td><td>100–200</td>
+          <td>30–50%</td><td>20–30%</td>
+        </tr>
+        <tr>
+          <td><strong>Bulking</strong></td>
+          <td>22–42</td><td>4–6 ×</td><td>200–400</td>
+          <td>2–5 ×</td><td>100–200</td>
+          <td>20–30%</td><td>10–15%</td>
+        </tr>
+        <tr>
+          <td><strong>Finalização</strong></td>
+          <td>43–65</td><td>4–6 ×</td><td>200–400</td>
+          <td>2–5 ×</td><td>100–200</td>
+          <td>20–40%</td><td>20–30%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="calc-note">
+      <span class="label">O segredo do crop steering</span>
+      <p>É tudo sobre <strong>controlar o dryback</strong>. Teste tempos de irrigação, calcule no Dryback acima, modifique o P2 para acertar a faixa. Uma vez que acertar, mantenha o padrão para os próximos ciclos. Cada fase dura ~3 semanas — meça o dryback 1–2× por semana para garantir que está na faixa.</p>
+    </div>
+  </section>
+
+</main>
+
+</div>

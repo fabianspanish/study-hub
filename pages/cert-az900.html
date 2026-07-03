@@ -1,0 +1,794 @@
+<div class="cert-page" data-i18n-scope>
+
+<!-- HERO -->
+<header class="cert-hero">
+  <div class="cert-hero-inner">
+    <div>
+      <div class="cert-kicker" data-i18n="kicker">Microsoft · Certificação Fundamentals</div>
+      <h1>
+        <span class="b" data-i18n="title_part1">AZ-900</span>
+        <span class="a" data-i18n="title_part2">Azure</span>
+        <span class="b" data-i18n="title_part3">Fundamentals.</span>
+      </h1>
+      <p class="cert-subtitle" data-i18n="subtitle">A porta de entrada para a nuvem Microsoft.</p>
+    </div>
+    <div class="cert-meta">
+      <strong>03</strong> <span data-i18n="meta_domains">domínios</span><br>
+      <strong>11</strong> <span data-i18n="meta_topics">tópicos</span><br>
+      <strong>700</strong> <span data-i18n="meta_passing">nota mín.</span>
+    </div>
+  </div>
+
+  <!-- Lang selector flutuante (canto inferior do hero) -->
+  <div id="az-lang-mount"></div>
+</header>
+
+<!-- TOC -->
+<div class="cert-toc">
+  <div class="cert-toc-card">
+    <div class="cert-toc-title" data-i18n="toc.overview">Visão geral</div>
+    <div class="cert-toc-grid">
+      <a class="cert-toc-item" href="#s1">
+        <div class="cert-toc-num">00</div>
+        <div>
+          <div class="cert-toc-label" data-i18n="toc.overview">Visão geral</div>
+          <div class="cert-toc-name" data-i18n="section1.title_b">Sobre o exame & roteiro</div>
+        </div>
+      </a>
+      <a class="cert-toc-item" href="#s2">
+        <div class="cert-toc-num">01</div>
+        <div>
+          <div class="cert-toc-label" data-i18n="toc.domain1">Domínio 1 · 25–30%</div>
+          <div class="cert-toc-name" data-i18n="toc.cloud_concepts">Conceitos da nuvem</div>
+        </div>
+      </a>
+      <a class="cert-toc-item" href="#s3">
+        <div class="cert-toc-num">02</div>
+        <div>
+          <div class="cert-toc-label" data-i18n="toc.domain2">Domínio 2 · 35–40%</div>
+          <div class="cert-toc-name" data-i18n="toc.architecture">Arquitetura & serviços</div>
+        </div>
+      </a>
+      <a class="cert-toc-item" href="#s4">
+        <div class="cert-toc-num">03</div>
+        <div>
+          <div class="cert-toc-label" data-i18n="toc.domain3">Domínio 3 · 30–35%</div>
+          <div class="cert-toc-name" data-i18n="toc.management">Gerenciamento & governança</div>
+        </div>
+      </a>
+      <a class="cert-toc-item" href="#s5">
+        <div class="cert-toc-num">04</div>
+        <div>
+          <div class="cert-toc-label" data-i18n="toc.study_plan">Plano de estudos</div>
+          <div class="cert-toc-name" data-i18n="section5.title_b">4 paths oficiais</div>
+        </div>
+      </a>
+      <a class="cert-toc-item" href="#/cert/az900/quiz">
+        <div class="cert-toc-num">05</div>
+        <div>
+          <div class="cert-toc-label" data-i18n="toc.quiz">Banco de questões</div>
+          <div class="cert-toc-name">Quiz · Estudo & simulado</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<main class="cert-main">
+
+<!-- ============ SEÇÃO 1: OVERVIEW ============ -->
+<section id="s1">
+  <div class="cert-section-head">
+    <div class="cert-section-num">00</div>
+    <div>
+      <div class="cert-section-tag" data-i18n="section1.tag">Visão geral · Sobre o exame</div>
+      <h1 class="cert-section-title">
+        <span data-i18n="section1.title_a">O que é a</span>
+        <em data-i18n="section1.title_b">AZ-900</em>
+      </h1>
+    </div>
+  </div>
+
+  <p class="cert-lead" data-i18n="section1.lead">A AZ-900 é a certificação Fundamentals do Azure.</p>
+
+  <h3 data-i18n="section1.exam_structure">Estrutura do exame</h3>
+  <div class="svc-grid">
+    <div class="svc">
+      <div class="svc-name" data-i18n="section1.duration_label">Duração</div>
+      <div class="svc-desc" data-i18n="section1.duration_value">~45 min</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section1.questions_label">Questões</div>
+      <div class="svc-desc" data-i18n="section1.questions_value">40–60</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section1.passing_label">Nota mínima</div>
+      <div class="svc-desc" data-i18n="section1.passing_value">700/1000</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section1.languages_label">Idiomas</div>
+      <div class="svc-desc" data-i18n="section1.languages_value">PT · EN · outros</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section1.validity_label">Validade</div>
+      <div class="svc-desc" data-i18n="section1.validity_value">Sem expiração</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section1.format_label">Modalidade</div>
+      <div class="svc-desc" data-i18n="section1.format_value">Online ou centro Pearson VUE</div>
+    </div>
+  </div>
+
+  <h3 data-i18n="section1.domains_title">Os 3 domínios (e seus pesos)</h3>
+  <ol class="steps">
+    <li>
+      <strong data-i18n="section1.domain1_label">Conceitos da nuvem</strong>
+      (<span data-i18n="section1.domain1_pct">25–30%</span>) —
+      <span data-i18n="section1.domain1_desc">modelos, tipos de serviço.</span>
+    </li>
+    <li>
+      <strong data-i18n="section1.domain2_label">Arquitetura e serviços</strong>
+      (<span data-i18n="section1.domain2_pct">35–40%</span>) —
+      <span data-i18n="section1.domain2_desc">regiões, compute, rede, storage, identidade.</span>
+    </li>
+    <li>
+      <strong data-i18n="section1.domain3_label">Gerenciamento e governança</strong>
+      (<span data-i18n="section1.domain3_pct">30–35%</span>) —
+      <span data-i18n="section1.domain3_desc">custos, conformidade, ferramentas, monitoramento.</span>
+    </li>
+  </ol>
+
+  <div class="cert-callout">
+    <div class="cert-callout-kicker" data-i18n="section1.callout_tag">Estratégia</div>
+    <h3 data-i18n="section1.callout_text">Estude na ordem dos domínios.</h3>
+  </div>
+
+  <div class="tip">
+    <span class="label" data-i18n="section1.free_practice_tag">Avaliação simulada gratuita</span>
+    <p data-i18n="section1.free_practice_text">A Microsoft oferece simulado oficial gratuito.</p>
+    <p style="margin-top:8px"><a href="https://learn.microsoft.com/credentials/certifications/exams/az-900/practice/assessment?assessment-type=practice&assessmentId=23" target="_blank" rel="noopener" data-i18n="section1.free_practice_link" style="color:var(--amber);font-weight:600">Fazer a avaliação simulada →</a></p>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 2: DOMÍNIO 1 — CLOUD CONCEPTS ============ -->
+<section id="s2">
+  <div class="cert-section-head">
+    <div class="cert-section-num">01</div>
+    <div>
+      <div class="cert-section-tag" data-i18n="section2.tag">Domínio 1 · 25–30%</div>
+      <h1 class="cert-section-title">
+        <span data-i18n="section2.title_a">Conceitos da</span>
+        <em data-i18n="section2.title_b">nuvem</em>
+      </h1>
+    </div>
+  </div>
+
+  <p class="cert-lead" data-i18n="section2.lead">Antes de falar de Azure, é preciso entender o que é nuvem.</p>
+
+  <h3 data-i18n="section2.compute_title">Computação em nuvem</h3>
+  <p data-i18n-html data-i18n="section2.compute_p1">Cloud computing é a entrega de serviços de TI pela internet.</p>
+
+  <!-- Shared responsibility -->
+  <div class="topic">
+    <div class="topic-title" data-i18n="section2.shared_resp_topic">Responsabilidade compartilhada</div>
+    <p data-i18n-html data-i18n="section2.shared_resp_intro">O modelo define o que provedor e cliente cuidam.</p>
+    <div class="modules">
+      <div class="module-card basic">
+        <h4 data-i18n="section2.shared_resp_h1">IaaS — cliente faz mais</h4>
+        <p class="module-desc" data-i18n="section2.shared_resp_d1">Cliente: OS, runtime, aplicação.</p>
+      </div>
+      <div class="module-card intermediate">
+        <h4 data-i18n="section2.shared_resp_h2">PaaS — meio a meio</h4>
+        <p class="module-desc" data-i18n="section2.shared_resp_d2">Cliente: aplicação, dados.</p>
+      </div>
+      <div class="module-card advanced">
+        <h4 data-i18n="section2.shared_resp_h3">SaaS — provedor faz mais</h4>
+        <p class="module-desc" data-i18n="section2.shared_resp_d3">Cliente: dados, identidade.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cloud models -->
+  <h3 data-i18n="section2.models_title">Modelos de nuvem</h3>
+  <div class="modules">
+    <div class="module-card basic">
+      <h4 data-i18n="section2.public">Pública</h4>
+      <p class="module-desc" data-i18n="section2.public_desc">infra do provedor.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section2.private">Privada</h4>
+      <p class="module-desc" data-i18n="section2.private_desc">infra dedicada.</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section2.hybrid">Híbrida</h4>
+      <p class="module-desc" data-i18n="section2.hybrid_desc">combina as duas.</p>
+    </div>
+    <div class="module-card basic">
+      <h4 data-i18n="section2.multi">Multinuvem</h4>
+      <p class="module-desc" data-i18n="section2.multi_desc">mais de uma nuvem pública.</p>
+    </div>
+  </div>
+
+  <!-- Consumption / pricing -->
+  <h3 data-i18n="section2.consumption_title">Modelo baseado em consumo e modelos de preço</h3>
+  <p data-i18n-html data-i18n="section2.consumption_p1">OpEx vs CapEx.</p>
+  <div class="modules">
+    <div class="module-card basic">
+      <h4 data-i18n="section2.pricing_h1">Pay-as-you-go</h4>
+      <p class="module-desc" data-i18n="section2.pricing_d1">Paga só o uso.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section2.pricing_h2">Reserved</h4>
+      <p class="module-desc" data-i18n="section2.pricing_d2">1 ou 3 anos, até 72% off.</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section2.pricing_h3">Spot</h4>
+      <p class="module-desc" data-i18n="section2.pricing_d3">capacidade ociosa, até 90% off.</p>
+    </div>
+    <div class="module-card basic">
+      <h4 data-i18n="section2.pricing_h4">Savings Plan</h4>
+      <p class="module-desc" data-i18n="section2.pricing_d4">valor por hora flexível.</p>
+    </div>
+  </div>
+
+  <!-- Serverless -->
+  <div class="topic">
+    <div class="topic-title" data-i18n="section2.serverless_title">Computação sem servidor</div>
+    <p data-i18n-html data-i18n="section2.serverless_p1">Serverless = você não gerencia o servidor.</p>
+    <h4 data-i18n="section2.serverless_h1">Características</h4>
+    <p data-i18n="section2.serverless_d1">Escala automática, paga por execução.</p>
+  </div>
+
+  <!-- Benefits -->
+  <h3 data-i18n="section2.benefits_title">Benefícios dos serviços de nuvem</h3>
+  <div class="svc-grid">
+    <div class="svc">
+      <div class="svc-name" data-i18n="section2.benefit_avail">Alta disponibilidade</div>
+      <div class="svc-desc" data-i18n="section2.benefit_avail_d">SLA 99.9%+.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section2.benefit_scale">Escalabilidade</div>
+      <div class="svc-desc" data-i18n="section2.benefit_scale_d">Vertical ou horizontal.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section2.benefit_elastic">Elasticidade</div>
+      <div class="svc-desc" data-i18n="section2.benefit_elastic_d">Recursos sobem e descem.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section2.benefit_reliab">Confiabilidade</div>
+      <div class="svc-desc" data-i18n="section2.benefit_reliab_d">Recupera de falhas.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section2.benefit_predict">Previsibilidade</div>
+      <div class="svc-desc" data-i18n="section2.benefit_predict_d">Performance e custos.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section2.benefit_sec">Segurança</div>
+      <div class="svc-desc" data-i18n="section2.benefit_sec_d">Camadas físicas e lógicas.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section2.benefit_gov">Governança</div>
+      <div class="svc-desc" data-i18n="section2.benefit_gov_d">Políticas centralizadas.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-name" data-i18n="section2.benefit_manage">Gerenciabilidade</div>
+      <div class="svc-desc" data-i18n="section2.benefit_manage_d">Web, CLI, automação.</div>
+    </div>
+  </div>
+
+  <!-- IaaS/PaaS/SaaS -->
+  <h3 data-i18n="section2.service_types_title">Tipos de serviço de nuvem</h3>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section2.iaas_title">IaaS — Infraestrutura como Serviço</div>
+    <p data-i18n-html data-i18n="section2.iaas_desc">Você aluga máquinas virtuais, redes, storage.</p>
+    <p><strong data-i18n="section2.iaas_uses">Casos de uso:</strong></p>
+    <p><em data-i18n="section2.iaas_examples">Exemplos:</em></p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section2.paas_title">PaaS — Plataforma como Serviço</div>
+    <p data-i18n-html data-i18n="section2.paas_desc">Foco em código.</p>
+    <p data-i18n="section2.paas_uses">Casos de uso</p>
+    <p><em data-i18n="section2.paas_examples">Exemplos:</em></p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section2.saas_title">SaaS — Software como Serviço</div>
+    <p data-i18n="section2.saas_desc">Software completo pela internet.</p>
+    <p data-i18n="section2.saas_uses">Casos de uso</p>
+    <p><em data-i18n="section2.saas_examples">Exemplos:</em></p>
+  </div>
+
+  <div class="tip">
+    <span class="label" data-i18n="section2.tip_tag">Os 3 conceitos para fixar</span>
+    <p data-i18n-html data-i18n="section2.tip_html">Responsabilidade, OpEx/CapEx, lift-and-shift.</p>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 3: DOMÍNIO 2 — ARCHITECTURE & SERVICES ============ -->
+<section id="s3">
+  <div class="cert-section-head">
+    <div class="cert-section-num">02</div>
+    <div>
+      <div class="cert-section-tag" data-i18n="section3.tag">Domínio 2 · 35–40%</div>
+      <h1 class="cert-section-title">
+        <span data-i18n="section3.title_a">Arquitetura &</span>
+        <em data-i18n="section3.title_b">serviços do Azure</em>
+      </h1>
+    </div>
+  </div>
+
+  <p class="cert-lead" data-i18n-html data-i18n="section3.lead">Este é o maior domínio do exame.</p>
+
+  <h3 data-i18n="section3.arch_title">Componentes arquitetônicos principais</h3>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.regions_topic">Regiões, pares de regiões e regiões soberanas</div>
+    <p data-i18n-html data-i18n="section3.regions_p1">Região = datacenters geograficamente próximos.</p>
+    <p data-i18n-html data-i18n="section3.regions_p2">Pares de regiões.</p>
+    <p data-i18n-html data-i18n="section3.regions_p3">Regiões soberanas.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.az_topic">Zonas de disponibilidade</div>
+    <p data-i18n="section3.az_text">Datacenters fisicamente separados na mesma região.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.dc_topic">Datacenters</div>
+    <p data-i18n="section3.dc_text">Edifícios físicos com servidores.</p>
+  </div>
+
+  <h3 data-i18n="section3.hierarchy_title">Hierarquia de recursos</h3>
+  <p data-i18n="section3.hierarchy_lead">Do mais abrangente ao mais específico:</p>
+  <ul class="bullets">
+    <li data-i18n-html data-i18n="section3.hierarchy_l1">Management groups.</li>
+    <li data-i18n-html data-i18n="section3.hierarchy_l2">Assinaturas.</li>
+    <li data-i18n-html data-i18n="section3.hierarchy_l3">Grupos de recursos.</li>
+    <li data-i18n-html data-i18n="section3.hierarchy_l4">Recursos.</li>
+  </ul>
+
+  <!-- Compute services -->
+  <h3 data-i18n="section3.compute_title">Serviços de computação</h3>
+  <div class="modules">
+    <div class="module-card basic">
+      <h4 data-i18n="section3.vm_card">Máquinas Virtuais</h4>
+      <p class="module-desc" data-i18n="section3.vm_desc">IaaS.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section3.vmss_card">VM Scale Sets</h4>
+      <p class="module-desc" data-i18n="section3.vmss_desc">VMs idênticas que escalam juntas.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section3.as_card">Conjuntos de disponibilidade</h4>
+      <p class="module-desc" data-i18n="section3.as_desc">Distribui VMs em fault domains.</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section3.avd_card">Azure Virtual Desktop</h4>
+      <p class="module-desc" data-i18n="section3.avd_desc">VDI gerenciado.</p>
+    </div>
+    <div class="module-card basic">
+      <h4 data-i18n="section3.container_card">Container Instances</h4>
+      <p class="module-desc" data-i18n="section3.container_desc">Container sem gerenciar VM.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section3.aks_card">AKS (Kubernetes)</h4>
+      <p class="module-desc" data-i18n="section3.aks_desc">K8s gerenciado.</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section3.functions_card">Azure Functions</h4>
+      <p class="module-desc" data-i18n="section3.functions_desc">Serverless.</p>
+    </div>
+    <div class="module-card basic">
+      <h4 data-i18n="section3.appservice_card">App Service</h4>
+      <p class="module-desc" data-i18n="section3.appservice_desc">PaaS para web apps.</p>
+    </div>
+  </div>
+
+  <h3 data-i18n="section3.hosting_title">Opções de hospedagem de aplicativos</h3>
+  <p data-i18n="section3.hosting_p1">Quando escolher cada opção:</p>
+  <ul class="bullets">
+    <li data-i18n-html data-i18n="section3.hosting_l1">VMs: máximo controle.</li>
+    <li data-i18n-html data-i18n="section3.hosting_l2">App Service: web moderna.</li>
+    <li data-i18n-html data-i18n="section3.hosting_l3">Containers: portabilidade.</li>
+    <li data-i18n-html data-i18n="section3.hosting_l4">Functions: event-driven.</li>
+  </ul>
+
+  <!-- Networking -->
+  <h3 data-i18n="section3.network_title">Serviços de rede</h3>
+  <div class="modules">
+    <div class="module-card basic">
+      <h4 data-i18n="section3.vnet_card">Virtual Network</h4>
+      <p class="module-desc" data-i18n="section3.vnet_desc">Rede privada isolada.</p>
+    </div>
+    <div class="module-card basic">
+      <h4 data-i18n="section3.subnet_card">Sub-redes</h4>
+      <p class="module-desc" data-i18n="section3.subnet_desc">Segmentações dentro da VNet.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section3.peering_card">VNet Peering</h4>
+      <p class="module-desc" data-i18n="section3.peering_desc">Conecta duas VNets.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section3.dns_card">Azure DNS</h4>
+      <p class="module-desc" data-i18n="section3.dns_desc">Hospedagem de DNS.</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section3.vpn_card">VPN Gateway</h4>
+      <p class="module-desc" data-i18n="section3.vpn_desc">VPN via internet (IPsec).</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section3.er_card">ExpressRoute</h4>
+      <p class="module-desc" data-i18n="section3.er_desc">Conexão privada dedicada.</p>
+    </div>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.endpoints_topic">Endpoints públicos vs privados</div>
+    <p data-i18n-html data-i18n="section3.endpoints_text">Público = internet; Privado = VNet.</p>
+  </div>
+
+  <!-- Storage -->
+  <h3 data-i18n="section3.storage_title">Serviços de armazenamento</h3>
+  <div class="modules">
+    <div class="module-card basic">
+      <h4 data-i18n="section3.blob_card">Blob Storage</h4>
+      <p class="module-desc" data-i18n="section3.blob_desc">Objetos não estruturados.</p>
+    </div>
+    <div class="module-card basic">
+      <h4 data-i18n="section3.files_card">Azure Files</h4>
+      <p class="module-desc" data-i18n="section3.files_desc">SMB/NFS gerenciados.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section3.queue_card">Queue Storage</h4>
+      <p class="module-desc" data-i18n="section3.queue_desc">Filas de mensagens.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section3.table_card">Table Storage</h4>
+      <p class="module-desc" data-i18n="section3.table_desc">NoSQL chave-valor.</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section3.disk_card">Managed Disks</h4>
+      <p class="module-desc" data-i18n="section3.disk_desc">SSD Premium, SSD Standard, HDD.</p>
+    </div>
+  </div>
+
+  <h3 data-i18n="section3.storage_tiers_title">Camadas de blob (tiers)</h3>
+  <ul class="bullets">
+    <li data-i18n="section3.tier_hot">Hot — acessos frequentes.</li>
+    <li data-i18n="section3.tier_cool">Cool — raramente acessados.</li>
+    <li data-i18n="section3.tier_cold">Cold — muito raros.</li>
+    <li data-i18n="section3.tier_archive">Archive — offline.</li>
+  </ul>
+
+  <h3 data-i18n="section3.redundancy_title">Opções de redundância</h3>
+  <ul class="bullets">
+    <li data-i18n-html data-i18n="section3.lrs">LRS.</li>
+    <li data-i18n-html data-i18n="section3.zrs">ZRS.</li>
+    <li data-i18n-html data-i18n="section3.grs">GRS.</li>
+    <li data-i18n-html data-i18n="section3.ragrs">RA-GRS.</li>
+    <li data-i18n-html data-i18n="section3.gzrs">GZRS.</li>
+    <li data-i18n-html data-i18n="section3.ragzrs">RA-GZRS.</li>
+  </ul>
+
+  <h3 data-i18n="section3.movetools_title">Mover arquivos e migrações</h3>
+  <ul class="bullets">
+    <li data-i18n-html data-i18n="section3.azcopy">AzCopy.</li>
+    <li data-i18n-html data-i18n="section3.stexp">Storage Explorer.</li>
+    <li data-i18n-html data-i18n="section3.afs">Azure File Sync.</li>
+    <li data-i18n-html data-i18n="section3.migrate">Azure Migrate.</li>
+    <li data-i18n-html data-i18n="section3.databox">Azure Data Box.</li>
+  </ul>
+
+  <!-- Identity -->
+  <h3 data-i18n="section3.iam_title">Identidade, acesso e segurança</h3>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.entraid_topic">Microsoft Entra ID</div>
+    <p data-i18n="section3.entraid_text">Diretório de identidade na nuvem.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.entrads_topic">Entra Domain Services</div>
+    <p data-i18n="section3.entrads_text">Active Directory gerenciado.</p>
+  </div>
+
+  <h4 data-i18n="section3.auth_title">Métodos de autenticação</h4>
+  <ul class="bullets">
+    <li><strong data-i18n="section3.sso_label">SSO</strong> — <span data-i18n="section3.sso_text">login único.</span></li>
+    <li><strong data-i18n="section3.mfa_label">MFA</strong> — <span data-i18n="section3.mfa_text">múltiplos fatores.</span></li>
+    <li><strong data-i18n="section3.passwordless_label">Passwordless</strong> — <span data-i18n="section3.passwordless_text">sem senha.</span></li>
+    <li><strong data-i18n="section3.external_label">Identidades externas</strong> — <span data-i18n="section3.external_text">B2B e B2C.</span></li>
+  </ul>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.cond_topic">Acesso condicional</div>
+    <p data-i18n="section3.cond_text">Políticas baseadas em sinais.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.rbac_topic">RBAC</div>
+    <p data-i18n="section3.rbac_text">Permissões por função.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.zerotrust_topic">Confiança Zero</div>
+    <p data-i18n="section3.zerotrust_text">Nunca confie, sempre verifique.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.dd_topic">Defesa em profundidade</div>
+    <p data-i18n="section3.dd_text">Camadas de segurança.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section3.defender_topic">Microsoft Defender para Nuvem</div>
+    <p data-i18n="section3.defender_text">CSPM + CWP.</p>
+  </div>
+
+  <div class="tip">
+    <span class="label" data-i18n="section3.tip_tag">O que mais cai no exame</span>
+    <p data-i18n-html data-i18n="section3.tip_html">Hierarquia, tipos de computação, VPN vs ExpressRoute, RBAC.</p>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 4: DOMÍNIO 3 — MANAGEMENT & GOVERNANCE ============ -->
+<section id="s4">
+  <div class="cert-section-head">
+    <div class="cert-section-num">03</div>
+    <div>
+      <div class="cert-section-tag" data-i18n="section4.tag">Domínio 3 · 30–35%</div>
+      <h1 class="cert-section-title">
+        <span data-i18n="section4.title_a">Gerenciamento &</span>
+        <em data-i18n="section4.title_b">governança</em>
+      </h1>
+    </div>
+  </div>
+
+  <p class="cert-lead" data-i18n="section4.lead">Como controlar custos, garantir conformidade e gerenciar em escala.</p>
+
+  <h3 data-i18n="section4.cost_title">Gerenciamento de custos</h3>
+
+  <h4 data-i18n="section4.cost_factors">Fatores que afetam o custo</h4>
+  <ul class="bullets">
+    <li data-i18n-html data-i18n="section4.cost_f1">Tipo de recurso.</li>
+    <li data-i18n-html data-i18n="section4.cost_f2">Tamanho/SKU.</li>
+    <li data-i18n-html data-i18n="section4.cost_f3">Região.</li>
+    <li data-i18n-html data-i18n="section4.cost_f4">Tráfego de saída.</li>
+    <li data-i18n-html data-i18n="section4.cost_f5">Modelo de preço.</li>
+    <li data-i18n-html data-i18n="section4.cost_f6">Tempo de uso.</li>
+  </ul>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section4.calc_topic">Calculadora de Preços + TCO</div>
+    <p data-i18n-html data-i18n="section4.calc_p1">Pricing Calculator.</p>
+    <p data-i18n-html data-i18n="section4.calc_p2">TCO Calculator.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section4.cm_topic">Cost Management</div>
+    <p data-i18n="section4.cm_text">Painel para visualizar gastos e criar orçamentos.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section4.tags_topic">Marcas (tags)</div>
+    <p data-i18n="section4.tags_text">Pares chave-valor.</p>
+  </div>
+
+  <!-- Governance -->
+  <h3 data-i18n="section4.gov_title">Governança e conformidade</h3>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section4.purview_topic">Microsoft Purview</div>
+    <p data-i18n="section4.purview_text">Governança e conformidade de dados.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section4.policy_topic">Azure Policy</div>
+    <p data-i18n="section4.policy_text">Define regras que recursos devem seguir.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section4.locks_topic">Bloqueios de recursos</div>
+    <p data-i18n-html data-i18n="section4.locks_text">CanNotDelete e ReadOnly.</p>
+  </div>
+
+  <!-- Deploy tools -->
+  <h3 data-i18n="section4.deploy_title">Ferramentas de gerenciamento e implantação</h3>
+  <div class="modules">
+    <div class="module-card basic">
+      <h4 data-i18n="section4.portal_card">Portal do Azure</h4>
+      <p class="module-desc" data-i18n="section4.portal_desc">Interface web.</p>
+    </div>
+    <div class="module-card basic">
+      <h4 data-i18n="section4.shell_card">Cloud Shell</h4>
+      <p class="module-desc" data-i18n="section4.shell_desc">Terminal no navegador.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section4.cli_card">Azure CLI</h4>
+      <p class="module-desc" data-i18n="section4.cli_desc">Linha de comando cross-platform.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section4.ps_card">Azure PowerShell</h4>
+      <p class="module-desc" data-i18n="section4.ps_desc">Cmdlets PowerShell.</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section4.arc_card">Azure Arc</h4>
+      <p class="module-desc" data-i18n="section4.arc_desc">Estende Azure para fora.</p>
+    </div>
+    <div class="module-card intermediate">
+      <h4 data-i18n="section4.iac_card">IaC</h4>
+      <p class="module-desc" data-i18n="section4.iac_desc">Infraestrutura como código.</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section4.arm_card">ARM</h4>
+      <p class="module-desc" data-i18n="section4.arm_desc">Camada de gerenciamento.</p>
+    </div>
+    <div class="module-card advanced">
+      <h4 data-i18n="section4.armtpl_card">Templates ARM e Bicep</h4>
+      <p class="module-desc" data-i18n="section4.armtpl_desc">JSON declarativo e Bicep.</p>
+    </div>
+  </div>
+
+  <!-- Monitoring -->
+  <h3 data-i18n="section4.monitor_title">Monitoramento</h3>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section4.advisor_topic">Azure Advisor</div>
+    <p data-i18n="section4.advisor_text">Recomendações em 5 categorias.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section4.health_topic">Azure Service Health</div>
+    <p data-i18n-html data-i18n="section4.health_text">Saúde dos serviços Azure.</p>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section4.monitor_topic">Azure Monitor</div>
+    <p data-i18n="section4.monitor_text">Plataforma unificada de telemetria.</p>
+    <ul class="bullets">
+      <li data-i18n-html data-i18n="section4.monitor_la">Log Analytics.</li>
+      <li data-i18n-html data-i18n="section4.monitor_alerts">Alerts.</li>
+      <li data-i18n-html data-i18n="section4.monitor_ai">Application Insights.</li>
+    </ul>
+  </div>
+
+  <div class="tip">
+    <span class="label" data-i18n="section4.tip_tag">Decore os 'para quê serve'</span>
+    <p data-i18n-html data-i18n="section4.tip_html">Policy, Lock, Tag, Advisor, Service Health, Monitor, Defender.</p>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 5: STUDY PLAN ============ -->
+<section id="s5">
+  <div class="cert-section-head">
+    <div class="cert-section-num">04</div>
+    <div>
+      <div class="cert-section-tag" data-i18n="section5.tag">Ordem de aprendizagem · 4 semanas</div>
+      <h1 class="cert-section-title">
+        <span data-i18n="section5.title_a">Plano de</span>
+        <em data-i18n="section5.title_b">estudos</em>
+      </h1>
+    </div>
+  </div>
+
+  <p class="cert-lead" data-i18n="section5.lead">Roteiro semana a semana com os 4 paths oficiais da Microsoft.</p>
+
+  <div class="modules">
+    <article class="module-card basic">
+      <div class="module-tag">
+        <span data-i18n="section5.week1_tag">Semana 1 · Conceitos</span>
+        <span class="level-pill">Path 1</span>
+      </div>
+      <h3 class="module-title" data-i18n="section5.week1_title">Part 1 · Cloud concepts</h3>
+      <p class="module-desc" data-i18n="section5.week1_desc">Funda a base teórica.</p>
+      <p style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cert-bronze)" data-i18n="section5.week1_modules">Cloud computing · Benefits · Cloud service types</p>
+      <p style="margin-top:12px"><a href="https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/" target="_blank" rel="noopener" style="color:var(--amber)">Acessar path →</a></p>
+    </article>
+
+    <article class="module-card intermediate">
+      <div class="module-tag">
+        <span data-i18n="section5.week2_tag">Semanas 2–3 · Arquitetura</span>
+        <span class="level-pill">Path 2</span>
+      </div>
+      <h3 class="module-title" data-i18n="section5.week2_title">Part 2 · Azure architecture and services</h3>
+      <p class="module-desc" data-i18n="section5.week2_desc">5 módulos. Maior bloco do exame.</p>
+      <p style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cert-bronze)" data-i18n="section5.week2_modules">Core arch · Compute · Networking · Storage · Identity</p>
+      <p style="margin-top:12px"><a href="https://learn.microsoft.com/en-us/training/paths/azure-fundamentals-describe-azure-architecture-services/" target="_blank" rel="noopener" style="color:var(--amber)">Acessar path →</a></p>
+    </article>
+
+    <article class="module-card advanced">
+      <div class="module-tag">
+        <span data-i18n="section5.week3_tag">Semana 3–4 · Governança</span>
+        <span class="level-pill">Path 3</span>
+      </div>
+      <h3 class="module-title" data-i18n="section5.week3_title">Part 3 · Azure management and governance</h3>
+      <p class="module-desc" data-i18n="section5.week3_desc">4 módulos.</p>
+      <p style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cert-bronze)" data-i18n="section5.week3_modules">Cost · Governance · Tools · Monitoring</p>
+      <p style="margin-top:12px"><a href="https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/" target="_blank" rel="noopener" style="color:var(--amber)">Acessar path →</a></p>
+    </article>
+
+    <article class="module-card basic">
+      <div class="module-tag">
+        <span data-i18n="section5.week4_tag">Semana 4 · Prática</span>
+        <span class="level-pill">Path 4</span>
+      </div>
+      <h3 class="module-title" data-i18n="section5.week4_title">Part 4 · Apply Azure skills in guided projects</h3>
+      <p class="module-desc" data-i18n="section5.week4_desc">8 projetos guiados.</p>
+      <p style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cert-bronze)" data-i18n="section5.week4_modules">Static website · Tags · Functions · Entra · etc</p>
+      <p style="margin-top:12px"><a href="https://learn.microsoft.com/en-us/training/paths/introduction-cloud-infrastructure-apply-azure-skills-guided-projects/" target="_blank" rel="noopener" style="color:var(--amber)">Acessar path →</a></p>
+    </article>
+  </div>
+
+  <h3 data-i18n="section5.trecho_title">Trechos importantes em cada path</h3>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section5.key_p1_title">Path 1 · Trechos mais cobrados</div>
+    <ul class="bullets">
+      <li data-i18n="section5.key_p1_l1">OpEx vs CapEx.</li>
+      <li data-i18n="section5.key_p1_l2">Responsabilidade compartilhada.</li>
+      <li data-i18n="section5.key_p1_l3">Casos de uso por tipo.</li>
+      <li data-i18n="section5.key_p1_l4">Serverless.</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section5.key_p2_title">Path 2 · Trechos mais cobrados</div>
+    <ul class="bullets">
+      <li data-i18n="section5.key_p2_l1">Hierarquia MG → Sub → RG → Recurso.</li>
+      <li data-i18n="section5.key_p2_l2">Quando usar VM vs App Service vs Container vs Function.</li>
+      <li data-i18n="section5.key_p2_l3">VPN Gateway vs ExpressRoute.</li>
+      <li data-i18n="section5.key_p2_l4">Camadas de blob e redundâncias.</li>
+      <li data-i18n="section5.key_p2_l5">Entra ID vs Entra Domain Services.</li>
+      <li data-i18n="section5.key_p2_l6">MFA, Conditional Access, RBAC, Zero Trust.</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <div class="topic-title" data-i18n="section5.key_p3_title">Path 3 · Trechos mais cobrados</div>
+    <ul class="bullets">
+      <li data-i18n="section5.key_p3_l1">Pricing vs TCO Calculator.</li>
+      <li data-i18n="section5.key_p3_l2">Policy vs Lock vs Tag.</li>
+      <li data-i18n="section5.key_p3_l3">Purview.</li>
+      <li data-i18n="section5.key_p3_l4">CLI vs PowerShell.</li>
+      <li data-i18n="section5.key_p3_l5">Azure Arc.</li>
+      <li data-i18n="section5.key_p3_l6">Advisor vs Service Health vs Monitor.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 6: OFFICIAL LINKS ============ -->
+<section id="s6">
+  <div class="cert-section-head">
+    <div class="cert-section-num">05</div>
+    <div>
+      <div class="cert-section-tag" data-i18n="section6.tag">Recursos · Links oficiais</div>
+      <h1 class="cert-section-title">
+        <span data-i18n="section6.title_a">Roteiros oficiais &</span>
+        <em data-i18n="section6.title_b">links</em>
+      </h1>
+    </div>
+  </div>
+
+  <h3 data-i18n="section6.complement_title">Recursos complementares</h3>
+  <ul class="bullets">
+    <li><a href="https://learn.microsoft.com/pt-br/credentials/certifications/resources/study-guides/az-900" target="_blank" rel="noopener" style="color:var(--amber);font-weight:600" data-i18n="section6.cmpl_outline">Skills outline oficial</a></li>
+    <li><a href="https://learn.microsoft.com/credentials/certifications/exams/az-900/practice/assessment?assessment-type=practice&assessmentId=23" target="_blank" rel="noopener" style="color:var(--amber);font-weight:600" data-i18n="section6.cmpl_practice">Avaliação simulada gratuita</a></li>
+    <li><a href="https://aka.ms/examdemo" target="_blank" rel="noopener" style="color:var(--amber);font-weight:600" data-i18n="section6.cmpl_sandbox">Sandbox do exame</a></li>
+    <li><a href="https://learn.microsoft.com/credentials/certifications/azure-fundamentals/" target="_blank" rel="noopener" style="color:var(--amber);font-weight:600" data-i18n="section6.cmpl_schedule">Agendar o exame</a></li>
+    <li><a href="#/cert/az900/quiz" style="color:var(--amber);font-weight:600" data-i18n="section6.cmpl_quiz">Banco de questões</a></li>
+  </ul>
+
+  <h3 data-i18n="section6.schedule_title">Cronograma sugerido (~4 semanas)</h3>
+  <ol class="steps">
+    <li data-i18n-html data-i18n="section6.schedule_w1">Semana 1.</li>
+    <li data-i18n-html data-i18n="section6.schedule_w2">Semana 2.</li>
+    <li data-i18n-html data-i18n="section6.schedule_w3">Semana 3.</li>
+    <li data-i18n-html data-i18n="section6.schedule_w4">Semana 4.</li>
+  </ol>
+</section>
+
+</main>
+
+</div>

@@ -1,0 +1,501 @@
+{
+  "kicker": "Microsoft · Fundamentals Certification",
+  "title_part1": "AZ-900",
+  "title_part2": "Azure",
+  "title_part3": "Fundamentals.",
+  "subtitle": "The gateway to the Microsoft cloud. Cloud concepts, Azure architecture and services, governance and management. Structured in 3 main domains, following the official Microsoft skills outline (updated January 14, 2026).",
+  "meta_domains": "domains",
+  "meta_topics": "topics",
+  "meta_passing": "passing score",
+
+  "toc": {
+    "overview": "Overview",
+    "domain1": "Domain 1",
+    "cloud_concepts": "Cloud concepts",
+    "domain2": "Domain 2",
+    "architecture": "Architecture & services",
+    "domain3": "Domain 3",
+    "management": "Management & governance",
+    "study_plan": "Study plan",
+    "official_paths": "Official paths & links",
+    "quiz": "Question bank"
+  },
+
+  "section1": {
+    "tag": "Overview · About the exam",
+    "title_a": "What is the",
+    "title_b": "AZ-900",
+    "lead": "AZ-900 is the Azure Fundamentals certification — the first step into any Microsoft cloud career. It measures conceptual knowledge: you don't need to know how to configure services, but you must know what each one does, when to use it, and how they relate to one another.",
+
+    "exam_structure": "Exam structure",
+    "duration_label": "Duration",
+    "duration_value": "~45 min to answer, ~65 min total",
+    "questions_label": "Questions",
+    "questions_value": "40 to 60 — multiple choice and scenarios",
+    "passing_label": "Passing score",
+    "passing_value": "700 out of 1000 points",
+    "languages_label": "Languages",
+    "languages_value": "English · Portuguese · several others",
+    "validity_label": "Validity",
+    "validity_value": "No expiration (Fundamentals)",
+    "format_label": "Format",
+    "format_value": "Online (proctored) or Pearson VUE testing center",
+
+    "domains_title": "The 3 domains (and their weights)",
+    "domain1_label": "Cloud concepts",
+    "domain1_pct": "25–30%",
+    "domain1_desc": "models, service types, benefits. The theoretical foundation.",
+    "domain2_label": "Azure architecture and services",
+    "domain2_pct": "35–40%",
+    "domain2_desc": "the heart of the exam: regions, compute, networking, storage, identity, security.",
+    "domain3_label": "Management and governance",
+    "domain3_pct": "30–35%",
+    "domain3_desc": "costs, compliance, tools, monitoring.",
+
+    "callout_tag": "Strategy",
+    "callout_text": "Study in domain order — they were designed in a logical sequence. Concepts first, then services (which use those concepts), then governance (which manages the services). Skipping steps causes confusion.",
+
+    "free_practice_tag": "Free practice assessment",
+    "free_practice_text": "Microsoft offers a free official practice assessment for AZ-900 inside Learn — works as a thermometer before booking the paid exam.",
+    "free_practice_link": "Take the practice assessment →"
+  },
+
+  "section2": {
+    "tag": "Domain 1 · 25–30% of the exam",
+    "title_a": "Cloud",
+    "title_b": "concepts",
+    "lead": "Before talking about Azure, you must understand what the cloud is. These concepts apply to any provider (AWS, GCP, Azure) — and Microsoft tests exactly this vocabulary in this domain.",
+
+    "compute_title": "Cloud computing",
+    "compute_p1": "Cloud computing is the delivery of IT services (compute, storage, databases, networking, software) over the internet. Instead of buying servers, you rent capacity as you use it, with elastic scale and consumption-based billing.",
+
+    "shared_resp_topic": "Shared responsibility",
+    "shared_resp_intro": "The shared responsibility model defines what the provider (Microsoft) handles and what the customer handles. <strong>Always the customer's</strong>: identities and accounts, devices, data, access management.",
+    "shared_resp_h1": "IaaS — customer does more",
+    "shared_resp_d1": "Provider: hardware, physical network, virtualization. Customer: OS, runtime, application, data, identity.",
+    "shared_resp_h2": "PaaS — middle ground",
+    "shared_resp_d2": "Provider: everything up through OS and runtime. Customer: application, data, identity.",
+    "shared_resp_h3": "SaaS — provider does more",
+    "shared_resp_d3": "Provider: pretty much everything. Customer: data, identity, app configuration.",
+
+    "models_title": "Cloud models",
+    "public": "Public",
+    "public_desc": "provider's infrastructure, accessible over the internet. Cheaper, more scalable, less control. E.g., public Azure, AWS.",
+    "private": "Private",
+    "private_desc": "infrastructure dedicated to one organization (on-premises or hosted). More control, more expensive, limited scale.",
+    "hybrid": "Hybrid",
+    "hybrid_desc": "combines public and private cloud with connectivity. Lets you keep sensitive workloads on-premises and use the cloud for the rest.",
+    "multi": "Multicloud",
+    "multi_desc": "simultaneous use of more than one public cloud (e.g., Azure + AWS). Reduces lock-in, increases complexity.",
+
+    "consumption_title": "Consumption-based model and pricing options",
+    "consumption_p1": "Cloud uses the OpEx (operating expense) model — you pay as you consume, with no upfront capital investment. Traditional on-premises is CapEx (capital expense) — you buy equipment upfront.",
+    "pricing_h1": "Pay-as-you-go",
+    "pricing_d1": "Pay only for what you use, per minute/second. Maximum flexibility, highest price.",
+    "pricing_h2": "Reserved instances",
+    "pricing_d2": "Commit to 1 or 3 years. Up to 72% discount vs pay-as-you-go.",
+    "pricing_h3": "Spot",
+    "pricing_d3": "Uses Azure's spare capacity. Up to 90% discount, but can be interrupted at any time. Good for interruption-tolerant workloads.",
+    "pricing_h4": "Azure Savings Plan",
+    "pricing_d4": "Commit to a fixed hourly amount for 1 or 3 years. More flexible than reserved — applies across multiple compute types.",
+
+    "serverless_title": "Serverless computing",
+    "serverless_p1": "Serverless does not mean there's no server — it means <strong>you don't manage the server</strong>. The provider scales automatically; you pay only for execution. Azure examples: Azure Functions, Logic Apps.",
+    "serverless_h1": "Characteristics",
+    "serverless_d1": "Auto-scale (from zero to thousands of executions), pay-per-execution, no server to provision or maintain, ideal for event-driven workloads.",
+
+    "benefits_title": "Benefits of cloud services",
+    "benefit_avail": "High availability",
+    "benefit_avail_d": "Typical SLA of 99.9% or higher. Multiple datacenters, automatic redundancy.",
+    "benefit_scale": "Scalability",
+    "benefit_scale_d": "Vertical (increase VM resources) or horizontal (add more VMs). Can be manual or automatic.",
+    "benefit_elastic": "Elasticity",
+    "benefit_elastic_d": "Resources scale up and down automatically with demand. Black Friday: scales out; Sunday night: shrinks.",
+    "benefit_reliab": "Reliability",
+    "benefit_reliab_d": "Ability to recover from failures. Regional failover, geographic replication.",
+    "benefit_predict": "Predictability",
+    "benefit_predict_d": "Predictable performance (autoscale) and predictable costs (planning, Cost Management, alerts).",
+    "benefit_sec": "Security",
+    "benefit_sec_d": "Physical layers, identity controls, encryption in transit and at rest, certified compliance.",
+    "benefit_gov": "Governance",
+    "benefit_gov_d": "Centralized policies, RBAC, audit logs, inherited standards via management groups.",
+    "benefit_manage": "Manageability",
+    "benefit_manage_d": "Web portal, CLI, PowerShell, REST APIs, templates, automation. Of the cloud (autoscale) and in the cloud (you managing resources).",
+
+    "service_types_title": "Cloud service types",
+    "iaas_title": "IaaS — Infrastructure as a Service",
+    "iaas_desc": "You rent virtual machines, networks, storage. The provider handles physical hardware and virtualization. <strong>You manage OS, patches, runtime, app.</strong> More flexible, more responsibility.",
+    "iaas_uses": "Use cases: lift-and-shift of on-premises VMs, dev/test, hosting legacy apps, fine-grained OS control.",
+    "iaas_examples": "Azure examples: Virtual Machines, Virtual Network, Disks.",
+    "paas_title": "PaaS — Platform as a Service",
+    "paas_desc": "You focus on code and data. The provider handles OS, runtime, patches, scaling. You don't see the underlying VM. More productive, less low-level control.",
+    "paas_uses": "Use cases: developing and deploying web apps, APIs, microservices; managed databases; workloads where you want to focus on code.",
+    "paas_examples": "Azure examples: App Service, Azure SQL Database, Azure Functions, AKS.",
+    "saas_title": "SaaS — Software as a Service",
+    "saas_desc": "Complete software delivered over the internet, by subscription. Customer just uses it. Provider handles everything — infra, software, updates.",
+    "saas_uses": "Use cases: productivity (email, doc editing), CRM, ERP. For the customer, it's just sign in and use.",
+    "saas_examples": "Microsoft examples: Microsoft 365, Dynamics 365, Outlook.com.",
+
+    "tip_tag": "The 3 concepts to lock in",
+    "tip_html": "<strong>Shared responsibility</strong>: identity and data are <em>always</em> the customer's. <strong>OpEx vs CapEx</strong>: cloud is OpEx. <strong>Lift-and-shift</strong> = IaaS; <strong>new code</strong> = PaaS; <strong>end-user app</strong> = SaaS."
+  },
+
+  "section3": {
+    "tag": "Domain 2 · 35–40% of the exam",
+    "title_a": "Azure architecture &",
+    "title_b": "services",
+    "lead": "This is the largest domain of the exam. Here you must know service <strong>names</strong>, <strong>when to use each</strong>, and how they relate hierarchically. Microsoft tests vocabulary heavily.",
+
+    "arch_title": "Core architectural components",
+
+    "regions_topic": "Regions, region pairs, and sovereign regions",
+    "regions_p1": "A <strong>region</strong> is a set of geographically close datacenters connected by a low-latency network. Azure has over 60 regions worldwide. You choose the region for your resources (usually the closest to users or based on legal requirements).",
+    "regions_p2": "<strong>Region pairs</strong>: each region has a paired region in the same country (or continent). Pairs are at least 500 km apart and receive updates sequentially (not simultaneously). Some geo-redundancy options use the pair automatically. E.g., Brazil South ↔ South Central US (cross-continent pair, an exception).",
+    "regions_p3": "<strong>Sovereign regions</strong>: isolated environments separate from public regions for government customers or countries with specific requirements. Examples: Azure Government (US), Azure China (operated by 21Vianet), Azure Germany.",
+
+    "az_topic": "Availability zones",
+    "az_text": "Physically separated datacenters within a region, each with independent power, cooling, and network. Typically 3 zones per region. Zone-redundant resources survive a full zone failure.",
+
+    "dc_topic": "Datacenters",
+    "dc_text": "Physical buildings with servers, networking, and cooling. The customer never interacts directly — always via region/zone. Multiple datacenters make up a region.",
+
+    "hierarchy_title": "Resource hierarchy",
+    "hierarchy_lead": "Hierarchy, from broadest to most specific:",
+    "hierarchy_l1": "<strong>Management groups</strong> — aggregate multiple subscriptions to apply policies and RBAC at scale.",
+    "hierarchy_l2": "<strong>Subscriptions</strong> — billing and limit boundary. Each subscription has an owner, quotas, and separate billing.",
+    "hierarchy_l3": "<strong>Resource groups</strong> — logical containers for related resources (a whole app, for instance). A resource can only be in one group, but it can be moved.",
+    "hierarchy_l4": "<strong>Resources</strong> — VMs, databases, networks, storage accounts. The billable units.",
+
+    "compute_title": "Compute services",
+
+    "vm_card": "Virtual Machines",
+    "vm_desc": "IaaS. You choose OS, size, disk. Maximum control, maximum responsibility. Ideal for lift-and-shift and workloads needing specific OS.",
+    "vmss_card": "VM Scale Sets (VMSS)",
+    "vmss_desc": "Sets of identical VMs that scale together, with load balancing. Grows and shrinks automatically.",
+    "as_card": "Availability sets",
+    "as_desc": "Group VMs to ensure SLA even during maintenance. Distributes VMs across fault domains (racks) and update domains. SLA 99.95%.",
+    "avd_card": "Azure Virtual Desktop (AVD)",
+    "avd_desc": "Virtualization of Windows desktops and apps in the cloud. Access from any device. Good for remote workforce and BYOD.",
+    "container_card": "Container Instances",
+    "container_desc": "A Docker container without needing to manage a VM or orchestrator. Good for short, isolated tasks.",
+    "aks_card": "AKS (Kubernetes)",
+    "aks_desc": "Managed Kubernetes for orchestrating containers at scale. Azure manages the control plane.",
+    "functions_card": "Azure Functions",
+    "functions_desc": "Serverless. You write a function, define the trigger (HTTP, queue, timer), Azure runs it. Pay only for execution.",
+    "appservice_card": "App Service",
+    "appservice_desc": "PaaS for web apps, APIs, mobile backends. Supports multiple runtimes. Vertical and horizontal scale. Deployment slots.",
+
+    "hosting_title": "Application hosting options",
+    "hosting_p1": "Summary of when to pick each option to host an application:",
+    "hosting_l1": "<strong>VMs</strong>: maximum control, legacy app, specific OS requirements.",
+    "hosting_l2": "<strong>App Service (Web Apps)</strong>: modern web app or API, without managing OS. Reasonable default for most.",
+    "hosting_l3": "<strong>Containers (ACI, AKS)</strong>: portability across environments, microservices, fine-grained scale.",
+    "hosting_l4": "<strong>Functions</strong>: light event-driven logic, pay only per execution.",
+
+    "network_title": "Networking services",
+
+    "vnet_card": "Virtual Network (VNet)",
+    "vnet_desc": "Private cloud network, isolated. Define your own IP ranges, subnets, route tables.",
+    "subnet_card": "Subnets",
+    "subnet_desc": "Segmentations within the VNet. Let you separate tiers (web, app, db) and apply different rules to each.",
+    "peering_card": "VNet Peering",
+    "peering_desc": "Connects two VNets — same or different regions. Traffic stays on Microsoft's private backbone.",
+    "dns_card": "Azure DNS",
+    "dns_desc": "Hosts DNS domains in Azure. Fast resolution, integrated with the portal and CLI.",
+    "vpn_card": "VPN Gateway",
+    "vpn_desc": "Connects your on-premises network to Azure over encrypted internet (IPsec). Site-to-site, point-to-site.",
+    "er_card": "ExpressRoute",
+    "er_desc": "Dedicated private connection between on-premises and Azure (does not traverse the public internet). Higher bandwidth, lower latency.",
+
+    "endpoints_topic": "Public vs private endpoints",
+    "endpoints_text": "<strong>Public endpoint</strong>: service accessible from the internet (with a public IP). <strong>Private endpoint</strong>: the service gets an IP from your VNet — accessible only inside the network, without crossing the public internet. Increases security.",
+
+    "storage_title": "Storage services",
+
+    "blob_card": "Blob Storage",
+    "blob_desc": "Unstructured objects — images, videos, backups, logs. Large volumes. Hot, Cool, Cold, Archive tiers.",
+    "files_card": "Azure Files",
+    "files_desc": "Managed SMB and NFS file shares. Replaces traditional file servers. Mountable on Windows, Linux, and Mac.",
+    "queue_card": "Queue Storage",
+    "queue_desc": "Message queues between app components. Messages up to 64 KB. Good for decoupling.",
+    "table_card": "Table Storage",
+    "table_desc": "Schemaless NoSQL key-value storage. Useful for large volumes of simple structured data.",
+    "disk_card": "Managed Disks",
+    "disk_desc": "VM disks. Premium SSD, Standard SSD, HDD. Managed snapshots and backups.",
+
+    "storage_tiers_title": "Blob tiers",
+    "tier_hot": "Hot — frequent access, higher storage cost, lower access cost.",
+    "tier_cool": "Cool — rarely accessed data (>30 days). Cheaper storage, pricier access.",
+    "tier_cold": "Cold — very rare access (>90 days).",
+    "tier_archive": "Archive — offline backups. Very cheap storage, but rehydration takes hours.",
+
+    "redundancy_title": "Redundancy options",
+    "lrs": "<strong>LRS</strong> (Locally Redundant) — 3 copies in a single datacenter. Cheapest.",
+    "zrs": "<strong>ZRS</strong> (Zone Redundant) — copies in 3 availability zones in the same region.",
+    "grs": "<strong>GRS</strong> (Geo Redundant) — LRS + async replication to paired region.",
+    "ragrs": "<strong>RA-GRS</strong> — GRS with read enabled in the secondary region.",
+    "gzrs": "<strong>GZRS</strong> — ZRS + replication to paired region. Highest tier.",
+    "ragzrs": "<strong>RA-GZRS</strong> — GZRS with read in the secondary.",
+
+    "movetools_title": "Moving files and migrations",
+    "azcopy": "<strong>AzCopy</strong> — command-line tool to copy blobs and files. Good for automation and large volumes.",
+    "stexp": "<strong>Storage Explorer</strong> — GUI desktop app to manage storage (Windows, macOS, Linux).",
+    "afs": "<strong>Azure File Sync</strong> — syncs Azure file shares with on-premises Windows servers. Local cache.",
+    "migrate": "<strong>Azure Migrate</strong> — unified tool to discover, assess, and migrate servers, databases, apps, and VDI.",
+    "databox": "<strong>Azure Data Box</strong> — physical appliance to transfer TB/PB of data when internet is impractical. Family: Disk (up to 7TB), Box (80TB), Heavy (800TB).",
+
+    "iam_title": "Identity, access, and security",
+
+    "entraid_topic": "Microsoft Entra ID",
+    "entraid_text": "Microsoft's cloud identity directory (formerly Azure AD). Manages users, groups, applications, and devices. Identity foundation for Microsoft 365, Azure, and integrated apps.",
+
+    "entrads_topic": "Entra Domain Services",
+    "entrads_text": "Managed service offering traditional Active Directory (Kerberos, NTLM, group policy) compatible with legacy apps — without managing domain controllers yourself. Useful in migrations.",
+
+    "auth_title": "Authentication methods",
+    "sso_label": "SSO (Single Sign-On)",
+    "sso_text": "Sign in once, access multiple applications. Reduces the risk of weak passwords.",
+    "mfa_label": "MFA (Multi-Factor Authentication)",
+    "mfa_text": "At least two factors: something you know (password), something you have (phone), something you are (biometrics).",
+    "passwordless_label": "Passwordless access",
+    "passwordless_text": "Methods without passwords: Windows Hello, FIDO2 keys, Microsoft Authenticator. More secure and more convenient.",
+    "external_label": "External identities",
+    "external_text": "Allow users from other tenants or partners to access your resources. Includes B2B Collaboration (partners) and B2C (end customers).",
+
+    "cond_topic": "Conditional Access",
+    "cond_text": "Set of policies that apply access controls based on signals — location, device, risk, app. E.g., 'if coming from outside the country and trying to access corporate email, require MFA.'",
+
+    "rbac_topic": "RBAC (Role-Based Access Control)",
+    "rbac_text": "Assigns permissions by role (Owner, Contributor, Reader, etc.), not by user. You assign the role to a user or group at a scope (subscription, resource group, resource). Principle of least privilege.",
+
+    "zerotrust_topic": "Zero Trust",
+    "zerotrust_text": "Security model based on 'never trust, always verify.' Assumes the network may be compromised — so every request is authenticated and authorized as if it came from an open network. Three principles: verify explicitly, use least-privilege access, assume breach.",
+
+    "dd_topic": "Defense in depth",
+    "dd_text": "Layers of security in series — if one fails, the next still protects. Layers: data, application, compute, network, perimeter, identity/access, physical security.",
+
+    "defender_topic": "Microsoft Defender for Cloud",
+    "defender_text": "CSPM (Cloud Security Posture Management) + CWP (Cloud Workload Protection). Continuously assesses your security posture, detects threats, and gives recommendations with a Secure Score. Works across Azure, AWS, GCP, and on-premises.",
+
+    "tip_tag": "What gets tested most",
+    "tip_html": "<strong>Hierarchy</strong>: Management Group → Subscription → Resource Group → Resource. <strong>Compute types</strong>: VM (IaaS) vs App Service (PaaS) vs Functions (serverless). <strong>VPN vs ExpressRoute</strong>: VPN over public internet; ExpressRoute is dedicated private. <strong>RBAC</strong>: built-in roles + hierarchical scopes."
+  },
+
+  "section4": {
+    "tag": "Domain 3 · 30–35% of the exam",
+    "title_a": "Management &",
+    "title_b": "governance",
+    "lead": "Here Azure stops being 'a bunch of services' and becomes a platform with rules: how you control costs, ensure compliance, monitor health, and manage at scale.",
+
+    "cost_title": "Cost management",
+
+    "cost_factors": "Factors that affect cost",
+    "cost_f1": "<strong>Resource type</strong> — VMs cost more than queues; SQL Database costs more than Blob.",
+    "cost_f2": "<strong>Size/SKU</strong> — VM D8s_v4 vs B1s. Premium SSD vs Standard HDD.",
+    "cost_f3": "<strong>Region</strong> — some regions are pricier (especially for SQL and VMs).",
+    "cost_f4": "<strong>Egress traffic</strong> — inbound is free, outbound is charged (cross-region and to internet).",
+    "cost_f5": "<strong>Pricing model</strong> — pay-as-you-go vs reserved vs spot.",
+    "cost_f6": "<strong>Usage time</strong> — VMs billed per second, even when stopped (you still pay for disk storage).",
+
+    "calc_topic": "Pricing Calculator + TCO Calculator",
+    "calc_p1": "<strong>Pricing Calculator</strong> — estimates how much specific services will cost before provisioning. You select services, configure sizes, and see the monthly cost.",
+    "calc_p2": "<strong>TCO Calculator</strong> (Total Cost of Ownership) — compares the cost of running workloads on-premises vs Azure. Considers hardware, software, electricity, IT labor, datacenter.",
+
+    "cm_topic": "Cost Management",
+    "cm_text": "Dashboard to view current spending, analyze trends, create budgets with alerts, export reports. Works at subscription or management group scope.",
+
+    "tags_topic": "Tags",
+    "tags_text": "Key-value pairs attached to resources (e.g., 'Environment=Production', 'CostCenter=Marketing'). Allow grouping costs, organizing, and applying policies. Each resource can have up to 50 tags.",
+
+    "gov_title": "Governance and compliance",
+
+    "purview_topic": "Microsoft Purview",
+    "purview_text": "Unified platform for data governance and compliance. Catalogs data (where it lives, how sensitive), manages lifecycle, discovers information risks. Replaced Compliance Manager as the central compliance tool.",
+
+    "policy_topic": "Azure Policy",
+    "policy_text": "Defines rules that resources must follow (e.g., 'VMs can only be created in Brazil South and East US'). Evaluates current state and can block creations outside the rule. Assigned at hierarchical scopes.",
+
+    "locks_topic": "Resource locks",
+    "locks_text": "Prevents accidental modification or deletion of critical resources. <strong>CanNotDelete</strong>: modifiable but not deletable. <strong>ReadOnly</strong>: neither modifiable nor deletable.",
+
+    "deploy_title": "Management and deployment tools",
+
+    "portal_card": "Azure Portal",
+    "portal_desc": "Web interface to manage everything. Good for discovery, prototyping, and ad-hoc tasks.",
+    "shell_card": "Azure Cloud Shell",
+    "shell_desc": "Browser-based terminal with Azure CLI and PowerShell preinstalled. No setup on your local machine.",
+    "cli_card": "Azure CLI",
+    "cli_desc": "Cross-platform command line (Bash, Linux, macOS, Windows). Commands like 'az vm create...'. Good for scripts.",
+    "ps_card": "Azure PowerShell",
+    "ps_desc": "PowerShell cmdlets to manage Azure (e.g., 'New-AzVM'). More verbose syntax, integrates well with Windows scripts.",
+    "arc_card": "Azure Arc",
+    "arc_desc": "Extends Azure management to resources outside Azure — on-premises servers, other clouds, external Kubernetes. You see them as Azure resources.",
+    "iac_card": "IaC (Infrastructure as Code)",
+    "iac_desc": "Describe infrastructure in versioned files (Git), apply as code. Guarantees reproducibility and versioning.",
+    "arm_card": "ARM (Azure Resource Manager)",
+    "arm_desc": "The management layer behind everything in Azure — all provisioning goes through it. Defines the resource hierarchy and applies RBAC and policies.",
+    "armtpl_card": "ARM templates and Bicep",
+    "armtpl_desc": "ARM templates are declarative JSON for provisioning resources. Bicep is a cleaner language that compiles to ARM. Idempotent — you can reapply without side effects.",
+
+    "monitor_title": "Monitoring",
+
+    "advisor_topic": "Azure Advisor",
+    "advisor_text": "Personalized recommendation system across 5 categories: reliability, security, performance, cost, and operational excellence. 'You have underused VMs — consider resizing and saving X dollars.'",
+
+    "health_topic": "Azure Service Health",
+    "health_text": "Shows Azure service health (global incidents, planned maintenance) and how it affects <strong>your</strong> specific resources. Can be configured with alerts.",
+
+    "monitor_topic": "Azure Monitor",
+    "monitor_text": "Unified telemetry platform — metrics, logs, traces. Collects data from everything in Azure (VMs, App Service, AKS) and on-premises (via agents).",
+    "monitor_la": "<strong>Log Analytics</strong> — workspace to store and query logs with KQL (Kusto Query Language).",
+    "monitor_alerts": "<strong>Azure Monitor Alerts</strong> — rules that fire actions (email, webhook, Logic App, function) when metrics or logs cross a threshold.",
+    "monitor_ai": "<strong>Application Insights</strong> — APM (Application Performance Monitoring) for web apps. Shows response time, dependencies, failures, application maps.",
+
+    "tip_tag": "Memorize the 'what's it for'",
+    "tip_html": "<strong>Policy</strong> = enforces rules. <strong>Lock</strong> = prevents change/deletion. <strong>Tag</strong> = organizes/groups. <strong>Advisor</strong> = recommends. <strong>Service Health</strong> = Azure health. <strong>Monitor</strong> = telemetry. <strong>Defender</strong> = security."
+  },
+
+  "section5": {
+    "tag": "Learning order · 4 weeks",
+    "title_a": "Study",
+    "title_b": "plan",
+    "lead": "Week-by-week roadmap using Microsoft's 4 official learning paths (free on Learn). Order matches the exam — concepts → architecture → governance → practice.",
+
+    "week1_tag": "Week 1 · Concepts",
+    "week1_title": "Part 1 · Describe cloud concepts",
+    "week1_desc": "3 modules. Establishes the theoretical base: what cloud is, benefits, IaaS/PaaS/SaaS.",
+    "week1_modules": "Cloud computing · Benefits of cloud services · Cloud service types",
+
+    "week2_tag": "Weeks 2–3 · Architecture",
+    "week2_title": "Part 2 · Describe Azure architecture and services",
+    "week2_desc": "5 modules. The largest exam block. May take 2 weeks given the number of services.",
+    "week2_modules": "Core architectural components · Compute · Networking · Storage · Identity, access & security",
+
+    "week3_tag": "Week 3–4 · Governance",
+    "week3_title": "Part 3 · Describe Azure management and governance",
+    "week3_desc": "4 modules. Costs, compliance, tools, and monitoring. Short but critical topics.",
+    "week3_modules": "Cost management · Governance and compliance · Tools to manage and deploy · Monitoring tools",
+
+    "week4_tag": "Week 4 · Practice",
+    "week4_title": "Part 4 · Apply Azure skills in guided projects",
+    "week4_desc": "8 guided projects, optional but highly recommended. Create a free Azure account and do real hands-on — locks in much of the abstract content.",
+    "week4_modules": "Static website · Tags & locks · Functions · Entra+RBAC · Secure file sharing · Cost guardrails · Monitoring · Cloud Shell + CLI",
+
+    "trecho_title": "Key segments in each path",
+
+    "key_p1_title": "Path 1 · Most tested segments",
+    "key_p1_l1": "OpEx vs CapEx difference (always tested)",
+    "key_p1_l2": "Shared responsibility model (who handles what in IaaS/PaaS/SaaS)",
+    "key_p1_l3": "Use cases for each cloud type (public, private, hybrid)",
+    "key_p1_l4": "Serverless: pay-per-execution characteristic",
+
+    "key_p2_title": "Path 2 · Most tested segments",
+    "key_p2_l1": "Hierarchy Management Group → Subscription → Resource Group → Resource",
+    "key_p2_l2": "When to use VM vs App Service vs Container vs Function",
+    "key_p2_l3": "VPN Gateway vs ExpressRoute (public vs dedicated private)",
+    "key_p2_l4": "Blob tiers (Hot/Cool/Cold/Archive) and redundancies (LRS/ZRS/GRS/GZRS)",
+    "key_p2_l5": "Entra ID vs Entra Domain Services",
+    "key_p2_l6": "MFA, Conditional Access, RBAC, Zero Trust — distinguish each one",
+
+    "key_p3_title": "Path 3 · Most tested segments",
+    "key_p3_l1": "Pricing Calculator vs TCO Calculator (estimate future vs compare to on-premises)",
+    "key_p3_l2": "Policy vs Lock vs Tag — what each is for",
+    "key_p3_l3": "Purview = data governance",
+    "key_p3_l4": "Azure CLI vs PowerShell difference (syntax)",
+    "key_p3_l5": "Azure Arc = manage things outside Azure",
+    "key_p3_l6": "Advisor vs Service Health vs Monitor — role of each"
+  },
+
+  "section6": {
+    "tag": "Resources · Official links",
+    "title_a": "Official paths &",
+    "title_b": "links",
+
+    "paths_title": "4 official Learning Paths (Microsoft Learn)",
+    "p1_label": "Part 1",
+    "p1_name": "Describe cloud concepts",
+    "p1_meta": "3 modules · ~3h",
+    "p2_label": "Part 2",
+    "p2_name": "Describe Azure architecture and services",
+    "p2_meta": "5 modules · ~6h",
+    "p3_label": "Part 3",
+    "p3_name": "Describe Azure management and governance",
+    "p3_meta": "4 modules · ~4h",
+    "p4_label": "Part 4",
+    "p4_name": "Apply Azure skills in guided projects",
+    "p4_meta": "8 projects · ~8h (optional)",
+
+    "complement_title": "Additional resources",
+    "cmpl_outline": "Official skills outline (updated Jan 14, 2026)",
+    "cmpl_practice": "Free practice assessment (Microsoft)",
+    "cmpl_sandbox": "Exam sandbox (real interface)",
+    "cmpl_schedule": "Schedule the exam · certification page",
+    "cmpl_quiz": "Hub question bank (internal)",
+
+    "schedule_title": "Suggested schedule (~4 weeks)",
+    "schedule_w1": "<strong>Week 1</strong> — Path 1 (3 modules), start Path 2 (module 1)",
+    "schedule_w2": "<strong>Week 2</strong> — Path 2 (compute + networking)",
+    "schedule_w3": "<strong>Week 3</strong> — Path 2 (storage + identity), start Path 3",
+    "schedule_w4": "<strong>Week 4</strong> — finish Path 3, Microsoft official practice assessment, internal question bank, schedule the exam"
+  },
+
+  "quiz": {
+    "back_link": "← Back to AZ-900",
+    "title": "Question bank · AZ-900",
+    "subtitle": "Exam-style questions, split by domain. Study mode gives immediate feedback; exam mode scores at the end (just like the real exam).",
+
+    "stats_label": "Stats",
+    "stats_total": "questions",
+    "stats_answered": "answered",
+    "stats_correct": "correct",
+    "stats_rate": "accuracy",
+
+    "mode_label": "Mode",
+    "mode_study": "Study",
+    "mode_study_desc": "Shows the answer after each question. No timer.",
+    "mode_exam": "Exam simulation",
+    "mode_exam_desc": "60 questions, 65 minutes. Score only at the end, like the real exam.",
+
+    "filter_label": "Filter by domain",
+    "filter_all": "All domains",
+    "filter_d1": "Domain 1 · Cloud concepts",
+    "filter_d2": "Domain 2 · Architecture & services",
+    "filter_d3": "Domain 3 · Management & governance",
+
+    "start": "Start",
+    "next": "Next",
+    "check": "Check answer",
+    "finish": "Finish simulation",
+    "restart": "Restart bank",
+    "show_explanation": "Show explanation",
+
+    "correct": "Correct!",
+    "incorrect": "Incorrect.",
+    "your_answer": "Your answer",
+    "right_answer": "Correct answer",
+    "explanation": "Explanation",
+    "reference": "Official reference",
+
+    "results_title": "Simulation results",
+    "results_score": "Score",
+    "results_correct": "You got",
+    "results_of": "out of",
+    "results_questions": "questions",
+    "results_pass": "Passed (≥ 70%)",
+    "results_fail": "Not ready yet (< 70%)",
+    "results_time": "Time used",
+    "results_by_domain": "Correct answers by domain",
+    "results_review": "Review questions",
+    "results_retry": "Try again",
+
+    "no_questions": "No questions for the selected filter.",
+    "domain_pill_d1": "D1",
+    "domain_pill_d2": "D2",
+    "domain_pill_d3": "D3",
+
+    "select_multiple": "Select all correct options.",
+    "select_one": "Select the best option.",
+    "tf_true": "True",
+    "tf_false": "False"
+  }
+}

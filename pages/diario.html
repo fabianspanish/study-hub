@@ -1,0 +1,170 @@
+<div class="diary-page">
+
+<!-- HERO -->
+<header class="diary-hero">
+  <div class="diary-hero-inner">
+    <div>
+      <div class="kicker">Cultivo · Prática diária</div>
+      <h1>
+        <span class="b">Diário</span>
+        <span class="a">de cultivo.</span>
+      </h1>
+      <p class="subtitle">
+        Cada ciclo é uma nova chance de aprimoramento. Anote o ambiente, a nutrição, o estágio da planta e suas observações — e o próximo cultivo já começa melhor que o anterior.
+      </p>
+    </div>
+    <div class="diary-stats">
+      <strong id="statTotal">0</strong>
+      registros totais<br><br>
+      <strong id="statActive">0</strong>
+      em andamento
+    </div>
+  </div>
+</header>
+
+<!-- AUTH BAR -->
+<div class="auth-bar">
+  <div id="authBar"></div>
+</div>
+
+<!-- MAIN -->
+<main class="diary-main">
+
+  <div class="toolbar">
+    <h2 class="toolbar-title">Seus <em>registros</em></h2>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" id="btnNew">+ Novo registro</button>
+    </div>
+  </div>
+
+  <div class="filters">
+    <button class="filter-pill active" data-filter="all">Todos</button>
+    <button class="filter-pill" data-filter="germ">Germinação</button>
+    <button class="filter-pill" data-filter="muda">Muda</button>
+    <button class="filter-pill" data-filter="vega">Vegetativo</button>
+    <button class="filter-pill" data-filter="flora">Floração</button>
+    <button class="filter-pill" data-filter="colheita">Colheita</button>
+    <button class="filter-pill" data-filter="cura">Cura</button>
+  </div>
+
+  <div class="entries" id="entriesList"></div>
+
+</main>
+
+<!-- ============ MODAL: NOVO/EDITAR ============ -->
+<div class="modal-overlay" id="modalEntry">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">Novo registro</h3>
+      <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+    </div>
+
+    <form id="formEntry">
+      <div class="modal-body">
+
+        <div class="form-section">Identificação</div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-date">Data</label>
+            <input type="date" id="f-date" name="date" required>
+          </div>
+          <div class="field">
+            <label for="f-day">Dia do ciclo</label>
+            <input type="number" id="f-day" name="day" min="0" placeholder="ex: 14">
+          </div>
+          <div class="field">
+            <label for="f-stage">Estágio</label>
+            <select id="f-stage" name="stage" required>
+              <option value="">— selecione —</option>
+              <option value="germ">Germinação</option>
+              <option value="muda">Muda</option>
+              <option value="vega">Vegetativo</option>
+              <option value="flora">Floração</option>
+              <option value="colheita">Colheita</option>
+              <option value="cura">Cura</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid full">
+          <div class="field">
+            <label for="f-title">Título</label>
+            <input type="text" id="f-title" name="title" placeholder="ex: Topping no 4º nódulo" required>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-strain">Genética / Strain</label>
+            <input type="text" id="f-strain" name="strain" placeholder="ex: Northern Lights Auto">
+          </div>
+        </div>
+
+        <div class="form-section">Ambiente</div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-tempC">Temperatura (°C)</label>
+            <input type="number" step="0.1" id="f-tempC" name="tempC" placeholder="ex: 24.5">
+          </div>
+          <div class="field">
+            <label for="f-rh">UR (%)</label>
+            <input type="number" step="1" id="f-rh" name="rh" placeholder="ex: 60">
+          </div>
+          <div class="field">
+            <label for="f-lightHours">Fotoperíodo (h)</label>
+            <input type="number" step="0.5" id="f-lightHours" name="lightHours" placeholder="18 / 12">
+          </div>
+          <div class="field">
+            <label for="f-ppfd">PPFD (µmol/m²/s)</label>
+            <input type="number" step="10" id="f-ppfd" name="ppfd" placeholder="ex: 600">
+          </div>
+        </div>
+
+        <div class="form-section">Nutrição</div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-ph">pH</label>
+            <input type="number" step="0.01" id="f-ph" name="ph" placeholder="ex: 5.8">
+          </div>
+          <div class="field">
+            <label for="f-ec">EC (mS/cm)</label>
+            <input type="number" step="0.01" id="f-ec" name="ec" placeholder="ex: 1.4">
+          </div>
+          <div class="field">
+            <label for="f-runoffEc">EC run-off</label>
+            <input type="number" step="0.01" id="f-runoffEc" name="runoffEc" placeholder="ex: 1.6">
+          </div>
+        </div>
+
+        <div class="form-section">Planta</div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-heightCm">Altura (cm)</label>
+            <input type="number" step="0.5" id="f-heightCm" name="heightCm" placeholder="ex: 32">
+          </div>
+          <div class="field">
+            <label for="f-actions">Ação realizada</label>
+            <input type="text" id="f-actions" name="actions" placeholder="ex: LST, topping, desfolhação...">
+          </div>
+        </div>
+
+        <div class="form-section">Observações</div>
+        <div class="form-grid full">
+          <div class="field">
+            <label for="f-observations">Notas livres</label>
+            <textarea id="f-observations" name="observations" placeholder="O que você notou hoje? Mudanças no ambiente, respostas da planta, dúvidas..."></textarea>
+            <span class="hint">Anote tudo: mudanças no ambiente, respostas da planta, nutrição, datas de poda. O hábito de escrever transforma suas práticas e permite replicar sucessos.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-foot">
+        <button type="button" class="btn btn-ghost" id="modalCancel">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Salvar registro</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</div>

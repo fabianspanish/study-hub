@@ -1,0 +1,292 @@
+/* ============================================================
+   LOGIN PAGE · Tela de entrada (primeira coisa que aparece)
+   Paleta neutra (mesma do cert) com hero verde subtle
+   ============================================================ */
+
+.login-shell{
+  min-height:100vh;
+  width:100%;
+  background:
+    radial-gradient(ellipse at top right, rgba(200,131,42,.12) 0%, transparent 55%),
+    linear-gradient(180deg, #100c08 0%, #1a1612 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+  font-family:'Inter',sans-serif;
+  color:var(--cream);
+
+  --cert-dark:        #1a1612;
+  --cert-darker:      #100c08;
+  --cert-bronze:      #8b6f47;
+  --cert-bronze-soft: #a8896a;
+  --cert-warm-line:   rgba(244,239,228,.12);
+}
+/* Cobre toda a tela mesmo com scroll: html + body em escuro no modo login */
+body.no-header{
+  background:linear-gradient(180deg, #100c08 0%, #1a1612 100%);
+  min-height:100vh;
+}
+body.no-header #page{
+  margin:0;padding:0;
+  min-height:100vh;
+  max-width:none;          /* sobrescreve cultivo.css main{max-width:1280px} */
+  width:100%;
+  display:flex;
+}
+body.no-header #page > .login-shell{flex:1}
+
+.login-card{
+  width:100%;
+  max-width:440px;
+  background:var(--paper);
+  border-radius:8px;
+  box-shadow:0 30px 80px -20px rgba(0,0,0,.6), 0 0 0 1px rgba(244,239,228,.05);
+  overflow:hidden;
+  color:var(--ink);
+}
+
+/* Header da card */
+.login-header{
+  padding:36px 36px 24px;
+  border-bottom:1px solid var(--cert-warm-line, rgba(26,22,18,.08));
+  text-align:center;
+}
+.login-logo{
+  font-family:'Fraunces',serif;
+  font-style:italic;font-weight:600;
+  font-size:32px;
+  color:var(--cert-dark, #1a1612);
+  margin-bottom:6px;
+}
+.login-logo .dot{color:var(--amber)}
+.login-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--cert-bronze, #8b6f47);
+}
+
+/* Tabs */
+.login-tabs{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-bottom:1px solid rgba(26,22,18,.08);
+}
+.login-tab{
+  background:none;border:none;
+  padding:14px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:600;
+  color:var(--clay, #6b5b4a);
+  cursor:pointer;
+  border-bottom:2px solid transparent;
+  transition:color .15s, border-color .15s;
+}
+.login-tab:hover{color:var(--cert-dark, #1a1612)}
+.login-tab.active{
+  color:var(--amber, #c8832a);
+  border-bottom-color:var(--amber, #c8832a);
+}
+
+/* Body */
+.login-body{padding:28px 36px 32px}
+
+.login-form{display:flex;flex-direction:column;gap:14px}
+
+.login-field{display:flex;flex-direction:column;gap:6px}
+.login-field label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--cert-bronze, #8b6f47);
+  font-weight:600;
+}
+.login-field input{
+  font-family:'Inter',sans-serif;
+  font-size:15px;
+  padding:11px 14px;
+  border:1px solid var(--cert-warm-line, rgba(26,22,18,.15));
+  border-radius:4px;
+  background:var(--cream);
+  color:var(--ink);
+  transition:border-color .15s, box-shadow .15s;
+}
+.login-field input:focus{
+  outline:none;
+  border-color:var(--amber, #c8832a);
+  box-shadow:0 0 0 3px rgba(200,131,42,.12);
+}
+.login-field input.invalid{
+  border-color:#a93b3b;
+  background:rgba(169,59,59,.04);
+}
+
+/* Password meter */
+.login-pwmeter{
+  display:flex;gap:3px;height:3px;margin-top:6px;
+}
+.login-pwmeter-bar{
+  flex:1;background:rgba(26,22,18,.1);border-radius:99px;
+  transition:background .2s;
+}
+.login-pwmeter-bar.lvl1{background:#a93b3b}
+.login-pwmeter-bar.lvl2{background:#d68a40}
+.login-pwmeter-bar.lvl3{background:#c8832a}
+.login-pwmeter-bar.lvl4{background:#5a7d4a}
+.login-pwhint{
+  font-size:11.5px;color:var(--clay, #6b5b4a);
+  margin-top:4px;font-style:italic;
+}
+
+/* Buttons */
+.login-btn{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  padding:13px 20px;
+  border:none;border-radius:4px;
+  cursor:pointer;
+  transition:transform .12s, box-shadow .12s, background .12s;
+}
+.login-btn-primary{
+  background:var(--amber, #c8832a);
+  color:var(--cream);
+  margin-top:6px;
+}
+.login-btn-primary:hover:not(:disabled){
+  transform:translateY(-1px);
+  box-shadow:0 4px 12px rgba(200,131,42,.3);
+}
+.login-btn-primary:disabled{
+  opacity:.6;cursor:not-allowed;
+}
+.login-btn-google{
+  background:var(--cream);
+  color:var(--cert-dark, #1a1612);
+  border:1px solid var(--cert-warm-line, rgba(26,22,18,.15));
+  display:flex;align-items:center;justify-content:center;
+  gap:10px;
+}
+.login-btn-google:hover:not(:disabled){
+  background:#f7f2e6;
+  border-color:var(--cert-bronze, #8b6f47);
+}
+.login-btn-google svg{width:18px;height:18px;flex-shrink:0}
+
+/* Divider */
+.login-divider{
+  display:flex;align-items:center;gap:12px;
+  margin:18px 0;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.2em;
+  color:var(--cert-bronze, #8b6f47);
+}
+.login-divider::before,.login-divider::after{
+  content:"";flex:1;height:1px;
+  background:var(--cert-warm-line, rgba(26,22,18,.12));
+}
+
+/* Footer link */
+.login-footer{
+  margin-top:20px;text-align:center;
+  font-size:13px;color:var(--clay, #6b5b4a);
+}
+.login-footer a{
+  color:var(--amber, #c8832a);
+  text-decoration:none;font-weight:600;cursor:pointer;
+}
+.login-footer a:hover{text-decoration:underline}
+
+/* Error / success messages */
+.login-message{
+  padding:12px 16px;
+  border-radius:4px;
+  font-size:13.5px;
+  line-height:1.45;
+  margin-bottom:14px;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.login-message.error{
+  background:rgba(169,59,59,.08);
+  border-left:3px solid #a93b3b;
+  color:#7d2b2b;
+}
+.login-message.success{
+  background:rgba(90,125,74,.08);
+  border-left:3px solid #5a7d4a;
+  color:#3d5a30;
+}
+.login-message.info{
+  background:rgba(200,131,42,.06);
+  border-left:3px solid var(--amber, #c8832a);
+  color:#6b4d18;
+}
+
+.login-loading{
+  display:inline-block;
+  width:14px;height:14px;
+  border:2px solid currentColor;
+  border-top-color:transparent;
+  border-radius:50%;
+  animation:spin .8s linear infinite;
+  vertical-align:middle;
+  margin-right:8px;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* User chip no header */
+.user-chip{
+  display:flex;align-items:center;gap:10px;
+  padding:5px 12px 5px 5px;
+  background:rgba(244,239,228,.06);
+  border:1px solid rgba(244,239,228,.1);
+  border-radius:99px;
+  color:var(--cream);
+  font-size:13px;
+  cursor:pointer;
+  transition:background .15s;
+  text-decoration:none;
+}
+.user-chip:hover{background:rgba(244,239,228,.1)}
+.user-chip-avatar{
+  width:28px;height:28px;
+  border-radius:50%;
+  background:var(--amber);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-style:italic;font-weight:600;
+  font-size:14px;
+  color:var(--cream);
+  overflow:hidden;flex-shrink:0;
+}
+.user-chip-avatar img{width:100%;height:100%;object-fit:cover}
+.user-chip-name{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.05em;
+  max-width:160px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+
+/* Boot splash (enquanto carrega Firebase no início) */
+.boot-splash{
+  position:fixed;inset:0;z-index:9999;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg, #100c08 0%, #1a1612 100%);
+  color:var(--cream);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  opacity:1;transition:opacity .3s;
+}
+.boot-splash.fade{opacity:0;pointer-events:none}
+.boot-splash-spinner{
+  width:32px;height:32px;
+  border:2px solid rgba(244,239,228,.15);
+  border-top-color:var(--amber);
+  border-radius:50%;
+  animation:spin .9s linear infinite;
+  margin-bottom:16px;
+}
+
+@media (max-width:480px){
+  .login-card{max-width:none;border-radius:0;min-height:100vh}
+  .login-shell{padding:0;align-items:stretch}
+  .login-header{padding:48px 28px 24px}
+  .login-body{padding:24px 28px 32px}
+}

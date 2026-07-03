@@ -1,0 +1,110 @@
+<div class="cert-page">
+
+<!-- HERO -->
+<header class="cert-hero">
+  <div class="cert-hero-inner">
+    <div>
+      <div class="cert-kicker">Conta · Meu perfil</div>
+      <h1>
+        <span class="a">Meu</span>
+        <span class="b">perfil.</span>
+      </h1>
+      <p class="cert-subtitle">Atualize seus dados pessoais e foto de perfil. As mudanças são sincronizadas no Firebase.</p>
+    </div>
+    <div class="cert-meta">
+      <span id="perfil-email-display">—</span><br>
+      <span id="perfil-role-display">—</span><br>
+      <span id="perfil-since-display">—</span>
+    </div>
+  </div>
+</header>
+
+<main class="cert-main">
+
+  <section id="perfil-section">
+    <div class="cert-section-head">
+      <div class="cert-section-num">01</div>
+      <div>
+        <div class="cert-section-tag">Dados pessoais</div>
+        <h1 class="cert-section-title">
+          <span>Informações</span>
+          <em>do perfil</em>
+        </h1>
+      </div>
+    </div>
+
+    <p class="cert-lead">Email é fixo (vinculado à conta Firebase). Para mudar de email, contate o admin.</p>
+
+    <div id="perfil-message-slot"></div>
+
+    <form id="perfil-form" class="cert-form" style="max-width:680px">
+      <div class="cert-field-grid">
+        <div class="login-field">
+          <label for="perfil-name">Nome completo</label>
+          <input type="text" id="perfil-name" maxlength="80" required>
+        </div>
+        <div class="login-field">
+          <label for="perfil-phone">Telefone</label>
+          <input type="tel" id="perfil-phone" maxlength="25" placeholder="(11) 99999-9999">
+        </div>
+      </div>
+
+      <div class="login-field" style="margin-top:18px">
+        <label for="perfil-photo">Foto de perfil (máx 2MB)</label>
+        <div style="display:flex;gap:18px;align-items:center;margin-top:8px">
+          <div class="perfil-avatar-preview" id="perfil-avatar-preview">
+            <span id="perfil-avatar-initial">F</span>
+          </div>
+          <div>
+            <input type="file" id="perfil-photo" accept="image/*" style="display:none">
+            <button type="button" class="login-btn login-btn-google" id="perfil-photo-btn" style="display:inline-flex">
+              Escolher arquivo
+            </button>
+            <div id="perfil-photo-status" style="font-size:12px;color:var(--clay);margin-top:6px"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:24px">
+        <button type="submit" class="login-btn login-btn-primary" id="perfil-save">Salvar mudanças</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="perfil-security" style="margin-top:50px">
+    <div class="cert-section-head">
+      <div class="cert-section-num">02</div>
+      <div>
+        <div class="cert-section-tag">Segurança</div>
+        <h1 class="cert-section-title">
+          <span>Senha e</span>
+          <em>sessão</em>
+        </h1>
+      </div>
+    </div>
+
+    <p class="cert-lead">Sua senha é hasheada nos servidores do Google — nem eu nem o Firebase armazenamos ela em texto. Para trocá-la, use o link de "Esqueci minha senha" na tela de login.</p>
+
+    <div class="tip" style="max-width:680px">
+      <span class="label">Verificação de email</span>
+      <p id="email-verified-status">Carregando...</p>
+      <p style="margin-top:10px"><button type="button" class="login-btn login-btn-google" id="btn-resend-verification" style="display:none">Reenviar email de verificação</button></p>
+    </div>
+  </section>
+
+</main>
+
+</div>
+
+<style>
+.perfil-avatar-preview{
+  width:72px;height:72px;border-radius:50%;
+  background:var(--amber, #c8832a);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-style:italic;font-weight:600;
+  font-size:34px;color:var(--cream);overflow:hidden;flex-shrink:0;
+}
+.perfil-avatar-preview img{width:100%;height:100%;object-fit:cover}
+.cert-field-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:600px){.cert-field-grid{grid-template-columns:1fr}}
+</style>

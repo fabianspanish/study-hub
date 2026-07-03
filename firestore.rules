@@ -1,0 +1,50 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ============ Helper: checa se requisitante é admin ============
+    function isAdmin() {
+      return request.auth != null &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    function isSelf(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    // ============ /users/{uid} ============
+    // Cada usuário lê e escreve só o próprio documento.
+    // Admin pode ler/escrever de todos (para o painel admin).
+    match /users/{uid} {
+      allow read:   if isSelf(uid) || isAdmin();
+      allow create: if isSelf(uid);
+      allow update: if isSelf(uid) || isAdmin();
+      allow delete: if isAdmin();
+
+      // Subcoleção do diário: só o dono lê/escreve
+      match /diary/{entryId} {
+        allow read, write: if isSelf(uid);
+      }
+    }
+
+    // ============ /allowlist/{email} ============
+    // Leitura: pública (porque precisamos checar ANTES do signup,
+    //   quando ainda não há autenticação). Risco mínimo — não há
+    //   listagem (só getDoc por email exato).
+    // Escrita: apenas admin.
+    // NOTA: não use rules para listar a allowlist! Use uma Function ou
+    //   confie que apenas admin chama listAllowlist() (validado no client).
+    match /allowlist/{email} {
+      allow get:    if true;            // qualquer um pode checar se um email está
+      allow list:   if isAdmin();       // só admin lista a allowlist completa
+      allow write:  if isAdmin();
+    }
+
+    // ============ Bloqueio default ============
+    // Qualquer outra coleção é negada por padrão (defesa em profundidade).
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

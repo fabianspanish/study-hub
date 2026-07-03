@@ -1,0 +1,1161 @@
+{
+  "version": "2026-05-12",
+  "exam": "AZ-900",
+  "passing_pct": 70,
+  "questions": [
+
+    {
+      "id": "d1-001",
+      "domain": "d1",
+      "topic": "shared_responsibility",
+      "type": "single",
+      "question_pt": "No modelo de responsabilidade compartilhada do Azure, quem é responsável pelos <strong>dados</strong> armazenados em uma máquina virtual?",
+      "question_en": "In the Azure shared responsibility model, who is responsible for the <strong>data</strong> stored in a virtual machine?",
+      "options_pt": ["Apenas a Microsoft", "Compartilhada entre Microsoft e cliente", "Apenas o cliente", "Apenas o departamento jurídico"],
+      "options_en": ["Microsoft only", "Shared between Microsoft and customer", "Customer only", "The legal department only"],
+      "correct": [2],
+      "explanation_pt": "Os dados são <strong>sempre</strong> responsabilidade do cliente, em qualquer modelo (IaaS, PaaS ou SaaS). A Microsoft protege a infraestrutura, mas a classificação, criptografia e governança dos dados são do cliente.",
+      "explanation_en": "Data is <strong>always</strong> the customer's responsibility, in any model (IaaS, PaaS, or SaaS). Microsoft protects the infrastructure, but data classification, encryption and governance belong to the customer.",
+      "reference": "https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility"
+    },
+    {
+      "id": "d1-002",
+      "domain": "d1",
+      "topic": "cloud_models",
+      "type": "single",
+      "question_pt": "Uma empresa quer manter dados financeiros sensíveis em seu próprio datacenter, mas usar a nuvem pública para o site de marketing. Qual modelo de nuvem é mais apropriado?",
+      "question_en": "A company wants to keep sensitive financial data in its own datacenter, but use the public cloud for its marketing website. Which cloud model is most appropriate?",
+      "options_pt": ["Nuvem pública", "Nuvem privada", "Nuvem híbrida", "Comunitária"],
+      "options_en": ["Public cloud", "Private cloud", "Hybrid cloud", "Community cloud"],
+      "correct": [2],
+      "explanation_pt": "<strong>Nuvem híbrida</strong> combina recursos on-premises (ou privados) com recursos da nuvem pública, permitindo escolher onde cada carga roda. Dados sensíveis ficam local, cargas escaláveis vão para a nuvem.",
+      "explanation_en": "<strong>Hybrid cloud</strong> combines on-premises (or private) resources with public cloud resources, letting you choose where each workload runs. Sensitive data stays local, scalable workloads go to the cloud.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
+    },
+    {
+      "id": "d1-003",
+      "domain": "d1",
+      "topic": "opex_capex",
+      "type": "single",
+      "question_pt": "Qual afirmação descreve melhor o modelo OpEx (despesa operacional) da nuvem?",
+      "question_en": "Which statement best describes the cloud's OpEx (operating expense) model?",
+      "options_pt": [
+        "Compra antecipada de hardware com amortização de 5 anos",
+        "Pagamento conforme o uso, sem investimento inicial significativo",
+        "Aluguel mensal fixo independente do consumo",
+        "Investimento de capital com retorno garantido"
+      ],
+      "options_en": [
+        "Upfront hardware purchase with 5-year amortization",
+        "Pay as you go, with no significant upfront investment",
+        "Fixed monthly rental regardless of consumption",
+        "Capital investment with guaranteed return"
+      ],
+      "correct": [1],
+      "explanation_pt": "OpEx significa pagar pelos serviços conforme você usa, sem capital inicial. CapEx é o oposto: compra de hardware como investimento de capital, on-premises tradicional.",
+      "explanation_en": "OpEx means paying for services as you consume them, with no upfront capital. CapEx is the opposite: hardware purchase as capital investment, traditional on-premises.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
+    },
+    {
+      "id": "d1-004",
+      "domain": "d1",
+      "topic": "serverless",
+      "type": "single",
+      "question_pt": "Qual é a principal característica de cobrança de serviços de computação sem servidor (serverless) como Azure Functions?",
+      "question_en": "What is the main billing characteristic of serverless compute services like Azure Functions?",
+      "options_pt": [
+        "Cobrança mensal fixa por função implantada",
+        "Cobrança apenas quando o código é executado",
+        "Cobrança pelo tamanho do código fonte",
+        "Cobrança anual antecipada"
+      ],
+      "options_en": [
+        "Fixed monthly charge per deployed function",
+        "Charges only when the code executes",
+        "Charges based on source code size",
+        "Annual prepaid charge"
+      ],
+      "correct": [1],
+      "explanation_pt": "Serverless cobra <strong>apenas pelo tempo de execução</strong> (geralmente medido em GB-segundo) e número de execuções. Quando o código não roda, não há custo. Isso é o que torna serverless ideal para cargas event-driven com picos intermitentes.",
+      "explanation_en": "Serverless charges <strong>only for execution time</strong> (usually measured in GB-seconds) and number of executions. When the code isn't running, there's no cost. This is what makes serverless ideal for event-driven workloads with intermittent peaks.",
+      "reference": "https://learn.microsoft.com/azure/azure-functions/functions-consumption-costs"
+    },
+    {
+      "id": "d1-005",
+      "domain": "d1",
+      "topic": "service_types",
+      "type": "single",
+      "question_pt": "Uma empresa quer migrar 50 servidores Windows do datacenter local para o Azure, mantendo o controle total do sistema operacional. Qual tipo de serviço de nuvem é o mais adequado?",
+      "question_en": "A company wants to migrate 50 Windows servers from its on-premises datacenter to Azure while maintaining full control of the operating system. Which cloud service type is most appropriate?",
+      "options_pt": ["SaaS", "PaaS", "IaaS", "FaaS"],
+      "options_en": ["SaaS", "PaaS", "IaaS", "FaaS"],
+      "correct": [2],
+      "explanation_pt": "IaaS (Infraestrutura como Serviço) — usando Máquinas Virtuais do Azure. É o cenário clássico de <strong>lift-and-shift</strong>: você mantém o OS, aplicações e responsabilidades, mudando só o local de hospedagem. PaaS exigiria refatoração.",
+      "explanation_en": "IaaS (Infrastructure as a Service) — using Azure Virtual Machines. This is the classic <strong>lift-and-shift</strong> scenario: you keep the OS, apps, and responsibilities, only changing the hosting location. PaaS would require refactoring.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-service-types/"
+    },
+    {
+      "id": "d1-006",
+      "domain": "d1",
+      "topic": "benefits",
+      "type": "single",
+      "question_pt": "Sua aplicação web sofre picos de tráfego durante Black Friday e fica quase ociosa em outras épocas. Qual benefício da nuvem aborda <strong>melhor</strong> esse cenário?",
+      "question_en": "Your web application gets traffic spikes during Black Friday and is nearly idle other times. Which cloud benefit <strong>best</strong> addresses this scenario?",
+      "options_pt": ["Alta disponibilidade", "Elasticidade", "Confiabilidade", "Governança"],
+      "options_en": ["High availability", "Elasticity", "Reliability", "Governance"],
+      "correct": [1],
+      "explanation_pt": "<strong>Elasticidade</strong> é a capacidade de escalar recursos automaticamente para cima e para baixo conforme a demanda. Não confunda com escalabilidade (capacidade de crescer) — elasticidade inclui também encolher quando a demanda cai.",
+      "explanation_en": "<strong>Elasticity</strong> is the ability to automatically scale resources up and down with demand. Don't confuse with scalability (ability to grow) — elasticity also includes shrinking when demand drops.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/"
+    },
+    {
+      "id": "d1-007",
+      "domain": "d1",
+      "topic": "benefits",
+      "type": "multi",
+      "question_pt": "Quais das seguintes são consideradas características da computação em nuvem? (Escolha duas)",
+      "question_en": "Which of the following are considered characteristics of cloud computing? (Choose two)",
+      "options_pt": [
+        "Recursos pagos antecipadamente em contratos de 5 anos",
+        "Acesso via internet sob demanda",
+        "Capacidade de medir o consumo e cobrar por uso",
+        "Localização física fixa dos servidores definida pelo cliente"
+      ],
+      "options_en": [
+        "Resources paid upfront in 5-year contracts",
+        "On-demand internet access",
+        "Ability to measure consumption and charge for usage",
+        "Fixed physical server location defined by the customer"
+      ],
+      "correct": [1, 2],
+      "explanation_pt": "As características essenciais da nuvem incluem acesso sob demanda pela rede e cobrança baseada em consumo medido. Pagamento antecipado de 5 anos é CapEx tradicional. Cliente não escolhe localização física exata — escolhe a região.",
+      "explanation_en": "Essential cloud characteristics include on-demand network access and consumption-measured billing. 5-year upfront payment is traditional CapEx. Customer doesn't choose exact physical location — only the region.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
+    },
+    {
+      "id": "d1-008",
+      "domain": "d1",
+      "topic": "pricing_models",
+      "type": "single",
+      "question_pt": "Uma equipe de pesquisa precisa rodar análises de Big Data por algumas horas por dia, podendo tolerar interrupções. Qual modelo de preço de VM oferece o maior desconto?",
+      "question_en": "A research team needs to run Big Data analytics for a few hours per day and can tolerate interruptions. Which VM pricing model offers the highest discount?",
+      "options_pt": ["Pay-as-you-go", "Reservada por 3 anos", "Spot", "Plano de economia"],
+      "options_en": ["Pay-as-you-go", "3-year Reserved", "Spot", "Savings plan"],
+      "correct": [2],
+      "explanation_pt": "<strong>Spot VMs</strong> oferecem até 90% de desconto, pois usam capacidade ociosa do Azure que pode ser recuperada a qualquer momento. Perfeito para workloads tolerantes a interrupção (batch jobs, análises, dev/test).",
+      "explanation_en": "<strong>Spot VMs</strong> offer up to 90% discount because they use Azure's idle capacity that can be reclaimed at any time. Perfect for interruption-tolerant workloads (batch jobs, analytics, dev/test).",
+      "reference": "https://learn.microsoft.com/azure/virtual-machines/spot-vms"
+    },
+    {
+      "id": "d1-009",
+      "domain": "d1",
+      "topic": "service_types",
+      "type": "single",
+      "question_pt": "Microsoft 365 (Outlook, Word, Excel online) é um exemplo de qual tipo de serviço de nuvem?",
+      "question_en": "Microsoft 365 (Outlook, Word, Excel online) is an example of which cloud service type?",
+      "options_pt": ["IaaS", "PaaS", "SaaS", "DaaS"],
+      "options_en": ["IaaS", "PaaS", "SaaS", "DaaS"],
+      "correct": [2],
+      "explanation_pt": "SaaS (Software como Serviço): o usuário final só usa o software pela internet. A Microsoft gerencia infraestrutura, plataforma, software e atualizações. Cliente cuida apenas dos seus dados e identidades.",
+      "explanation_en": "SaaS (Software as a Service): the end user just uses the software over the internet. Microsoft manages infrastructure, platform, software, and updates. Customer only handles their data and identities.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-service-types/"
+    },
+    {
+      "id": "d1-010",
+      "domain": "d1",
+      "topic": "scaling",
+      "type": "single",
+      "question_pt": "Aumentar a quantidade de CPU e RAM de uma máquina virtual existente é um exemplo de:",
+      "question_en": "Increasing the CPU and RAM of an existing virtual machine is an example of:",
+      "options_pt": ["Escala horizontal (scale out)", "Escala vertical (scale up)", "Escala automática", "Replicação geográfica"],
+      "options_en": ["Horizontal scaling (scale out)", "Vertical scaling (scale up)", "Auto-scaling", "Geo-replication"],
+      "correct": [1],
+      "explanation_pt": "Escala <strong>vertical</strong> (scale up/down) = aumentar/diminuir recursos da mesma instância. Escala <strong>horizontal</strong> (scale out/in) = adicionar/remover mais instâncias.",
+      "explanation_en": "<strong>Vertical</strong> scaling (scale up/down) = increase/decrease resources on the same instance. <strong>Horizontal</strong> scaling (scale out/in) = add/remove more instances.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/"
+    },
+    {
+      "id": "d1-011",
+      "domain": "d1",
+      "topic": "shared_responsibility",
+      "type": "single",
+      "question_pt": "Em qual modelo de serviço o cliente é responsável por instalar patches no sistema operacional?",
+      "question_en": "In which service model is the customer responsible for installing OS patches?",
+      "options_pt": ["IaaS", "PaaS", "SaaS", "Em todos os modelos"],
+      "options_en": ["IaaS", "PaaS", "SaaS", "In all models"],
+      "correct": [0],
+      "explanation_pt": "Em <strong>IaaS</strong>, o cliente gerencia o SO, incluindo patches. Em PaaS, o provedor cuida do SO. Em SaaS, o provedor cuida de tudo.",
+      "explanation_en": "In <strong>IaaS</strong>, the customer manages the OS, including patches. In PaaS, the provider handles the OS. In SaaS, the provider handles everything.",
+      "reference": "https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility"
+    },
+    {
+      "id": "d1-012",
+      "domain": "d1",
+      "topic": "benefits",
+      "type": "single",
+      "question_pt": "Um SLA garantindo 99,99% de disponibilidade representa, aproximadamente, quanto tempo de inatividade permitido por ano?",
+      "question_en": "An SLA guaranteeing 99.99% availability represents approximately how much allowed downtime per year?",
+      "options_pt": ["~8 horas", "~52 minutos", "~9 horas", "~5 minutos"],
+      "options_en": ["~8 hours", "~52 minutes", "~9 hours", "~5 minutes"],
+      "correct": [1],
+      "explanation_pt": "99,99% de 1 ano (8.760 horas) = ~52 minutos de downtime tolerado. 99,9% = ~8,76 horas. 99,999% = ~5 minutos. Quanto mais '9' no SLA, maior o custo e a complexidade da arquitetura.",
+      "explanation_en": "99.99% of 1 year (8,760 hours) = ~52 minutes of tolerated downtime. 99.9% = ~8.76 hours. 99.999% = ~5 minutes. More 9s in SLA = higher cost and architectural complexity.",
+      "reference": "https://learn.microsoft.com/azure/reliability/availability-zones-overview"
+    },
+    {
+      "id": "d1-013",
+      "domain": "d1",
+      "topic": "cloud_models",
+      "type": "single",
+      "question_pt": "Quais são as características da nuvem pública? (Marque a melhor descrição)",
+      "question_en": "What are the characteristics of public cloud? (Select the best description)",
+      "options_pt": [
+        "Infraestrutura dedicada a uma única organização",
+        "Recursos compartilhados entre múltiplos clientes, acessíveis pela internet",
+        "Hardware comprado e operado pela própria empresa",
+        "Combinação de nuvem privada e pública com conectividade"
+      ],
+      "options_en": [
+        "Infrastructure dedicated to a single organization",
+        "Resources shared among multiple customers, accessible over the internet",
+        "Hardware purchased and operated by the company itself",
+        "Combination of private and public cloud with connectivity"
+      ],
+      "correct": [1],
+      "explanation_pt": "Nuvem pública usa <strong>multi-tenancy</strong>: vários clientes compartilham a mesma infraestrutura subjacente (com isolamento lógico). Acessível pela internet. Privada = dedicada. Híbrida = combinação.",
+      "explanation_en": "Public cloud uses <strong>multi-tenancy</strong>: multiple customers share the same underlying infrastructure (with logical isolation). Accessible over the internet. Private = dedicated. Hybrid = combination.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
+    },
+    {
+      "id": "d1-014",
+      "domain": "d1",
+      "topic": "service_types",
+      "type": "single",
+      "question_pt": "Uma desenvolvedora quer publicar uma API web em Python sem gerenciar servidores nem o sistema operacional, mas ainda controlando o código. Qual tipo de serviço atende melhor?",
+      "question_en": "A developer wants to publish a Python web API without managing servers or operating system, but still controlling the code. Which service type fits best?",
+      "options_pt": ["IaaS — Máquina Virtual", "PaaS — App Service", "SaaS — Microsoft 365", "On-premises"],
+      "options_en": ["IaaS — Virtual Machine", "PaaS — App Service", "SaaS — Microsoft 365", "On-premises"],
+      "correct": [1],
+      "explanation_pt": "<strong>PaaS</strong> (Azure App Service) é ideal: você faz upload do código, o Azure cuida do SO, runtime, patches e escala. Você foca apenas no app. IaaS daria mais controle (e responsabilidade) sobre o SO.",
+      "explanation_en": "<strong>PaaS</strong> (Azure App Service) is ideal: you upload the code, Azure handles the OS, runtime, patches and scaling. You focus only on the app. IaaS would give more control (and responsibility) over the OS.",
+      "reference": "https://learn.microsoft.com/azure/app-service/overview"
+    },
+    {
+      "id": "d1-015",
+      "domain": "d1",
+      "topic": "benefits",
+      "type": "multi",
+      "question_pt": "Quais benefícios da nuvem reduzem o impacto de falhas de hardware no seu cultivo de produção? (Escolha duas)",
+      "question_en": "Which cloud benefits reduce the impact of hardware failures on your production workload? (Choose two)",
+      "options_pt": [
+        "Confiabilidade",
+        "Modelo OpEx",
+        "Alta disponibilidade",
+        "Marcas (tags)"
+      ],
+      "options_en": [
+        "Reliability",
+        "OpEx model",
+        "High availability",
+        "Tags"
+      ],
+      "correct": [0, 2],
+      "explanation_pt": "Confiabilidade (capacidade de recuperar de falhas) e alta disponibilidade (manter o serviço acessível com redundância) são os dois benefícios diretamente ligados a tolerância a falhas. OpEx é modelo de cobrança. Tags são para organização.",
+      "explanation_en": "Reliability (ability to recover from failures) and high availability (keep the service accessible through redundancy) are the two benefits directly tied to fault tolerance. OpEx is a billing model. Tags are for organization.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/"
+    },
+    {
+      "id": "d1-016",
+      "domain": "d1",
+      "topic": "consumption",
+      "type": "tf",
+      "question_pt": "O modelo baseado em consumo da nuvem significa que você paga uma taxa mensal fixa, independentemente do uso real.",
+      "question_en": "The cloud's consumption-based model means you pay a fixed monthly fee regardless of actual usage.",
+      "options_pt": ["Verdadeiro", "Falso"],
+      "options_en": ["True", "False"],
+      "correct": [1],
+      "explanation_pt": "Falso. Consumption-based = você paga <strong>pelo que usa</strong>, não taxa fixa. VMs cobradas por segundo, storage por GB armazenado, requisições por mil chamadas, etc.",
+      "explanation_en": "False. Consumption-based = you pay <strong>for what you use</strong>, not a fixed fee. VMs charged per second, storage per GB stored, requests per thousand calls, etc.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
+    },
+    {
+      "id": "d1-017",
+      "domain": "d1",
+      "topic": "service_types",
+      "type": "single",
+      "question_pt": "Qual modelo de serviço transfere ao cliente <strong>menor</strong> responsabilidade pela infraestrutura subjacente?",
+      "question_en": "Which service model transfers the <strong>least</strong> responsibility for underlying infrastructure to the customer?",
+      "options_pt": ["IaaS", "PaaS", "SaaS", "Bare metal"],
+      "options_en": ["IaaS", "PaaS", "SaaS", "Bare metal"],
+      "correct": [2],
+      "explanation_pt": "SaaS — o provedor cuida de quase tudo (hardware, virtualização, SO, runtime, aplicação). O cliente só consome o software. IaaS é o oposto: máximo de responsabilidade no cliente. Bare metal nem é nuvem.",
+      "explanation_en": "SaaS — the provider handles almost everything (hardware, virtualization, OS, runtime, application). The customer just consumes the software. IaaS is the opposite: maximum customer responsibility. Bare metal isn't even cloud.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-service-types/"
+    },
+
+    {
+      "id": "d2-001",
+      "domain": "d2",
+      "topic": "regions",
+      "type": "single",
+      "question_pt": "Qual afirmação sobre <strong>pares de regiões</strong> do Azure é correta?",
+      "question_en": "Which statement about Azure <strong>region pairs</strong> is correct?",
+      "options_pt": [
+        "Estão sempre na mesma cidade para baixa latência",
+        "Estão a pelo menos 500 km de distância e recebem atualizações em sequência",
+        "São datacenters dentro de uma zona de disponibilidade",
+        "Cada cliente pode criar seu próprio par de regiões"
+      ],
+      "options_en": [
+        "Are always in the same city for low latency",
+        "Are at least 500 km apart and receive updates sequentially",
+        "Are datacenters within an availability zone",
+        "Each customer can create their own region pairs"
+      ],
+      "correct": [1],
+      "explanation_pt": "Pares de regiões ficam a <strong>pelo menos 500 km</strong> de distância (resiliência geográfica) e o Azure atualiza um por vez (nunca os dois simultaneamente). Algumas opções de redundância (GRS, GZRS) usam o par automaticamente.",
+      "explanation_en": "Region pairs are <strong>at least 500 km</strong> apart (geographic resilience) and Azure updates one at a time (never both simultaneously). Some redundancy options (GRS, GZRS) use the pair automatically.",
+      "reference": "https://learn.microsoft.com/azure/reliability/cross-region-replication-azure"
+    },
+    {
+      "id": "d2-002",
+      "domain": "d2",
+      "topic": "availability_zones",
+      "type": "single",
+      "question_pt": "Quantas zonas de disponibilidade normalmente existem em uma região do Azure que suporta esse recurso?",
+      "question_en": "How many availability zones are typically in an Azure region that supports them?",
+      "options_pt": ["1", "2", "3 ou mais", "10"],
+      "options_en": ["1", "2", "3 or more", "10"],
+      "correct": [2],
+      "explanation_pt": "Regiões com suporte a AZ têm <strong>pelo menos 3</strong> zonas. Cada zona é um datacenter (ou cluster) fisicamente separado com energia, refrigeração e rede independentes — para sobreviver à falha de uma zona inteira.",
+      "explanation_en": "Regions with AZ support have <strong>at least 3</strong> zones. Each zone is a physically separated datacenter (or cluster) with independent power, cooling, and networking — to survive an entire zone failure.",
+      "reference": "https://learn.microsoft.com/azure/reliability/availability-zones-overview"
+    },
+    {
+      "id": "d2-003",
+      "domain": "d2",
+      "topic": "hierarchy",
+      "type": "single",
+      "question_pt": "Qual é a ordem correta da hierarquia de recursos do Azure, do mais abrangente ao mais específico?",
+      "question_en": "What is the correct order of the Azure resource hierarchy, from broadest to most specific?",
+      "options_pt": [
+        "Grupo de recursos → Assinatura → Grupo de gerenciamento → Recurso",
+        "Grupo de gerenciamento → Assinatura → Grupo de recursos → Recurso",
+        "Assinatura → Grupo de gerenciamento → Recurso → Grupo de recursos",
+        "Recurso → Grupo de recursos → Assinatura → Grupo de gerenciamento"
+      ],
+      "options_en": [
+        "Resource group → Subscription → Management group → Resource",
+        "Management group → Subscription → Resource group → Resource",
+        "Subscription → Management group → Resource → Resource group",
+        "Resource → Resource group → Subscription → Management group"
+      ],
+      "correct": [1],
+      "explanation_pt": "<strong>Management Group → Subscription → Resource Group → Resource</strong>. Políticas e RBAC aplicados no topo são herdados para baixo. Recursos só podem estar em um Resource Group.",
+      "explanation_en": "<strong>Management Group → Subscription → Resource Group → Resource</strong>. Policies and RBAC applied at the top are inherited downwards. Resources can only be in one Resource Group.",
+      "reference": "https://learn.microsoft.com/azure/governance/management-groups/overview"
+    },
+    {
+      "id": "d2-004",
+      "domain": "d2",
+      "topic": "compute",
+      "type": "single",
+      "question_pt": "Você precisa rodar centenas de instâncias idênticas de uma aplicação, com escala automática baseada em carga e balanceamento integrado. Qual serviço Azure é mais adequado?",
+      "question_en": "You need to run hundreds of identical instances of an application with auto-scaling based on load and integrated load balancing. Which Azure service is most appropriate?",
+      "options_pt": ["Máquinas Virtuais individuais", "VM Scale Sets", "Conjuntos de disponibilidade", "Azure Virtual Desktop"],
+      "options_en": ["Individual Virtual Machines", "VM Scale Sets", "Availability Sets", "Azure Virtual Desktop"],
+      "correct": [1],
+      "explanation_pt": "VM Scale Sets (VMSS) gerenciam um conjunto de VMs idênticas, escalando juntas. Suportam autoscale e balanceamento. Availability Sets distribuem VMs para SLA, mas não escalam automaticamente.",
+      "explanation_en": "VM Scale Sets (VMSS) manage a set of identical VMs that scale together. Support autoscale and load balancing. Availability Sets distribute VMs for SLA but don't auto-scale.",
+      "reference": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/overview"
+    },
+    {
+      "id": "d2-005",
+      "domain": "d2",
+      "topic": "networking",
+      "type": "single",
+      "question_pt": "Sua empresa precisa de uma conexão privada de alta velocidade entre o datacenter on-premises e o Azure, <strong>sem trafegar pela internet pública</strong>. Qual serviço usar?",
+      "question_en": "Your company needs a high-speed private connection between on-premises datacenter and Azure, <strong>without traversing the public internet</strong>. Which service should you use?",
+      "options_pt": ["VPN Gateway Site-to-Site", "ExpressRoute", "VNet Peering", "Public IP"],
+      "options_en": ["Site-to-Site VPN Gateway", "ExpressRoute", "VNet Peering", "Public IP"],
+      "correct": [1],
+      "explanation_pt": "<strong>ExpressRoute</strong> é uma conexão privada dedicada através de um provedor de conectividade — não passa pela internet pública. VPN Gateway trafega pela internet (mas criptografado). VNet Peering conecta VNets dentro do Azure.",
+      "explanation_en": "<strong>ExpressRoute</strong> is a dedicated private connection through a connectivity provider — doesn't traverse the public internet. VPN Gateway uses the internet (encrypted). VNet Peering connects VNets inside Azure.",
+      "reference": "https://learn.microsoft.com/azure/expressroute/expressroute-introduction"
+    },
+    {
+      "id": "d2-006",
+      "domain": "d2",
+      "topic": "storage_tiers",
+      "type": "single",
+      "question_pt": "Você precisa armazenar backups antigos que serão raramente acessados, esperando o menor custo de storage possível, mesmo que a recuperação demore horas. Qual camada de blob escolher?",
+      "question_en": "You need to store old backups that will be rarely accessed, wanting the lowest possible storage cost, even if retrieval takes hours. Which blob tier to choose?",
+      "options_pt": ["Hot", "Cool", "Cold", "Archive"],
+      "options_en": ["Hot", "Cool", "Cold", "Archive"],
+      "correct": [3],
+      "explanation_pt": "<strong>Archive</strong> tem o menor custo de armazenamento, mas é offline — você precisa fazer 'rehydration' (re-hidratação) que leva horas até o dado ficar acessível. Hot/Cool/Cold são online (acesso imediato).",
+      "explanation_en": "<strong>Archive</strong> has the lowest storage cost, but is offline — you must do 'rehydration' which takes hours before data becomes accessible. Hot/Cool/Cold are online (immediate access).",
+      "reference": "https://learn.microsoft.com/azure/storage/blobs/access-tiers-overview"
+    },
+    {
+      "id": "d2-007",
+      "domain": "d2",
+      "topic": "redundancy",
+      "type": "single",
+      "question_pt": "Qual opção de redundância de Storage replica os dados em <strong>3 zonas de disponibilidade dentro da mesma região</strong>?",
+      "question_en": "Which Storage redundancy option replicates data across <strong>3 availability zones within the same region</strong>?",
+      "options_pt": ["LRS", "ZRS", "GRS", "RA-GRS"],
+      "options_en": ["LRS", "ZRS", "GRS", "RA-GRS"],
+      "correct": [1],
+      "explanation_pt": "<strong>ZRS</strong> (Zone-Redundant Storage) mantém 3 cópias em 3 zonas de disponibilidade diferentes na mesma região. LRS = 3 cópias num único datacenter. GRS = LRS + replicação assíncrona para a região par.",
+      "explanation_en": "<strong>ZRS</strong> (Zone-Redundant Storage) keeps 3 copies in 3 different availability zones in the same region. LRS = 3 copies in a single datacenter. GRS = LRS + async replication to paired region.",
+      "reference": "https://learn.microsoft.com/azure/storage/common/storage-redundancy"
+    },
+    {
+      "id": "d2-008",
+      "domain": "d2",
+      "topic": "identity",
+      "type": "single",
+      "question_pt": "Microsoft Entra ID (antigo Azure AD) é primariamente um serviço de:",
+      "question_en": "Microsoft Entra ID (formerly Azure AD) is primarily a service for:",
+      "options_pt": [
+        "Armazenamento de arquivos",
+        "Identidade e gerenciamento de acesso na nuvem",
+        "Active Directory local com Group Policy completo",
+        "Hospedagem de máquinas virtuais"
+      ],
+      "options_en": [
+        "File storage",
+        "Cloud identity and access management",
+        "Full on-premises Active Directory with Group Policy",
+        "Virtual machine hosting"
+      ],
+      "correct": [1],
+      "explanation_pt": "Entra ID é o diretório de identidade na nuvem. Não é AD tradicional — não tem Kerberos nem Group Policy. Para isso usa-se <strong>Entra Domain Services</strong>, que oferece AD gerenciado.",
+      "explanation_en": "Entra ID is the cloud identity directory. It's not traditional AD — no Kerberos, no Group Policy. For that, use <strong>Entra Domain Services</strong>, which offers managed AD.",
+      "reference": "https://learn.microsoft.com/entra/fundamentals/whatis"
+    },
+    {
+      "id": "d2-009",
+      "domain": "d2",
+      "topic": "rbac",
+      "type": "single",
+      "question_pt": "RBAC (controle de acesso baseado em função) opera por meio de:",
+      "question_en": "RBAC (role-based access control) operates through:",
+      "options_pt": [
+        "Permissões individuais atribuídas a cada usuário",
+        "Funções (roles) atribuídas a identidades em escopos específicos",
+        "Senhas compartilhadas entre departamentos",
+        "Listas de IPs autorizados"
+      ],
+      "options_en": [
+        "Individual permissions assigned to each user",
+        "Roles assigned to identities at specific scopes",
+        "Passwords shared across departments",
+        "Lists of authorized IPs"
+      ],
+      "correct": [1],
+      "explanation_pt": "RBAC atribui <strong>roles</strong> (Owner, Contributor, Reader, etc) a usuários, grupos ou service principals, em <strong>escopos</strong> hierárquicos (subscription, RG, recurso). Princípio do menor privilégio.",
+      "explanation_en": "RBAC assigns <strong>roles</strong> (Owner, Contributor, Reader, etc.) to users, groups, or service principals at hierarchical <strong>scopes</strong> (subscription, RG, resource). Principle of least privilege.",
+      "reference": "https://learn.microsoft.com/azure/role-based-access-control/overview"
+    },
+    {
+      "id": "d2-010",
+      "domain": "d2",
+      "topic": "zero_trust",
+      "type": "single",
+      "question_pt": "Qual é o princípio fundamental do modelo Zero Trust?",
+      "question_en": "What is the fundamental principle of the Zero Trust model?",
+      "options_pt": [
+        "Confiar em qualquer dispositivo dentro do firewall corporativo",
+        "Nunca confie, sempre verifique",
+        "Confiar apenas no tráfego HTTPS",
+        "Confiar em conexões dos parceiros aprovados"
+      ],
+      "options_en": [
+        "Trust any device inside the corporate firewall",
+        "Never trust, always verify",
+        "Trust only HTTPS traffic",
+        "Trust connections from approved partners"
+      ],
+      "correct": [1],
+      "explanation_pt": "Zero Trust = <strong>nunca confie, sempre verifique</strong>. Pressupõe que a rede pode estar comprometida. Três pilares: verifique explicitamente, use acesso de menor privilégio, presuma a violação.",
+      "explanation_en": "Zero Trust = <strong>never trust, always verify</strong>. Assumes the network may be compromised. Three pillars: verify explicitly, use least-privilege access, assume breach.",
+      "reference": "https://learn.microsoft.com/security/zero-trust/zero-trust-overview"
+    },
+    {
+      "id": "d2-011",
+      "domain": "d2",
+      "topic": "defense_in_depth",
+      "type": "multi",
+      "question_pt": "Quais das seguintes são camadas do modelo de defesa em profundidade? (Escolha duas)",
+      "question_en": "Which of the following are layers of the defense-in-depth model? (Choose two)",
+      "options_pt": [
+        "Segurança física",
+        "Identidade e acesso",
+        "Marketing e vendas",
+        "Faturamento"
+      ],
+      "options_en": [
+        "Physical security",
+        "Identity and access",
+        "Marketing and sales",
+        "Billing"
+      ],
+      "correct": [0, 1],
+      "explanation_pt": "Defesa em profundidade tem múltiplas camadas: física → identidade → perímetro → rede → computação → aplicação → dados. Cada camada protege se a anterior falhar.",
+      "explanation_en": "Defense in depth has multiple layers: physical → identity → perimeter → network → compute → application → data. Each layer protects if the previous one fails.",
+      "reference": "https://learn.microsoft.com/training/modules/describe-azure-identity-access-security/"
+    },
+    {
+      "id": "d2-012",
+      "domain": "d2",
+      "topic": "auth",
+      "type": "single",
+      "question_pt": "MFA (autenticação multifator) significa exigir:",
+      "question_en": "MFA (multi-factor authentication) means requiring:",
+      "options_pt": [
+        "Apenas uma senha forte",
+        "Pelo menos 2 fatores de categorias diferentes (algo que sabe, tem ou é)",
+        "Múltiplas senhas para o mesmo sistema",
+        "Senha + token via SMS sempre"
+      ],
+      "options_en": [
+        "Only a strong password",
+        "At least 2 factors from different categories (know, have, are)",
+        "Multiple passwords for the same system",
+        "Password + SMS token always"
+      ],
+      "correct": [1],
+      "explanation_pt": "MFA exige fatores de <strong>categorias diferentes</strong>: algo que você <em>sabe</em> (senha, PIN), algo que <em>tem</em> (token, celular), algo que <em>é</em> (biometria). Duas senhas seriam o mesmo fator, não conta como MFA.",
+      "explanation_en": "MFA requires factors from <strong>different categories</strong>: something you <em>know</em> (password, PIN), something you <em>have</em> (token, phone), something you <em>are</em> (biometrics). Two passwords would be the same factor — doesn't count as MFA.",
+      "reference": "https://learn.microsoft.com/entra/identity/authentication/concept-mfa-howitworks"
+    },
+    {
+      "id": "d2-013",
+      "domain": "d2",
+      "topic": "conditional_access",
+      "type": "single",
+      "question_pt": "Qual recurso permite exigir MFA <strong>apenas quando</strong> o usuário acessa de fora do país?",
+      "question_en": "Which feature lets you require MFA <strong>only when</strong> a user accesses from outside the country?",
+      "options_pt": ["SSO", "Acesso condicional", "RBAC", "Microsoft Purview"],
+      "options_en": ["SSO", "Conditional Access", "RBAC", "Microsoft Purview"],
+      "correct": [1],
+      "explanation_pt": "<strong>Acesso Condicional</strong> aplica políticas baseadas em sinais (localização, dispositivo, risco, app). Permite regras como 'se IP de fora do país e tentando acessar Outlook → exija MFA'.",
+      "explanation_en": "<strong>Conditional Access</strong> applies policies based on signals (location, device, risk, app). Allows rules like 'if IP from outside the country and trying to access Outlook → require MFA'.",
+      "reference": "https://learn.microsoft.com/entra/identity/conditional-access/overview"
+    },
+    {
+      "id": "d2-014",
+      "domain": "d2",
+      "topic": "storage_services",
+      "type": "single",
+      "question_pt": "Você quer substituir um file server SMB tradicional na empresa por um serviço gerenciado do Azure que pode ser montado em Windows, Linux e Mac. Qual serviço usar?",
+      "question_en": "You want to replace a traditional SMB file server with a managed Azure service that can be mounted on Windows, Linux, and Mac. Which service to use?",
+      "options_pt": ["Blob Storage", "Azure Files", "Queue Storage", "Table Storage"],
+      "options_en": ["Blob Storage", "Azure Files", "Queue Storage", "Table Storage"],
+      "correct": [1],
+      "explanation_pt": "<strong>Azure Files</strong> oferece compartilhamentos SMB e NFS gerenciados — exatamente um substituto para file servers. Blob é para objetos não estruturados (imagens, vídeos, backups).",
+      "explanation_en": "<strong>Azure Files</strong> offers managed SMB and NFS shares — exactly a file server replacement. Blob is for unstructured objects (images, videos, backups).",
+      "reference": "https://learn.microsoft.com/azure/storage/files/storage-files-introduction"
+    },
+    {
+      "id": "d2-015",
+      "domain": "d2",
+      "topic": "migration",
+      "type": "single",
+      "question_pt": "Sua empresa precisa transferir 200 TB de dados para o Azure, mas a conexão de internet local é lenta. Qual serviço resolve isso?",
+      "question_en": "Your company needs to transfer 200 TB of data to Azure, but the local internet connection is slow. Which service solves this?",
+      "options_pt": ["AzCopy", "Azure File Sync", "Azure Data Box", "Storage Explorer"],
+      "options_en": ["AzCopy", "Azure File Sync", "Azure Data Box", "Storage Explorer"],
+      "correct": [2],
+      "explanation_pt": "<strong>Azure Data Box</strong> é um aparelho físico que a Microsoft envia para você. Você copia os dados localmente, envia o aparelho de volta, e a Microsoft carrega os dados na sua conta. Família: Disk (até 7TB), Box (80TB), Heavy (800TB).",
+      "explanation_en": "<strong>Azure Data Box</strong> is a physical appliance Microsoft ships to you. You copy data locally, ship the appliance back, and Microsoft uploads the data to your account. Family: Disk (up to 7TB), Box (80TB), Heavy (800TB).",
+      "reference": "https://learn.microsoft.com/azure/databox/data-box-overview"
+    },
+    {
+      "id": "d2-016",
+      "domain": "d2",
+      "topic": "endpoints",
+      "type": "single",
+      "question_pt": "Você quer que uma Azure SQL Database receba conexões <strong>apenas</strong> de uma VNet específica, sem expor à internet. Qual recurso usar?",
+      "question_en": "You want an Azure SQL Database to receive connections <strong>only</strong> from a specific VNet, without exposing to the internet. Which feature to use?",
+      "options_pt": ["Endpoint público", "Endpoint privado (Private Endpoint)", "Public IP", "ExpressRoute"],
+      "options_en": ["Public endpoint", "Private Endpoint", "Public IP", "ExpressRoute"],
+      "correct": [1],
+      "explanation_pt": "<strong>Private Endpoint</strong> dá ao serviço um IP da sua VNet. O tráfego permanece dentro do backbone do Azure, sem passar pela internet pública. Aumenta segurança e reduz superfície de ataque.",
+      "explanation_en": "<strong>Private Endpoint</strong> gives the service an IP from your VNet. Traffic stays inside Azure's backbone, without crossing the public internet. Increases security and reduces attack surface.",
+      "reference": "https://learn.microsoft.com/azure/private-link/private-endpoint-overview"
+    },
+    {
+      "id": "d2-017",
+      "domain": "d2",
+      "topic": "compute",
+      "type": "single",
+      "question_pt": "Sua aplicação processa um evento (mensagem em fila) e roda por 30 segundos, com tráfego imprevisível. Qual opção de computação minimiza o custo?",
+      "question_en": "Your application processes an event (queue message) and runs for 30 seconds, with unpredictable traffic. Which compute option minimizes cost?",
+      "options_pt": ["VM Sempre Ligada", "App Service Plan dedicado", "Azure Functions (serverless)", "AKS cluster dedicado"],
+      "options_en": ["Always-on VM", "Dedicated App Service Plan", "Azure Functions (serverless)", "Dedicated AKS cluster"],
+      "correct": [2],
+      "explanation_pt": "<strong>Azure Functions</strong> em plano de consumo é serverless — você só paga pela execução. Workloads event-driven com tráfego imprevisível são o caso de uso ideal. VM e App Service Plan dedicado pagam mesmo ociosos.",
+      "explanation_en": "<strong>Azure Functions</strong> on consumption plan is serverless — you only pay per execution. Event-driven workloads with unpredictable traffic are the ideal use case. VM and dedicated App Service Plan pay even when idle.",
+      "reference": "https://learn.microsoft.com/azure/azure-functions/functions-overview"
+    },
+    {
+      "id": "d2-018",
+      "domain": "d2",
+      "topic": "vnet",
+      "type": "single",
+      "question_pt": "Qual recurso do Azure permite que duas VNets em regiões diferentes se comuniquem usando o backbone privado da Microsoft (sem internet pública)?",
+      "question_en": "Which Azure feature allows two VNets in different regions to communicate using Microsoft's private backbone (no public internet)?",
+      "options_pt": ["VNet Peering (global)", "VPN Gateway", "Public IP", "DNS Zone"],
+      "options_en": ["Global VNet Peering", "VPN Gateway", "Public IP", "DNS Zone"],
+      "correct": [0],
+      "explanation_pt": "<strong>VNet Peering</strong> conecta duas VNets — mesmas ou diferentes regiões (Global Peering). Tráfego nunca sai do backbone da Microsoft. Não é transitivo: se A-peering-B e B-peering-C, A não fala com C automaticamente.",
+      "explanation_en": "<strong>VNet Peering</strong> connects two VNets — same or different regions (Global Peering). Traffic never leaves Microsoft's backbone. Not transitive: if A-peers-B and B-peers-C, A doesn't talk to C automatically.",
+      "reference": "https://learn.microsoft.com/azure/virtual-network/virtual-network-peering-overview"
+    },
+    {
+      "id": "d2-019",
+      "domain": "d2",
+      "topic": "defender",
+      "type": "single",
+      "question_pt": "Microsoft Defender for Cloud oferece principalmente:",
+      "question_en": "Microsoft Defender for Cloud primarily provides:",
+      "options_pt": [
+        "Antivirus para PCs Windows pessoais",
+        "Avaliação de postura de segurança e proteção de workloads em multi-cloud",
+        "Backup automático de máquinas virtuais",
+        "Firewall pessoal para usuários domésticos"
+      ],
+      "options_en": [
+        "Antivirus for personal Windows PCs",
+        "Security posture assessment and workload protection across multi-cloud",
+        "Automatic VM backup",
+        "Personal firewall for home users"
+      ],
+      "correct": [1],
+      "explanation_pt": "Defender for Cloud = CSPM (Cloud Security Posture Management) + CWP (Cloud Workload Protection). Avalia continuamente a postura de segurança (Secure Score), detecta ameaças e dá recomendações. Funciona em Azure, AWS, GCP e on-premises.",
+      "explanation_en": "Defender for Cloud = CSPM (Cloud Security Posture Management) + CWP (Cloud Workload Protection). Continuously assesses security posture (Secure Score), detects threats, and gives recommendations. Works on Azure, AWS, GCP, and on-premises.",
+      "reference": "https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction"
+    },
+    {
+      "id": "d2-020",
+      "domain": "d2",
+      "topic": "passwordless",
+      "type": "multi",
+      "question_pt": "Quais dos seguintes são métodos de autenticação <strong>sem senha</strong>? (Escolha duas)",
+      "question_en": "Which of the following are <strong>passwordless</strong> authentication methods? (Choose two)",
+      "options_pt": [
+        "Windows Hello for Business",
+        "Senha + SMS token",
+        "Chave de segurança FIDO2",
+        "Senha de 16 caracteres"
+      ],
+      "options_en": [
+        "Windows Hello for Business",
+        "Password + SMS token",
+        "FIDO2 security key",
+        "16-character password"
+      ],
+      "correct": [0, 2],
+      "explanation_pt": "Métodos passwordless eliminam a senha: <strong>Windows Hello</strong> (biometria/PIN ligado ao dispositivo), <strong>FIDO2</strong> (chaves físicas tipo YubiKey), <strong>Microsoft Authenticator</strong> (push notification). Senha + SMS ainda usa senha, então é MFA, não passwordless.",
+      "explanation_en": "Passwordless methods eliminate the password: <strong>Windows Hello</strong> (biometrics/PIN bound to device), <strong>FIDO2</strong> (physical keys like YubiKey), <strong>Microsoft Authenticator</strong> (push notification). Password + SMS still uses a password, so it's MFA, not passwordless.",
+      "reference": "https://learn.microsoft.com/entra/identity/authentication/concept-authentication-passwordless"
+    },
+    {
+      "id": "d2-021",
+      "domain": "d2",
+      "topic": "entra_domain_services",
+      "type": "single",
+      "question_pt": "Uma aplicação legada precisa de Group Policy e Kerberos para autenticar usuários, mas você quer rodá-la no Azure sem manter seu próprio Domain Controller. Qual serviço resolve?",
+      "question_en": "A legacy application needs Group Policy and Kerberos to authenticate users, but you want to run it on Azure without managing your own Domain Controller. Which service solves this?",
+      "options_pt": ["Microsoft Entra ID puro", "Microsoft Entra Domain Services", "Microsoft Defender", "Azure DNS"],
+      "options_en": ["Microsoft Entra ID alone", "Microsoft Entra Domain Services", "Microsoft Defender", "Azure DNS"],
+      "correct": [1],
+      "explanation_pt": "<strong>Entra Domain Services</strong> oferece Active Directory gerenciado — com Kerberos, NTLM, LDAP, Group Policy — sem você precisar manter DCs. Entra ID puro é cloud-only e não tem essas features de AD tradicional.",
+      "explanation_en": "<strong>Entra Domain Services</strong> offers managed Active Directory — with Kerberos, NTLM, LDAP, Group Policy — without managing DCs. Plain Entra ID is cloud-only and doesn't have these traditional AD features.",
+      "reference": "https://learn.microsoft.com/entra/identity/domain-services/overview"
+    },
+    {
+      "id": "d2-022",
+      "domain": "d2",
+      "topic": "resource_groups",
+      "type": "tf",
+      "question_pt": "Um recurso no Azure pode pertencer a vários grupos de recursos simultaneamente.",
+      "question_en": "A resource in Azure can belong to multiple resource groups simultaneously.",
+      "options_pt": ["Verdadeiro", "Falso"],
+      "options_en": ["True", "False"],
+      "correct": [1],
+      "explanation_pt": "Falso. Um recurso pertence a <strong>exatamente um</strong> grupo de recursos. Você pode movê-lo entre grupos (mesma subscription ou cross-subscription), mas nunca estar em dois ao mesmo tempo.",
+      "explanation_en": "False. A resource belongs to <strong>exactly one</strong> resource group. You can move it between groups (same or cross-subscription), but never be in two simultaneously.",
+      "reference": "https://learn.microsoft.com/azure/azure-resource-manager/management/overview"
+    },
+    {
+      "id": "d2-023",
+      "domain": "d2",
+      "topic": "sovereign_regions",
+      "type": "single",
+      "question_pt": "Uma agência do governo dos EUA precisa hospedar dados classificados e exige conformidade FedRAMP High. Qual nuvem do Azure ela deve usar?",
+      "question_en": "A US government agency needs to host classified data and requires FedRAMP High compliance. Which Azure cloud should they use?",
+      "options_pt": ["Azure público (commercial)", "Azure Government", "Azure China", "Azure Stack"],
+      "options_en": ["Public Azure (commercial)", "Azure Government", "Azure China", "Azure Stack"],
+      "correct": [1],
+      "explanation_pt": "<strong>Azure Government</strong> é uma nuvem soberana isolada do Azure público, projetada para agências federais, estaduais e fornecedores dos EUA. Atende FedRAMP High, DoD IL5, CJIS e ITAR.",
+      "explanation_en": "<strong>Azure Government</strong> is a sovereign cloud isolated from public Azure, designed for US federal, state and contractor agencies. Meets FedRAMP High, DoD IL5, CJIS, and ITAR.",
+      "reference": "https://learn.microsoft.com/azure/azure-government/documentation-government-welcome"
+    },
+    {
+      "id": "d2-024",
+      "domain": "d2",
+      "topic": "avd",
+      "type": "single",
+      "question_pt": "Qual serviço Azure permite entregar Windows desktops virtualizados para colaboradores remotos acessarem de qualquer dispositivo?",
+      "question_en": "Which Azure service lets you deliver virtualized Windows desktops to remote workers accessing from any device?",
+      "options_pt": ["VM Scale Sets", "Azure Virtual Desktop (AVD)", "App Service", "Container Instances"],
+      "options_en": ["VM Scale Sets", "Azure Virtual Desktop (AVD)", "App Service", "Container Instances"],
+      "correct": [1],
+      "explanation_pt": "<strong>Azure Virtual Desktop (AVD)</strong> é o serviço VDI da Microsoft. Permite acesso via browser ou cliente nativo, multi-sessão Windows, integração com Microsoft 365. Bom para força remota e BYOD.",
+      "explanation_en": "<strong>Azure Virtual Desktop (AVD)</strong> is Microsoft's VDI service. Allows access via browser or native client, Windows multi-session, Microsoft 365 integration. Good for remote workforce and BYOD.",
+      "reference": "https://learn.microsoft.com/azure/virtual-desktop/overview"
+    },
+    {
+      "id": "d2-025",
+      "domain": "d2",
+      "topic": "containers",
+      "type": "single",
+      "question_pt": "Qual a diferença principal entre Azure Container Instances (ACI) e Azure Kubernetes Service (AKS)?",
+      "question_en": "What's the main difference between Azure Container Instances (ACI) and Azure Kubernetes Service (AKS)?",
+      "options_pt": [
+        "ACI é gratuito; AKS é pago",
+        "ACI roda containers individuais sem orquestrador; AKS orquestra containers em escala",
+        "ACI suporta apenas Linux; AKS apenas Windows",
+        "Eles fazem exatamente a mesma coisa"
+      ],
+      "options_en": [
+        "ACI is free; AKS is paid",
+        "ACI runs single containers without an orchestrator; AKS orchestrates containers at scale",
+        "ACI supports only Linux; AKS only Windows",
+        "They do exactly the same thing"
+      ],
+      "correct": [1],
+      "explanation_pt": "<strong>ACI</strong> é para rodar containers isolados rapidamente, sem cluster nem orquestração — bom para tarefas curtas. <strong>AKS</strong> oferece Kubernetes gerenciado para orquestrar containers em escala com auto-healing, networking complexo, etc.",
+      "explanation_en": "<strong>ACI</strong> is for running isolated containers quickly, without a cluster or orchestration — good for short tasks. <strong>AKS</strong> offers managed Kubernetes for orchestrating containers at scale with auto-healing, complex networking, etc.",
+      "reference": "https://learn.microsoft.com/azure/container-instances/container-instances-overview"
+    },
+
+    {
+      "id": "d3-001",
+      "domain": "d3",
+      "topic": "cost_factors",
+      "type": "multi",
+      "question_pt": "Quais dos seguintes <strong>afetam o custo</strong> de uma máquina virtual no Azure? (Escolha duas)",
+      "question_en": "Which of the following <strong>affect the cost</strong> of an Azure virtual machine? (Choose two)",
+      "options_pt": [
+        "Região onde a VM está hospedada",
+        "Tamanho (SKU) da VM",
+        "Nome dado à VM",
+        "Cor do tema do portal"
+      ],
+      "options_en": [
+        "Region where the VM is hosted",
+        "VM size (SKU)",
+        "VM name",
+        "Portal theme color"
+      ],
+      "correct": [0, 1],
+      "explanation_pt": "Região e tamanho são fatores diretos de custo. Outros fatores: tipo de disco (SSD vs HDD), modelo de preço (PAYG vs Reserved), tráfego de saída (egress), tempo de uso. Nome e tema são gratuitos.",
+      "explanation_en": "Region and size are direct cost factors. Other factors: disk type (SSD vs HDD), pricing model (PAYG vs Reserved), egress traffic, usage time. Name and theme are free.",
+      "reference": "https://learn.microsoft.com/azure/cost-management-billing/cost-management-billing-overview"
+    },
+    {
+      "id": "d3-002",
+      "domain": "d3",
+      "topic": "calculators",
+      "type": "single",
+      "question_pt": "Você quer comparar o custo de rodar workloads no datacenter local versus migrá-los para o Azure. Qual ferramenta usar?",
+      "question_en": "You want to compare the cost of running workloads in your on-premises datacenter versus migrating to Azure. Which tool to use?",
+      "options_pt": ["Pricing Calculator", "TCO Calculator", "Cost Management", "Azure Advisor"],
+      "options_en": ["Pricing Calculator", "TCO Calculator", "Cost Management", "Azure Advisor"],
+      "correct": [1],
+      "explanation_pt": "<strong>TCO Calculator</strong> (Total Cost of Ownership) compara on-premises × Azure, considerando hardware, software, eletricidade, mão de obra de TI e datacenter. <strong>Pricing Calculator</strong> estima custo de serviços Azure específicos antes de provisionar.",
+      "explanation_en": "<strong>TCO Calculator</strong> (Total Cost of Ownership) compares on-premises × Azure, considering hardware, software, electricity, IT labor, and datacenter. <strong>Pricing Calculator</strong> estimates the cost of specific Azure services before provisioning.",
+      "reference": "https://learn.microsoft.com/azure/cost-management-billing/manage/tco-calculator"
+    },
+    {
+      "id": "d3-003",
+      "domain": "d3",
+      "topic": "calculators",
+      "type": "single",
+      "question_pt": "Antes de provisionar um Azure SQL Database, você quer estimar o custo mensal de diferentes SKUs. Qual ferramenta usar?",
+      "question_en": "Before provisioning an Azure SQL Database, you want to estimate the monthly cost of different SKUs. Which tool to use?",
+      "options_pt": ["Pricing Calculator", "TCO Calculator", "Cost Management", "Service Health"],
+      "options_en": ["Pricing Calculator", "TCO Calculator", "Cost Management", "Service Health"],
+      "correct": [0],
+      "explanation_pt": "<strong>Pricing Calculator</strong> é para estimar o custo de serviços <em>antes</em> de provisionar. TCO Calculator compara com on-premises. Cost Management vê custos <em>já incorridos</em>.",
+      "explanation_en": "<strong>Pricing Calculator</strong> is for estimating service costs <em>before</em> provisioning. TCO Calculator compares with on-premises. Cost Management sees <em>already-incurred</em> costs.",
+      "reference": "https://azure.microsoft.com/pricing/calculator/"
+    },
+    {
+      "id": "d3-004",
+      "domain": "d3",
+      "topic": "tags",
+      "type": "single",
+      "question_pt": "Sua empresa quer agrupar custos por departamento ('Marketing', 'Engenharia') para reportar e cobrar internamente. Qual recurso usar?",
+      "question_en": "Your company wants to group costs by department ('Marketing', 'Engineering') to report and charge back internally. Which feature to use?",
+      "options_pt": ["Azure Policy", "Marcas (Tags)", "Bloqueios de recursos", "Microsoft Purview"],
+      "options_en": ["Azure Policy", "Tags", "Resource locks", "Microsoft Purview"],
+      "correct": [1],
+      "explanation_pt": "<strong>Tags</strong> são pares chave-valor que se anexam a recursos para organização. 'Department=Marketing' permite filtrar custos no Cost Management por essa tag. Cada recurso aceita até 50 tags.",
+      "explanation_en": "<strong>Tags</strong> are key-value pairs attached to resources for organization. 'Department=Marketing' lets you filter costs in Cost Management by that tag. Each resource accepts up to 50 tags.",
+      "reference": "https://learn.microsoft.com/azure/azure-resource-manager/management/tag-resources"
+    },
+    {
+      "id": "d3-005",
+      "domain": "d3",
+      "topic": "policy",
+      "type": "single",
+      "question_pt": "Sua empresa quer garantir que VMs sejam criadas <strong>apenas</strong> nas regiões Brazil South e East US, bloqueando outras regiões. Qual recurso usar?",
+      "question_en": "Your company wants to ensure VMs are created <strong>only</strong> in Brazil South and East US regions, blocking other regions. Which feature to use?",
+      "options_pt": ["Tags", "Azure Policy", "Bloqueios de recursos (locks)", "RBAC"],
+      "options_en": ["Tags", "Azure Policy", "Resource locks", "RBAC"],
+      "correct": [1],
+      "explanation_pt": "<strong>Azure Policy</strong> define regras que recursos devem seguir. A política built-in 'Allowed locations' bloqueia criações fora das regiões permitidas. Locks impedem alteração/exclusão. RBAC dá permissões. Tags são organização.",
+      "explanation_en": "<strong>Azure Policy</strong> defines rules that resources must follow. The built-in 'Allowed locations' policy blocks creations outside permitted regions. Locks prevent modification/deletion. RBAC grants permissions. Tags are for organization.",
+      "reference": "https://learn.microsoft.com/azure/governance/policy/overview"
+    },
+    {
+      "id": "d3-006",
+      "domain": "d3",
+      "topic": "locks",
+      "type": "single",
+      "question_pt": "Você aplicou um lock 'CanNotDelete' em um grupo de recursos. Qual operação ainda é permitida?",
+      "question_en": "You applied a 'CanNotDelete' lock on a resource group. Which operation is still allowed?",
+      "options_pt": [
+        "Excluir o grupo de recursos",
+        "Excluir recursos individuais dentro do grupo",
+        "Modificar configurações dos recursos",
+        "Apenas leitura, nada mais"
+      ],
+      "options_en": [
+        "Delete the resource group",
+        "Delete individual resources inside the group",
+        "Modify resource configurations",
+        "Read-only, nothing else"
+      ],
+      "correct": [2],
+      "explanation_pt": "<strong>CanNotDelete</strong> permite ler e <strong>modificar</strong>, mas impede excluir. <strong>ReadOnly</strong> impede tanto modificar quanto excluir. Locks são herdados — aplicar no grupo afeta recursos filhos.",
+      "explanation_en": "<strong>CanNotDelete</strong> allows reading and <strong>modifying</strong>, but prevents deletion. <strong>ReadOnly</strong> prevents both modification and deletion. Locks are inherited — applying on a group affects child resources.",
+      "reference": "https://learn.microsoft.com/azure/azure-resource-manager/management/lock-resources"
+    },
+    {
+      "id": "d3-007",
+      "domain": "d3",
+      "topic": "purview",
+      "type": "single",
+      "question_pt": "Microsoft Purview serve principalmente para:",
+      "question_en": "Microsoft Purview primarily serves for:",
+      "options_pt": [
+        "Gerenciamento de máquinas virtuais",
+        "Governança e conformidade de dados (catalogação, sensibilidade, ciclo de vida)",
+        "Monitoramento de redes",
+        "Hospedagem de aplicações web"
+      ],
+      "options_en": [
+        "Virtual machine management",
+        "Data governance and compliance (cataloging, sensitivity, lifecycle)",
+        "Network monitoring",
+        "Web application hosting"
+      ],
+      "correct": [1],
+      "explanation_pt": "<strong>Microsoft Purview</strong> é a plataforma unificada de governança de dados e conformidade. Cataloga onde os dados estão, classifica por sensibilidade, gerencia ciclo de vida, descobre riscos. Substituiu o Compliance Manager como ferramenta central.",
+      "explanation_en": "<strong>Microsoft Purview</strong> is the unified platform for data governance and compliance. Catalogs where data lives, classifies by sensitivity, manages lifecycle, discovers risks. Replaced Compliance Manager as the central tool.",
+      "reference": "https://learn.microsoft.com/purview/purview"
+    },
+    {
+      "id": "d3-008",
+      "domain": "d3",
+      "topic": "tools",
+      "type": "single",
+      "question_pt": "Qual ferramenta permite executar comandos Azure pelo navegador, sem instalar nada localmente?",
+      "question_en": "Which tool lets you run Azure commands from the browser, with nothing installed locally?",
+      "options_pt": ["Azure PowerShell instalado no Windows", "Azure CLI no terminal Linux", "Azure Cloud Shell", "Azure DevOps"],
+      "options_en": ["Azure PowerShell installed on Windows", "Azure CLI in Linux terminal", "Azure Cloud Shell", "Azure DevOps"],
+      "correct": [2],
+      "explanation_pt": "<strong>Azure Cloud Shell</strong> é um terminal no navegador, com Azure CLI e PowerShell pré-instalados. Você acessa pelo portal do Azure ou shell.azure.com. Sem setup local.",
+      "explanation_en": "<strong>Azure Cloud Shell</strong> is a browser-based terminal with Azure CLI and PowerShell preinstalled. Access via Azure portal or shell.azure.com. No local setup needed.",
+      "reference": "https://learn.microsoft.com/azure/cloud-shell/overview"
+    },
+    {
+      "id": "d3-009",
+      "domain": "d3",
+      "topic": "azure_arc",
+      "type": "single",
+      "question_pt": "Sua empresa tem servidores no Azure, na AWS e em datacenter local. Quer gerenciar todos com Azure Policy e ver no portal do Azure. Qual serviço permite isso?",
+      "question_en": "Your company has servers in Azure, AWS, and on-premises. You want to manage all with Azure Policy and see them in the Azure portal. Which service enables this?",
+      "options_pt": ["Azure Migrate", "Azure Arc", "Azure VPN Gateway", "Azure Stack"],
+      "options_en": ["Azure Migrate", "Azure Arc", "Azure VPN Gateway", "Azure Stack"],
+      "correct": [1],
+      "explanation_pt": "<strong>Azure Arc</strong> estende o plano de gerenciamento Azure para recursos fora do Azure — VMs em outras nuvens, servidores físicos on-premises, Kubernetes externos. Você vê tudo no portal Azure e aplica Policy/RBAC/Defender de forma unificada.",
+      "explanation_en": "<strong>Azure Arc</strong> extends the Azure management plane to resources outside Azure — VMs in other clouds, physical on-premises servers, external Kubernetes. You see everything in the Azure portal and apply Policy/RBAC/Defender uniformly.",
+      "reference": "https://learn.microsoft.com/azure/azure-arc/overview"
+    },
+    {
+      "id": "d3-010",
+      "domain": "d3",
+      "topic": "iac",
+      "type": "single",
+      "question_pt": "Bicep e ARM Templates são linguagens para:",
+      "question_en": "Bicep and ARM Templates are languages for:",
+      "options_pt": [
+        "Análise de dados",
+        "Infraestrutura como Código (IaC) no Azure",
+        "Substituir Python e .NET",
+        "Modelar bancos relacionais"
+      ],
+      "options_en": [
+        "Data analytics",
+        "Infrastructure as Code (IaC) on Azure",
+        "Replacing Python and .NET",
+        "Modeling relational databases"
+      ],
+      "correct": [1],
+      "explanation_pt": "ARM Templates (JSON) e <strong>Bicep</strong> (linguagem mais limpa que compila pra ARM) são as linguagens nativas de IaC do Azure. Permitem provisionar infraestrutura de forma declarativa, idempotente e versionada em Git.",
+      "explanation_en": "ARM Templates (JSON) and <strong>Bicep</strong> (cleaner language that compiles to ARM) are Azure's native IaC languages. They allow provisioning infrastructure declaratively, idempotently, and versioned in Git.",
+      "reference": "https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview"
+    },
+    {
+      "id": "d3-011",
+      "domain": "d3",
+      "topic": "advisor",
+      "type": "single",
+      "question_pt": "Você quer receber recomendações personalizadas sobre como reduzir custos, melhorar segurança e otimizar performance no seu ambiente Azure. Qual serviço fornece isso?",
+      "question_en": "You want personalized recommendations on reducing costs, improving security, and optimizing performance in your Azure environment. Which service provides this?",
+      "options_pt": ["Azure Monitor", "Azure Advisor", "Service Health", "Microsoft Purview"],
+      "options_en": ["Azure Monitor", "Azure Advisor", "Service Health", "Microsoft Purview"],
+      "correct": [1],
+      "explanation_pt": "<strong>Azure Advisor</strong> dá recomendações personalizadas em 5 categorias: confiabilidade, segurança, performance, custo e excelência operacional. Ex: 'Você tem VMs subutilizadas, considere redimensionar e economizar X reais/mês'.",
+      "explanation_en": "<strong>Azure Advisor</strong> gives personalized recommendations across 5 categories: reliability, security, performance, cost, and operational excellence. E.g., 'You have underused VMs, consider resizing and saving X dollars/month'.",
+      "reference": "https://learn.microsoft.com/azure/advisor/advisor-overview"
+    },
+    {
+      "id": "d3-012",
+      "domain": "d3",
+      "topic": "service_health",
+      "type": "single",
+      "question_pt": "Qual serviço informa quando há um incidente ou manutenção planejada afetando especificamente seus recursos no Azure?",
+      "question_en": "Which service informs you when there's an incident or planned maintenance affecting your specific Azure resources?",
+      "options_pt": ["Azure Monitor", "Azure Advisor", "Azure Service Health", "Application Insights"],
+      "options_en": ["Azure Monitor", "Azure Advisor", "Azure Service Health", "Application Insights"],
+      "correct": [2],
+      "explanation_pt": "<strong>Azure Service Health</strong> mostra incidentes globais e manutenções e — crucialmente — como elas afetam <strong>seus</strong> recursos específicos. Pode ser configurado com alertas. Não confunda com Azure Status (status geral do Azure no mundo, sem personalização).",
+      "explanation_en": "<strong>Azure Service Health</strong> shows global incidents and maintenance and — crucially — how they affect <strong>your</strong> specific resources. Can be configured with alerts. Don't confuse with Azure Status (global Azure status, no personalization).",
+      "reference": "https://learn.microsoft.com/azure/service-health/overview"
+    },
+    {
+      "id": "d3-013",
+      "domain": "d3",
+      "topic": "monitor",
+      "type": "single",
+      "question_pt": "Você precisa coletar logs de uma aplicação .NET, consultá-los com KQL e gerar alertas quando exceções ultrapassarem um limiar. Qual componente do Azure Monitor usar?",
+      "question_en": "You need to collect logs from a .NET application, query them with KQL, and trigger alerts when exceptions exceed a threshold. Which Azure Monitor component to use?",
+      "options_pt": ["Log Analytics + Application Insights + Alerts", "Service Health", "Azure Advisor", "Microsoft Purview"],
+      "options_en": ["Log Analytics + Application Insights + Alerts", "Service Health", "Azure Advisor", "Microsoft Purview"],
+      "correct": [0],
+      "explanation_pt": "Azure Monitor é uma plataforma. <strong>Application Insights</strong> (APM) coleta telemetria da app. <strong>Log Analytics</strong> armazena e permite consultar com KQL. <strong>Alerts</strong> disparam ações quando métricas/logs cruzam um limiar.",
+      "explanation_en": "Azure Monitor is a platform. <strong>Application Insights</strong> (APM) collects app telemetry. <strong>Log Analytics</strong> stores logs and lets you query with KQL. <strong>Alerts</strong> trigger actions when metrics/logs cross a threshold.",
+      "reference": "https://learn.microsoft.com/azure/azure-monitor/overview"
+    },
+    {
+      "id": "d3-014",
+      "domain": "d3",
+      "topic": "policy_vs_rbac",
+      "type": "single",
+      "question_pt": "Qual a diferença essencial entre Azure Policy e RBAC?",
+      "question_en": "What's the essential difference between Azure Policy and RBAC?",
+      "options_pt": [
+        "Policy controla 'quem pode fazer o que'; RBAC controla 'que recursos podem existir'",
+        "Policy controla 'que recursos podem existir e como'; RBAC controla 'quem pode fazer o que'",
+        "São o mesmo serviço com nomes diferentes",
+        "Policy é gratuito; RBAC é pago"
+      ],
+      "options_en": [
+        "Policy controls 'who can do what'; RBAC controls 'what resources can exist'",
+        "Policy controls 'what resources can exist and how'; RBAC controls 'who can do what'",
+        "Same service with different names",
+        "Policy is free; RBAC is paid"
+      ],
+      "correct": [1],
+      "explanation_pt": "<strong>Azure Policy</strong> = restrições e conformidade dos recursos ('VMs só na Brazil South', 'todo recurso deve ter tag Environment'). <strong>RBAC</strong> = permissões de identidades ('Maria é Contributor neste RG').",
+      "explanation_en": "<strong>Azure Policy</strong> = resource restrictions and compliance ('VMs only in Brazil South', 'every resource must have Environment tag'). <strong>RBAC</strong> = identity permissions ('Maria is Contributor on this RG').",
+      "reference": "https://learn.microsoft.com/azure/governance/policy/overview"
+    },
+    {
+      "id": "d3-015",
+      "domain": "d3",
+      "topic": "cli_powershell",
+      "type": "single",
+      "question_pt": "Qual comando segue a sintaxe do Azure CLI?",
+      "question_en": "Which command follows Azure CLI syntax?",
+      "options_pt": [
+        "<code>New-AzVM -Name myVm -ResourceGroupName myRG</code>",
+        "<code>az vm create --name myVm --resource-group myRG</code>",
+        "<code>Create-VirtualMachine /name:myVm /group:myRG</code>",
+        "<code>azure vm new myVm in myRG</code>"
+      ],
+      "options_en": [
+        "<code>New-AzVM -Name myVm -ResourceGroupName myRG</code>",
+        "<code>az vm create --name myVm --resource-group myRG</code>",
+        "<code>Create-VirtualMachine /name:myVm /group:myRG</code>",
+        "<code>azure vm new myVm in myRG</code>"
+      ],
+      "correct": [1],
+      "explanation_pt": "Azure CLI usa <code>az [grupo] [comando] --flag valor</code>. A primeira opção é PowerShell (Verb-AzNoun -Parameter). Saber distinguir as sintaxes é cobrado no exame.",
+      "explanation_en": "Azure CLI uses <code>az [group] [command] --flag value</code>. The first option is PowerShell (Verb-AzNoun -Parameter). Knowing how to tell them apart is tested on the exam.",
+      "reference": "https://learn.microsoft.com/cli/azure/what-is-azure-cli"
+    },
+    {
+      "id": "d3-016",
+      "domain": "d3",
+      "topic": "cost_management",
+      "type": "single",
+      "question_pt": "Você quer ser notificado quando os custos da assinatura ultrapassarem R$ 5.000 em um mês. Qual recurso usar?",
+      "question_en": "You want to be notified when subscription costs exceed $5,000 in a month. Which feature to use?",
+      "options_pt": ["Tags", "Budgets no Cost Management", "Service Health", "Azure Policy"],
+      "options_en": ["Tags", "Budgets in Cost Management", "Service Health", "Azure Policy"],
+      "correct": [1],
+      "explanation_pt": "<strong>Budgets</strong> no Cost Management permitem definir um teto de gasto e configurar alertas em percentuais (50%, 75%, 100%, etc) que disparam e-mails ou ações automatizadas (Action Groups).",
+      "explanation_en": "<strong>Budgets</strong> in Cost Management let you set a spending cap and configure alerts at percentages (50%, 75%, 100%, etc.) that trigger emails or automated actions (Action Groups).",
+      "reference": "https://learn.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets"
+    },
+    {
+      "id": "d3-017",
+      "domain": "d3",
+      "topic": "egress",
+      "type": "tf",
+      "question_pt": "No Azure, o tráfego de entrada (ingress) de dados para a nuvem é gratuito, mas o tráfego de saída (egress) é cobrado.",
+      "question_en": "In Azure, inbound (ingress) traffic into the cloud is free, but outbound (egress) traffic is charged.",
+      "options_pt": ["Verdadeiro", "Falso"],
+      "options_en": ["True", "False"],
+      "correct": [0],
+      "explanation_pt": "Verdadeiro. Entrada de dados é gratuita. Saída de dados (egress) é cobrada por GB, com regras diferentes para saída entre regiões, para internet, dentro da mesma região (geralmente grátis intra-AZ), etc.",
+      "explanation_en": "True. Data ingress is free. Data egress is charged per GB, with different rules for cross-region, to-internet, intra-region (usually free intra-AZ), etc.",
+      "reference": "https://learn.microsoft.com/azure/cost-management-billing/understand/understand-azure-data-transfers"
+    },
+    {
+      "id": "d3-018",
+      "domain": "d3",
+      "topic": "monitor",
+      "type": "single",
+      "question_pt": "Application Insights é melhor descrito como:",
+      "question_en": "Application Insights is best described as:",
+      "options_pt": [
+        "Um banco NoSQL para armazenar logs",
+        "Um serviço de APM (Application Performance Monitoring)",
+        "Um firewall de aplicação web",
+        "Um sistema de backup automático"
+      ],
+      "options_en": [
+        "A NoSQL database for storing logs",
+        "An APM (Application Performance Monitoring) service",
+        "A web application firewall",
+        "An automatic backup system"
+      ],
+      "correct": [1],
+      "explanation_pt": "<strong>Application Insights</strong> é o APM do Azure Monitor. Coleta tempo de resposta, falhas, dependências, traces, mapas de aplicação e user analytics. Roda como SDK ou agente acoplado à aplicação.",
+      "explanation_en": "<strong>Application Insights</strong> is Azure Monitor's APM. Collects response time, failures, dependencies, traces, application maps, and user analytics. Runs as an SDK or agent attached to the app.",
+      "reference": "https://learn.microsoft.com/azure/azure-monitor/app/app-insights-overview"
+    },
+    {
+      "id": "d3-019",
+      "domain": "d3",
+      "topic": "subscription_limits",
+      "type": "single",
+      "question_pt": "A unidade de faturamento no Azure é:",
+      "question_en": "The unit of billing in Azure is:",
+      "options_pt": ["Resource Group", "Subscription (assinatura)", "Management Group", "Recurso individual"],
+      "options_en": ["Resource Group", "Subscription", "Management Group", "Individual resource"],
+      "correct": [1],
+      "explanation_pt": "<strong>Subscription</strong> é a unidade de faturamento — cada assinatura tem cobrança separada e seus próprios limites de cota. Resource Group é container lógico; Management Group agrupa subscriptions para governança.",
+      "explanation_en": "<strong>Subscription</strong> is the billing unit — each subscription has separate billing and its own quota limits. Resource Group is a logical container; Management Group groups subscriptions for governance.",
+      "reference": "https://learn.microsoft.com/azure/cost-management-billing/manage/subscription-disabled"
+    },
+    {
+      "id": "d3-020",
+      "domain": "d3",
+      "topic": "arm",
+      "type": "single",
+      "question_pt": "Toda operação no Azure (criar, ler, atualizar, deletar recursos) passa por qual serviço?",
+      "question_en": "Every operation in Azure (create, read, update, delete resources) goes through which service?",
+      "options_pt": ["Azure Monitor", "Azure Resource Manager (ARM)", "Azure Advisor", "Azure DNS"],
+      "options_en": ["Azure Monitor", "Azure Resource Manager (ARM)", "Azure Advisor", "Azure DNS"],
+      "correct": [1],
+      "explanation_pt": "<strong>ARM (Azure Resource Manager)</strong> é a camada de gerenciamento universal — toda chamada (portal, CLI, PowerShell, REST, SDK, templates) passa por ele. Aplica RBAC, Policy, tags, locks.",
+      "explanation_en": "<strong>ARM (Azure Resource Manager)</strong> is the universal management layer — every call (portal, CLI, PowerShell, REST, SDK, templates) goes through it. Applies RBAC, Policy, tags, locks.",
+      "reference": "https://learn.microsoft.com/azure/azure-resource-manager/management/overview"
+    },
+    {
+      "id": "d3-021",
+      "domain": "d3",
+      "topic": "monitoring_distinction",
+      "type": "single",
+      "question_pt": "Qual ferramenta é mais adequada para receber recomendações de redução de custos sobre VMs subutilizadas?",
+      "question_en": "Which tool is most appropriate to get cost-reduction recommendations about underused VMs?",
+      "options_pt": ["Azure Monitor", "Azure Service Health", "Azure Advisor", "Application Insights"],
+      "options_en": ["Azure Monitor", "Azure Service Health", "Azure Advisor", "Application Insights"],
+      "correct": [2],
+      "explanation_pt": "<strong>Azure Advisor</strong> tem uma categoria específica de Custo, que identifica VMs subutilizadas, recursos órfãos, oportunidades de Reserved Instances e dá sugestões com economia estimada.",
+      "explanation_en": "<strong>Azure Advisor</strong> has a Cost category that identifies underused VMs, orphaned resources, Reserved Instance opportunities, and gives suggestions with estimated savings.",
+      "reference": "https://learn.microsoft.com/azure/advisor/advisor-cost-recommendations"
+    },
+    {
+      "id": "d3-022",
+      "domain": "d3",
+      "topic": "free_account",
+      "type": "single",
+      "question_pt": "O Azure free account oferece:",
+      "question_en": "The Azure free account offers:",
+      "options_pt": [
+        "Acesso ilimitado por 30 dias e nada mais",
+        "12 meses de serviços populares gratuitos + crédito inicial + 65+ serviços sempre gratuitos",
+        "Apenas 1 VM grátis para sempre",
+        "Acesso completo gratuito para sempre"
+      ],
+      "options_en": [
+        "Unlimited access for 30 days, nothing more",
+        "12 months of popular services free + initial credit + 65+ always-free services",
+        "Only 1 VM free forever",
+        "Full free access forever"
+      ],
+      "correct": [1],
+      "explanation_pt": "Azure free account oferece: crédito inicial em USD para 30 dias, 12 meses de serviços populares grátis (B1S VM, blob storage, etc) e 65+ serviços sempre gratuitos (Functions com limite, Cosmos DB com limite, etc).",
+      "explanation_en": "Azure free account offers: an initial USD credit for 30 days, 12 months of popular services free (B1S VM, blob storage, etc.), and 65+ always-free services (Functions with limits, Cosmos DB with limits, etc.).",
+      "reference": "https://azure.microsoft.com/free/"
+    },
+    {
+      "id": "d3-023",
+      "domain": "d3",
+      "topic": "governance_tools",
+      "type": "single",
+      "question_pt": "Você quer aplicar uma regra de governança em <strong>todas as assinaturas</strong> da sua organização de uma só vez. Onde aplicar a Azure Policy?",
+      "question_en": "You want to apply a governance rule across <strong>all subscriptions</strong> in your organization at once. Where to apply the Azure Policy?",
+      "options_pt": [
+        "Em cada Resource Group individualmente",
+        "Em um Management Group raiz que contém todas as subscriptions",
+        "Em uma VM específica",
+        "Não é possível, Policy só funciona por subscription"
+      ],
+      "options_en": [
+        "In each Resource Group individually",
+        "On a root Management Group that contains all subscriptions",
+        "On a specific VM",
+        "Not possible, Policy only works per subscription"
+      ],
+      "correct": [1],
+      "explanation_pt": "Policies aplicadas em <strong>Management Groups</strong> são herdadas por todas as subscriptions abaixo. É a forma certa de governar em escala — você define uma vez no topo e vale para tudo embaixo.",
+      "explanation_en": "Policies applied at <strong>Management Groups</strong> are inherited by all subscriptions below. This is the correct way to govern at scale — define once at the top and it applies everywhere below.",
+      "reference": "https://learn.microsoft.com/azure/governance/management-groups/overview"
+    }
+
+  ]
+}

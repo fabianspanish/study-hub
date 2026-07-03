@@ -1,0 +1,185 @@
+<div class="calc-page">
+
+<header class="calc-hero">
+  <div class="calc-hero-inner">
+    <div>
+      <div class="kicker">Cultivo · Calculadora 01/03</div>
+      <h1>
+        <span class="b">Calculadora</span>
+        <span class="a">de Luz</span>
+        <span class="b">e Custo.</span>
+      </h1>
+      <p class="subtitle">
+        Estime custo de montagem, conta de luz e produção esperada para qualquer tamanho de quarto. Baseado nos custos reais de um quarto profissional de 12m² (R$ 3.683/m²) e na métrica de 267 W/m² recomendada pela apostila Cultlight.
+      </p>
+    </div>
+    <div class="meta">
+      <strong>R$ 3.683</strong> /m² ref<br>
+      <strong>267</strong> W/m²<br>
+      <strong>1,0–1,5</strong> g/W
+    </div>
+  </div>
+</header>
+
+<main class="calc-main">
+
+  <!-- ============ ENTRADA ============ -->
+  <section class="calc-section">
+    <div class="calc-section-head">
+      <div class="calc-section-tag">Entrada</div>
+      <h2>Tamanho do <em>seu espaço</em></h2>
+      <p class="desc">Insira a área em metros quadrados. Os parâmetros à direita são os padrões da apostila — você pode ajustar se quiser.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-inputs">
+        <div class="calc-input">
+          <label for="cl-area">Área do quarto</label>
+          <div class="with-unit">
+            <input type="number" id="cl-area" value="12" min="1" step="0.5">
+            <span class="unit">m²</span>
+          </div>
+          <span class="hint">Comprimento × largura. Exemplo: 4 × 3 = 12 m².</span>
+        </div>
+
+        <div class="calc-input">
+          <label for="cl-tarifa">Tarifa de energia</label>
+          <div class="with-unit">
+            <input type="number" id="cl-tarifa" value="1.10" min="0.1" step="0.01">
+            <span class="unit">R$/kWh</span>
+          </div>
+          <span class="hint">Vê na sua conta de luz. Padrão Brasil: R$ 0,90 a R$ 1,30.</span>
+        </div>
+      </div>
+
+      <div class="calc-inputs">
+        <div class="calc-input">
+          <label for="cl-watts">Potência por m²</label>
+          <div class="with-unit">
+            <input type="number" id="cl-watts" value="267" min="100" step="10">
+            <span class="unit">W/m²</span>
+          </div>
+          <span class="hint">Padrão Cultlight para cultivos eficientes em quarto.</span>
+        </div>
+
+        <div class="calc-input">
+          <label for="cl-rendimento">Rendimento por Watt</label>
+          <div class="with-unit">
+            <input type="number" id="cl-rendimento" value="1.0" min="0.5" step="0.1">
+            <span class="unit">g/W mín.</span>
+          </div>
+          <span class="hint">Conservador: 1,0 g/W. Avançado: 1,5 g/W. Calcula min/max.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTADO PRINCIPAL ============ -->
+  <section class="calc-section">
+    <div class="calc-section-head">
+      <div class="calc-section-tag">Resultado · Iluminação & produção</div>
+      <h2>Potência e <em>colheita esperada</em></h2>
+    </div>
+
+    <div class="calc-bigresult">
+      <div class="label">Potência total de iluminação</div>
+      <div class="value" id="cl-out-potencia">3.204<span class="unit">W</span></div>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-result">
+        <div class="label">Colheita mínima (1,0 g/W)</div>
+        <div class="value" id="cl-out-colhmin">3.204<span class="unit">g</span></div>
+        <div class="sub" id="cl-out-colhmin-kg">~3,20 kg por ciclo</div>
+      </div>
+      <div class="calc-result highlight">
+        <div class="label">Colheita elevada (1,5 g/W)</div>
+        <div class="value" id="cl-out-colhmax">4.806<span class="unit">g</span></div>
+        <div class="sub" id="cl-out-colhmax-kg">~4,81 kg por ciclo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CUSTOS DE MONTAGEM ============ -->
+  <section class="calc-section">
+    <div class="calc-section-head">
+      <div class="calc-section-tag">Custo · Montagem inicial</div>
+      <h2>Investimento <em>para montar</em></h2>
+      <p class="desc">Baseado nos custos reais de um quarto de 12 m² da apostila (R$ 44.200 total). Valores por m² extrapolados para o seu espaço.</p>
+    </div>
+
+    <div class="calc-grid three">
+      <div class="calc-result">
+        <div class="label">Infraestrutura</div>
+        <div class="value" id="cl-out-infra">22.400<span class="unit">R$</span></div>
+        <div class="sub">Pintura, elétrica, AC, desumidificador, perfis, mesas, ventilação, automação VPD</div>
+      </div>
+      <div class="calc-result">
+        <div class="label">Iluminação</div>
+        <div class="value" id="cl-out-ilum">20.000<span class="unit">R$</span></div>
+        <div class="sub">Painéis LED de qualidade (R$ 1.667/m² ref)</div>
+      </div>
+      <div class="calc-result">
+        <div class="label">Cultivo (1 ano)</div>
+        <div class="value" id="cl-out-cultivo">1.800<span class="unit">R$</span></div>
+        <div class="sub">Fertilizantes, substrato, vasos para 1 ano</div>
+      </div>
+    </div>
+
+    <div class="calc-bigresult" style="margin-top:24px">
+      <div class="label">Custo total de montagem</div>
+      <div class="value" id="cl-out-total">44.212<span class="unit">R$</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTA DE LUZ ============ -->
+  <section class="calc-section">
+    <div class="calc-section-head">
+      <div class="calc-section-tag">Custo · Operacional mensal</div>
+      <h2>Conta de <em>luz mensal</em></h2>
+      <p class="desc">Considera 12h/dia para iluminação (fotoperíodo 12/12 da floração). Desumidificador e AC parametrizados como % da iluminação.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-result">
+        <div class="label">Conta · só iluminação</div>
+        <div class="value" id="cl-out-luz-ilum">R$ 1.269</div>
+        <div class="sub">12h/dia × 30 dias × tarifa</div>
+      </div>
+      <div class="calc-result highlight">
+        <div class="label">Conta total estimada</div>
+        <div class="value" id="cl-out-luz-total">R$ 1.992</div>
+        <div class="sub">Inclui desumidificador (~30%) e AC (~42%)</div>
+      </div>
+    </div>
+
+    <div class="calc-note">
+      <span class="label">Por que a conta total é maior que só iluminação</span>
+      <p>O desumidificador roda em torno de 30% das horas que a luz fica acesa. O ar-condicionado é parametrizado em ~42% da potência da iluminação. Esses dois somados são responsáveis pela maior parte do consumo extra.</p>
+    </div>
+  </section>
+
+  <!-- ============ MODELOS PRONTOS ============ -->
+  <section class="calc-section">
+    <div class="calc-section-head">
+      <div class="calc-section-tag">Referência</div>
+      <h2>Modelos prontos da <em>apostila</em></h2>
+      <p class="desc">4 setups testados e validados. Use como referência para escolher o tamanho do seu quarto.</p>
+    </div>
+
+    <table class="calc-table">
+      <thead>
+        <tr><th>Quarto</th><th>Iluminação</th><th>Potência</th><th>Produção / ciclo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>4 × 2 m</strong> (8 m²)</td><td>6× 320W</td><td>1.920 W</td><td>~1,9–2,9 kg</td></tr>
+        <tr><td><strong>3 × 4 m</strong> (12 m²)</td><td>4× 720W</td><td>2.880 W</td><td>~2,9–4,3 kg</td></tr>
+        <tr><td><strong>5,5 × 3 m</strong> (16 m²)</td><td>6× 720W</td><td>4.320 W</td><td>~4,3–6,5 kg</td></tr>
+        <tr><td><strong>6 × 3 m</strong> (18 m²)</td><td>8× 720W</td><td>5.760 W</td><td>~5,8–8,6 kg</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+</div>

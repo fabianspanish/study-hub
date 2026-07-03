@@ -1,0 +1,96 @@
+<div class="cert-page">
+
+<header class="cert-hero">
+  <div class="cert-hero-inner">
+    <div>
+      <div class="cert-kicker">Conta · Admin</div>
+      <h1>
+        <span class="a">Gerenciar</span>
+        <span class="b">acessos.</span>
+      </h1>
+      <p class="cert-subtitle">Adicione emails à allowlist para permitir que novos usuários se cadastrem. Apenas você (admin) tem acesso a esta página.</p>
+    </div>
+    <div class="cert-meta">
+      <strong id="admin-users-count">—</strong> usuários<br>
+      <strong id="admin-allowlist-count">—</strong> permitidos<br>
+      <span id="admin-status">—</span>
+    </div>
+  </div>
+</header>
+
+<main class="cert-main">
+
+  <section>
+    <div class="cert-section-head">
+      <div class="cert-section-num">01</div>
+      <div>
+        <div class="cert-section-tag">Allowlist · Permissões de cadastro</div>
+        <h1 class="cert-section-title">
+          <span>Emails</span>
+          <em>permitidos</em>
+        </h1>
+      </div>
+    </div>
+
+    <p class="cert-lead">Adicione um email aqui antes da pessoa tentar se cadastrar. Sem isso, o Firebase recusa o cadastro.</p>
+
+    <div id="admin-message-slot"></div>
+
+    <form id="allowlist-add-form" style="display:flex;gap:10px;max-width:680px;margin-bottom:24px">
+      <input type="email" id="allowlist-email" placeholder="email@exemplo.com" required
+        style="flex:1;padding:11px 14px;border:1px solid rgba(26,22,18,.15);border-radius:4px;font-family:inherit;font-size:14px">
+      <button type="submit" class="login-btn login-btn-primary" id="allowlist-add-btn" style="white-space:nowrap">+ Adicionar</button>
+    </form>
+
+    <div id="allowlist-table-wrapper">
+      <p style="color:var(--clay);font-style:italic">Carregando lista...</p>
+    </div>
+  </section>
+
+  <section style="margin-top:50px">
+    <div class="cert-section-head">
+      <div class="cert-section-num">02</div>
+      <div>
+        <div class="cert-section-tag">Usuários cadastrados</div>
+        <h1 class="cert-section-title">
+          <span>Quem já</span>
+          <em>tem conta</em>
+        </h1>
+      </div>
+    </div>
+
+    <p class="cert-lead">Usuários que efetivamente criaram conta. Quem está na allowlist mas ainda não se cadastrou não aparece aqui.</p>
+
+    <div id="users-table-wrapper">
+      <p style="color:var(--clay);font-style:italic">Carregando usuários...</p>
+    </div>
+  </section>
+
+</main>
+
+</div>
+
+<style>
+.admin-table{width:100%;border-collapse:collapse;font-size:14px;background:var(--paper);border-radius:6px;overflow:hidden;box-shadow:var(--shadow)}
+.admin-table th,.admin-table td{padding:11px 16px;text-align:left;border-bottom:1px solid var(--cert-warm-line, rgba(26,22,18,.08))}
+.admin-table th{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--cert-bronze, #8b6f47);font-weight:600;
+  background:rgba(139,111,71,.06);
+}
+.admin-table tr:last-child td{border-bottom:none}
+.admin-table .admin-action{
+  background:none;border:1px solid var(--rust, #a93b3b);color:var(--rust, #a93b3b);
+  padding:4px 10px;border-radius:3px;font-size:11px;cursor:pointer;
+  font-family:'JetBrains Mono',monospace;letter-spacing:.05em;
+}
+.admin-table .admin-action:hover{background:var(--rust, #a93b3b);color:#fff}
+.role-pill{
+  display:inline-block;font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;
+  padding:2px 8px;border-radius:99px;
+}
+.role-pill.admin{background:var(--amber, #c8832a);color:#fff}
+.role-pill.member{background:rgba(139,111,71,.15);color:var(--cert-bronze, #8b6f47)}
+</style>

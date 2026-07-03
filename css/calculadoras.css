@@ -1,0 +1,334 @@
+/* ============================================================
+   CALCULADORAS · Luz, Rega, Fertilização
+   Mesma paleta verde do cultivo
+   ============================================================ */
+
+.calc-page{
+  font-family:'Inter',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+}
+
+/* HERO */
+.calc-hero{
+  background:
+    radial-gradient(ellipse at top right, rgba(122,148,102,.25) 0%, transparent 60%),
+    linear-gradient(180deg, var(--leaf-deep) 0%, var(--leaf-dark) 60%, var(--leaf) 100%);
+  color:var(--cream);
+  padding:50px 48px 100px;
+  position:relative;
+  overflow:hidden;
+}
+.calc-hero::after{
+  content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(244,239,228,.015) 2px, rgba(244,239,228,.015) 4px);
+  pointer-events:none;
+}
+.calc-hero-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;
+}
+.calc-hero h1{
+  font-family:'Fraunces',serif;
+  font-weight:400;font-style:italic;
+  font-size:clamp(42px, 7vw, 84px);
+  line-height:.95;letter-spacing:-.03em;
+}
+.calc-hero h1 .b{font-weight:800;font-style:normal;display:block}
+.calc-hero h1 .a{color:var(--amber);font-style:italic}
+.calc-hero .kicker{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  opacity:.7;margin-bottom:22px;
+  display:flex;align-items:center;gap:14px;
+}
+.calc-hero .kicker::before{content:"";height:1px;width:50px;background:var(--amber)}
+.calc-hero .subtitle{
+  max-width:560px;margin-top:24px;
+  font-size:16px;line-height:1.6;
+  color:rgba(244,239,228,.85);
+  font-weight:300;
+}
+.calc-hero .meta{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.1em;
+  text-align:right;opacity:.7;line-height:1.9;
+}
+.calc-hero .meta strong{color:var(--amber);font-weight:600}
+
+/* MAIN */
+.calc-main{
+  max-width:1280px;margin:-60px auto 60px;
+  padding:0 48px;
+  position:relative;z-index:5;
+}
+
+.calc-section{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:36px 40px;
+  box-shadow:var(--shadow);
+  margin-bottom:28px;
+}
+.calc-section-head{
+  margin-bottom:24px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--line);
+}
+.calc-section-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:8px;
+  display:flex;align-items:center;gap:10px;
+}
+.calc-section-tag::before{
+  content:"";width:24px;height:1px;background:var(--amber);
+}
+.calc-section h2{
+  font-family:'Fraunces',serif;
+  font-size:clamp(26px,3.5vw,38px);
+  font-weight:600;color:var(--leaf-deep);
+  letter-spacing:-.01em;line-height:1.1;
+}
+.calc-section h2 em{font-style:italic;font-weight:400;color:var(--moss)}
+.calc-section .desc{
+  margin-top:10px;
+  color:var(--clay);
+  font-size:15px;line-height:1.55;
+  max-width:780px;
+}
+
+/* ============ INPUT GRID ============ */
+.calc-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  margin-top:8px;
+}
+.calc-grid.three{grid-template-columns:repeat(3,1fr)}
+.calc-grid.full{grid-template-columns:1fr}
+
+@media (max-width:900px){
+  .calc-grid,.calc-grid.three{grid-template-columns:1fr}
+}
+
+.calc-inputs{
+  display:flex;flex-direction:column;gap:16px;
+}
+.calc-input{
+  display:flex;flex-direction:column;gap:6px;
+}
+.calc-input label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--moss);font-weight:600;
+}
+.calc-input .with-unit{
+  display:flex;align-items:stretch;
+  border:1px solid var(--line);
+  border-radius:4px;
+  background:var(--cream);
+  transition:border-color .15s;
+}
+.calc-input .with-unit:focus-within{
+  border-color:var(--amber);
+}
+.calc-input input{
+  flex:1;
+  background:transparent;
+  border:none;outline:none;
+  padding:11px 14px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:15px;
+  color:var(--leaf-deep);font-weight:600;
+}
+.calc-input .unit{
+  display:flex;align-items:center;
+  padding:0 14px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.12em;
+  color:var(--moss);
+  border-left:1px solid var(--line);
+  background:var(--paper);
+}
+.calc-input select{
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:11px 14px;
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  color:var(--leaf-deep);
+  cursor:pointer;
+}
+.calc-input .hint{
+  font-size:12px;color:var(--clay);font-style:italic;line-height:1.4;
+}
+
+/* ============ OUTPUT (RESULTS) ============ */
+.calc-results{
+  display:flex;flex-direction:column;gap:14px;
+}
+.calc-result{
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-left:3px solid var(--amber);
+  border-radius:0 4px 4px 0;
+  padding:14px 18px;
+}
+.calc-result .label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--moss);margin-bottom:4px;
+}
+.calc-result .value{
+  font-family:'Fraunces',serif;font-style:italic;
+  font-size:32px;line-height:1;font-weight:600;
+  color:var(--leaf-deep);
+}
+.calc-result .value .unit{
+  font-style:normal;font-weight:400;
+  font-size:14px;font-family:'JetBrains Mono',monospace;
+  color:var(--clay);margin-left:6px;letter-spacing:.1em;
+}
+.calc-result.highlight{
+  background:linear-gradient(135deg, rgba(200,131,42,.1), rgba(200,131,42,.04));
+  border-left-color:var(--rust);
+}
+.calc-result.highlight .value{color:var(--rust)}
+.calc-result .sub{
+  margin-top:6px;
+  font-size:13px;color:var(--clay);line-height:1.4;
+}
+
+/* Big result (hero result) */
+.calc-bigresult{
+  background:linear-gradient(135deg, var(--leaf-deep), var(--leaf-dark));
+  color:var(--cream);
+  padding:32px 36px;
+  border-radius:6px;
+  text-align:center;
+  margin:24px 0 8px;
+}
+.calc-bigresult .label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:8px;
+}
+.calc-bigresult .value{
+  font-family:'Fraunces',serif;font-style:italic;
+  font-size:clamp(40px,6vw,68px);
+  line-height:1;font-weight:600;
+  color:var(--cream);
+}
+.calc-bigresult .value .unit{
+  font-style:normal;font-weight:400;
+  font-size:.4em;font-family:'JetBrains Mono',monospace;
+  color:rgba(244,239,228,.65);margin-left:8px;letter-spacing:.1em;
+}
+
+/* Tabs (para receitas / fases) */
+.calc-tabs{
+  display:flex;gap:6px;flex-wrap:wrap;
+  margin-bottom:24px;
+  padding-bottom:0;
+  border-bottom:1px solid var(--line);
+}
+.calc-tab{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  padding:10px 18px;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  color:var(--moss);
+  border-bottom:2px solid transparent;
+  margin-bottom:-1px;
+  transition:all .15s;
+}
+.calc-tab:hover{color:var(--amber)}
+.calc-tab.active{
+  color:var(--amber);
+  border-bottom-color:var(--amber);
+  font-weight:600;
+}
+
+/* Tabela de resultados */
+.calc-table{
+  width:100%;border-collapse:collapse;
+  margin-top:14px;
+  background:var(--cream);
+  border-radius:4px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  font-size:14px;
+}
+.calc-table th{
+  background:var(--leaf-deep);
+  color:var(--cream);
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:600;
+  padding:11px 14px;text-align:left;
+}
+.calc-table td{
+  padding:11px 14px;
+  border-bottom:1px solid var(--line);
+  font-family:'Inter',sans-serif;
+}
+.calc-table td:nth-child(n+2){
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+  color:var(--leaf-deep);
+}
+.calc-table tbody tr:last-child td{border-bottom:none}
+.calc-table tbody tr:hover{background:rgba(200,131,42,.04)}
+
+/* Notas */
+.calc-note{
+  background:var(--paper);
+  border-left:3px solid var(--moss);
+  padding:14px 20px;
+  margin:18px 0;
+  border-radius:0 4px 4px 0;
+  font-size:13px;color:var(--ink);
+  line-height:1.55;
+}
+.calc-note strong{color:var(--leaf-deep)}
+.calc-note .label{
+  display:block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--moss);font-weight:600;margin-bottom:4px;
+}
+
+/* Stage selector pills (para fases do cultivo) */
+.stage-pills{
+  display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px;
+}
+.stage-pills button{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  padding:8px 14px;
+  border-radius:99px;
+  background:var(--cream);
+  border:1px solid var(--line);
+  color:var(--moss);
+  cursor:pointer;
+  transition:all .15s;
+}
+.stage-pills button.active{
+  background:var(--leaf-deep);
+  color:var(--amber);
+  border-color:var(--leaf-deep);
+}
+.stage-pills button:hover:not(.active){border-color:var(--amber)}
+
+@media (max-width:768px){
+  .calc-hero{padding:40px 24px 80px}
+  .calc-hero-inner{grid-template-columns:1fr}
+  .calc-hero .meta{text-align:left}
+  .calc-main{padding:0 18px}
+  .calc-section{padding:24px 22px}
+}

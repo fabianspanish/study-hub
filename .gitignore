@@ -1,0 +1,32 @@
+# =============================================================
+# .gitignore · Study Hub
+# =============================================================
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Pastas de teste/dev local
+node_modules/
+.cache/
+
+# Backups e temporários
+*.bak
+*.tmp
+*.old
+
+# Não subir o zip de download
+study-hub.zip
+*.zip
