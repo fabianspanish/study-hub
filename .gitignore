@@ -30,3 +30,4 @@ node_modules/
 # Não subir o zip de download
 study-hub.zip
 *.zip
+*:Zone.Identifier
