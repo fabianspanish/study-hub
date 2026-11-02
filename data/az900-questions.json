@@ -315,7 +315,7 @@
       ],
       "explanation_pt": "99,99% de 1 ano (8.760 horas) = ~52 minutos de downtime tolerado. 99,9% = ~8,76 horas. 99,999% = ~5 minutos. Quanto mais '9' no SLA, maior o custo e a complexidade da arquitetura.",
       "explanation_en": "99.99% of 1 year (8,760 hours) = ~52 minutes of tolerated downtime. 99.9% = ~8.76 hours. 99.999% = ~5 minutes. More 9s in SLA = higher cost and architectural complexity.",
-      "reference": "https://learn.microsoft.com/azure/reliability/availability-zones-overview"
+      "reference": "https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services"
     },
     {
       "id": "d1-013",
@@ -1117,7 +1117,7 @@
       ],
       "explanation_pt": "Região e tamanho são fatores diretos de custo. Outros fatores: tipo de disco (SSD vs HDD), modelo de preço (PAYG vs Reserved), tráfego de saída (egress), tempo de uso. Nome e tema são gratuitos.",
       "explanation_en": "Region and size are direct cost factors. Other factors: disk type (SSD vs HDD), pricing model (PAYG vs Reserved), egress traffic, usage time. Name and theme are free.",
-      "reference": "https://learn.microsoft.com/azure/cost-management-billing/cost-management-billing-overview"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cost-management-azure/"
     },
     {
       "id": "d3-002",
@@ -1143,7 +1143,7 @@
       ],
       "explanation_pt": "<strong>TCO Calculator</strong> (Total Cost of Ownership) compara on-premises × Azure, considerando hardware, software, eletricidade, mão de obra de TI e datacenter. <strong>Pricing Calculator</strong> estima custo de serviços Azure específicos antes de provisionar.",
       "explanation_en": "<strong>TCO Calculator</strong> (Total Cost of Ownership) compares on-premises × Azure, considering hardware, software, electricity, IT labor, and datacenter. <strong>Pricing Calculator</strong> estimates the cost of specific Azure services before provisioning.",
-      "reference": "https://learn.microsoft.com/azure/cost-management-billing/manage/tco-calculator"
+      "reference": "https://azure.microsoft.com/pricing/tco/calculator/"
     },
     {
       "id": "d3-003",
@@ -1529,7 +1529,7 @@
       ],
       "explanation_pt": "Verdadeiro. Entrada de dados é gratuita. Saída de dados (egress) é cobrada por GB, com regras diferentes para saída entre regiões, para internet, dentro da mesma região (geralmente grátis intra-AZ), etc.",
       "explanation_en": "True. Data ingress is free. Data egress is charged per GB, with different rules for cross-region, to-internet, intra-region (usually free intra-AZ), etc.",
-      "reference": "https://learn.microsoft.com/azure/cost-management-billing/understand/understand-azure-data-transfers"
+      "reference": "https://azure.microsoft.com/pricing/details/bandwidth/"
     },
     {
       "id": "d3-018",
@@ -1581,7 +1581,7 @@
       ],
       "explanation_pt": "<strong>Subscription</strong> é a unidade de faturamento — cada assinatura tem cobrança separada e seus próprios limites de cota. Resource Group é container lógico; Management Group agrupa subscriptions para governança.",
       "explanation_en": "<strong>Subscription</strong> is the billing unit — each subscription has separate billing and its own quota limits. Resource Group is a logical container; Management Group groups subscriptions for governance.",
-      "reference": "https://learn.microsoft.com/azure/cost-management-billing/manage/subscription-disabled"
+      "reference": "https://learn.microsoft.com/azure/cost-management-billing/manage/create-subscription"
     },
     {
       "id": "d3-020",
@@ -2073,7 +2073,7 @@
       ],
       "explanation_pt": "<strong>Nuvem privada</strong> ≠ datacenter tradicional. É infra dedicada que oferece as mesmas <strong>características de nuvem</strong>: provisionamento self-service (via portal), elasticidade (adicionar VMs em minutos), pool compartilhado entre equipes internas, cobrança por consumo (chargeback interno). Exemplos: <strong>Azure Stack HCI</strong>, VMware vSphere privado. Um 'datacenter tradicional' sem essa camada de orquestração é só um monte de servidores físicos — não é nuvem privada. É isso que diferencia 'temos servidores' de 'temos nuvem privada'.",
       "explanation_en": "<strong>Private cloud</strong> ≠ traditional datacenter. It's dedicated infra offering cloud characteristics: self-service provisioning, elasticity, resource pooling, consumption billing (internal chargeback). Examples: Azure Stack HCI, private VMware vSphere.",
-      "reference": "https://learn.microsoft.com/azure-stack/hci/overview"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d1-016",
@@ -2099,7 +2099,7 @@
       ],
       "explanation_pt": "99,9% de um mês (30 dias = 43.200 minutos) = permitido ~43 minutos de downtime. Tabela útil pra decorar: <br>• <strong>99%</strong> = ~7h/mês (muito pouco pra produção)<br>• <strong>99,9%</strong> = ~43min/mês (padrão single-instance)<br>• <strong>99,95%</strong> = ~22min/mês (típico com Availability Set)<br>• <strong>99,99%</strong> = ~4min/mês (típico com Availability Zones)<br>• <strong>99,999%</strong> ('five nines') = ~26seg/mês (missão crítica, muito caro)<br>Quanto mais 9s, exponencialmente mais caro.",
       "explanation_en": "99.9% of a month (43,200 min) = ~43 min of downtime. Useful table: 99% = ~7h/mo; 99.9% = ~43min; 99.95% = ~22min; 99.99% = ~4min; 99.999% = ~26sec. Each extra 9 is exponentially more expensive.",
-      "reference": "https://learn.microsoft.com/azure/reliability/availability-zones-overview"
+      "reference": "https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services"
     },
     {
       "id": "ext-d1-017",
@@ -2152,7 +2152,7 @@
       ],
       "explanation_pt": "<strong>Lift-and-shift</strong> (migrar VMs on-premises pra VMs na nuvem sem reescrever) é o caso de uso canônico de IaaS. Você preserva OS, aplicação, configuração; só muda o lugar de hospedagem. É o primeiro passo típico da jornada à nuvem — depois pode re-arquitetar pra PaaS. Email corporativo = SaaS (Microsoft 365). Blog simples = PaaS (WordPress em App Service). Push notifications = PaaS (Notification Hubs) ou serverless (Functions).",
       "explanation_en": "<strong>Lift-and-shift</strong> (migrate on-prem VMs without rewriting) is the canonical IaaS use case. Preserves OS/app/config, only changes hosting location. Typical first step of cloud journey.",
-      "reference": "https://learn.microsoft.com/azure/cloud-adoption-framework/migrate/"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-service-types/"
     },
     {
       "id": "ext-d1-019",
@@ -2334,7 +2334,7 @@
       ],
       "explanation_pt": "Pergunta sutil. SaaS parece a resposta, mas SaaS é <strong>produto pronto de terceiro</strong> — você não desenvolve 'funcionalidade nova' em SaaS, só configura. Pra desenvolver código próprio rapidamente, <strong>PaaS</strong> é a resposta: você sobe o código, Azure cuida de OS, deploy, scale, SSL, patches. Elimina 80% do trabalho de infra. IaaS exige configurar tudo (VM, SO, runtime, web server, load balancer, SSL) — mais lento. On-premises é o mais lento (comprar hardware).",
       "explanation_en": "Subtle question. SaaS seems the answer, but SaaS is a <strong>third-party ready product</strong> — you don't develop features in SaaS. For custom code quickly, <strong>PaaS</strong> is the answer: upload code, Azure handles OS/deploy/scale/SSL/patches.",
-      "reference": "https://learn.microsoft.com/azure/app-service/overview"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-service-types/"
     },
     {
       "id": "ext-d2-001",
@@ -2412,7 +2412,7 @@
       ],
       "explanation_pt": "<strong>Subscription</strong> é a unidade primária de faturamento. Cada subscription tem: ID único, forma de pagamento, limites de cota (ex: máximo 20.000 vCPUs), cobrança separada e faturamento próprio. Empresas típicas usam múltiplas subscriptions pra separar: Prod/Dev, departamentos, projetos, filiais. Resource Group é organização lógica (não cobra separadamente). Management Group agrupa subscriptions pra governança (também não cobra). Região afeta preço unitário mas não é limite de faturamento.",
       "explanation_en": "<strong>Subscription</strong> is the primary billing unit. Each has: unique ID, payment method, quota limits (e.g., max 20k vCPUs), separate billing. Companies typically use multiple subscriptions for Prod/Dev, departments, projects.",
-      "reference": "https://learn.microsoft.com/azure/cost-management-billing/manage/subscription-disabled"
+      "reference": "https://learn.microsoft.com/azure/cost-management-billing/manage/create-subscription"
     },
     {
       "id": "ext-d2-004",
@@ -2700,7 +2700,7 @@
       ],
       "explanation_pt": "Camada <strong>Dados</strong> cobre: criptografia at-rest (TDE no SQL, Storage Service Encryption), criptografia in-transit (TLS), classificação de sensibilidade (Microsoft Purview), DLP (Data Loss Prevention), backups seguros. Camadas do modelo (do externo pro interno): Segurança física → Identidade → Perímetro → Rede → Compute → Aplicação → <strong>Dados</strong>. Cada camada é independente — se perímetro for violado, criptografia dos dados ainda protege. Essa é a essência: múltiplas camadas, se uma falha a próxima protege.",
       "explanation_en": "<strong>Data</strong> layer covers: encryption at-rest (TDE in SQL, Storage Service Encryption), in-transit (TLS), sensitivity classification (Purview), DLP, secure backups. Layers (outer→inner): Physical → Identity → Perimeter → Network → Compute → Application → Data.",
-      "reference": "https://learn.microsoft.com/azure/security/fundamentals/defense-in-depth"
+      "reference": "https://learn.microsoft.com/azure/security/fundamentals/overview"
     },
     {
       "id": "ext-d2-015",
@@ -3138,7 +3138,7 @@
       ],
       "explanation_pt": "<strong>TCO Calculator</strong> (Total Cost of Ownership) é exatamente pra isso: compara custo total on-premises (hardware, software, energia, refrigeração, equipe IT, datacenter real estate) com equivalente no Azure. Resultado: economia projetada em 1/3/5 anos. <strong>Pricing Calculator</strong> estima o custo de serviços Azure específicos ANTES de criar (ex: 'quanto vai custar essa VM?'). <strong>Advisor</strong> dá recomendações DEPOIS que você já tem recursos. <strong>Cost Management</strong> mostra o que você JÁ gastou. Trio TCO + Pricing + Cost cobre: pré-decisão, estimativa, análise contínua.",
       "explanation_en": "<strong>TCO Calculator</strong>: compares total on-premises cost (hardware, software, power, cooling, IT staff, real estate) with Azure equivalent. Trio TCO + Pricing + Cost Management covers: pre-decision, estimate, continuous analysis.",
-      "reference": "https://learn.microsoft.com/azure/cost-management-billing/manage/tco-calculator"
+      "reference": "https://azure.microsoft.com/pricing/tco/calculator/"
     },
     {
       "id": "ext-d3-002",
@@ -3427,7 +3427,7 @@
       ],
       "explanation_pt": "Modelo clássico de cobrança de nuvem: <strong>ingress grátis</strong> (incentivo pra levar dados pra plataforma), <strong>egress pago</strong> (lock-in econômico). Egress é cobrado por GB saindo pra internet, cross-region, cross-zone (em alguns casos). Dentro da mesma região e zona é geralmente grátis. Pra apps com muito tráfego de saída (streaming, CDN), isso vira custo significativo. Mitigação: Azure CDN cacheia conteúdo próximo do usuário (reduz egress), Reserved Capacity em bandwidth. Criar RG é metadata (grátis). Ver fatura é interface (grátis).",
       "explanation_en": "Classic cloud billing: <strong>ingress free</strong> (incentive to bring data in), <strong>egress paid</strong> (economic lock-in). Charged per GB out to internet, cross-region, sometimes cross-zone. Mitigation: Azure CDN (caches content near user), bandwidth Reserved Capacity.",
-      "reference": "https://learn.microsoft.com/azure/cost-management-billing/understand/understand-azure-data-transfers"
+      "reference": "https://azure.microsoft.com/pricing/details/bandwidth/"
     },
     {
       "id": "ext-d3-013",
@@ -3479,7 +3479,7 @@
       ],
       "explanation_pt": "<strong>Preview</strong>: serviço disponível publicamente pra testes, mas sem SLA, sem compromisso de interface estável, pode mudar/sumir. Dentro de Preview: <em>Private Preview</em> (acesso restrito), <em>Public Preview</em> (qualquer um usa). <strong>GA (General Availability)</strong>: serviço maduro, SLA formal, compromisso de longo prazo. <strong>Deprecated</strong>: GA mas Microsoft anunciou que vai desligar. <strong>Retired</strong>: já desligado. Regra: nunca use Preview em produção (contratualmente sem SLA). Mas é ótimo pra testar features novas e dar feedback.",
       "explanation_en": "<strong>Preview</strong>: publicly available for testing, no SLA, interface may change. <strong>GA</strong>: mature, formal SLA. <strong>Deprecated</strong>: GA but will be retired. <strong>Retired</strong>: already shut down. Never use Preview in production.",
-      "reference": "https://learn.microsoft.com/azure/cognitive-services/cognitive-services-support-options"
+      "reference": "https://azure.microsoft.com/updates/"
     },
     {
       "id": "ext-d3-015",
@@ -3944,7 +3944,7 @@
       ],
       "explanation_pt": "<strong>Agilidade</strong> é a resposta: na nuvem você provisiona e implanta recursos muito rapidamente (minutos), permitindo experimentar, lançar e descartar ideias sem o atraso de comprar hardware — exatamente o cenário da startup. <strong>Tolerância a falhas</strong> está errada porque trata de continuar operando apesar de falhas de componentes. <strong>Alta disponibilidade</strong> está errada porque foca em manter serviços acessíveis com pouco tempo de inatividade, não na velocidade de criar recursos. <strong>Distribuição geográfica</strong> está errada porque se refere a implantar recursos em várias regiões do mundo. Ideia-chave: agilidade = \"velocidade para colocar ideias em produção\".",
       "explanation_en": "<strong>Agility</strong> is the answer: in the cloud you provision and deploy resources very quickly (minutes), letting you experiment, launch, and discard ideas without the delay of buying hardware — exactly the startup's scenario. <strong>Fault tolerance</strong> is wrong because it is about continuing to operate despite component failures. <strong>High availability</strong> is wrong because it focuses on keeping services accessible with little downtime, not the speed of creating resources. <strong>Geographic distribution</strong> is wrong because it refers to deploying resources across multiple regions of the world. Key idea: agility = \"speed to get ideas into production.\"",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud"
+      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/"
     },
     {
       "id": "ext-d1-107",
@@ -4420,7 +4420,7 @@
       ],
       "explanation_pt": "<strong>Nuvem pública</strong> está certa: os recursos pertencem a um provedor terceirizado (como a Microsoft no Azure), são compartilhados entre vários clientes (multilocação), acessados pela internet e cobrados por consumo — exatamente o que a startup precisa para ir ao ar rápido sem CapEx. <strong>Nuvem privada</strong> está errada: a organização teria que adquirir e operar o hardware (próprio ou hospedado) dedicado só a ela, o que contraria 'sem comprar servidores'. <strong>Datacenter on-premises</strong> está errado: é a definição clássica de infraestrutura própria, exigindo compra e manutenção de servidores. <strong>Nuvem da comunidade isolada</strong> está errada: é um ambiente restrito a um grupo específico de organizações com requisitos comuns, não o caminho mais rápido/barato para uma startup. Mnemônico: pública = 'de todos, pela internet, pague pelo uso'.",
       "explanation_en": "<strong>Public cloud</strong> is correct: the resources are owned by a third-party provider (like Microsoft in Azure), shared among many customers (multi-tenant), accessed over the internet and billed per use — exactly what the startup needs to go live fast with no CapEx. <strong>Private cloud</strong> is wrong: the organization would have to acquire and operate hardware dedicated solely to it, contradicting 'no buying servers'. <strong>On-premises datacenter</strong> is wrong: it is the classic definition of owned infrastructure requiring server purchase and maintenance. <strong>Isolated community cloud</strong> is wrong: it is an environment restricted to a specific group of organizations with shared requirements, not the fastest/cheapest path for a startup. Mnemonic: public = 'everyone's, over the internet, pay for use'.",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-define-cloud-models"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d1-125",
@@ -4446,7 +4446,7 @@
       ],
       "explanation_pt": "<strong>Nuvem privada</strong> está certa: oferece recursos de computação usados exclusivamente por uma única organização, podendo ficar no datacenter próprio ou hospedado por terceiros, dando o maior nível de controle e isolamento — ideal para requisitos regulatórios rígidos. <strong>Nuvem pública</strong> está errada: por definição os recursos são compartilhados entre múltiplos clientes, o que o banco quer evitar. <strong>Multicloud</strong> está errada: significa usar mais de um provedor de nuvem simultaneamente; não trata do requisito de recursos dedicados/isolados em si. <strong>SaaS de terceiros</strong> está errado: SaaS é um modelo de serviço (não de implantação) e tipicamente roda em nuvem pública compartilhada, reduzindo o controle sobre o hardware. Dica: privada = 'single-tenant', controle máximo, custo e responsabilidade também maiores.",
       "explanation_en": "<strong>Private cloud</strong> is correct: it provides compute resources used exclusively by a single organization, which can live in the organization's own datacenter or be hosted by a third party, giving the highest level of control and isolation — ideal for strict regulatory requirements. <strong>Public cloud</strong> is wrong: by definition resources are shared among multiple customers, which the bank wants to avoid. <strong>Multicloud</strong> is wrong: it means using more than one cloud provider at the same time; it does not address the dedicated/isolated resource requirement itself. <strong>Third-party SaaS</strong> is wrong: SaaS is a service model (not a deployment model) and typically runs on shared public cloud, reducing control over the hardware. Tip: private = 'single-tenant', maximum control, but also higher cost and responsibility.",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-define-cloud-models"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d1-126",
@@ -4472,7 +4472,7 @@
       ],
       "explanation_pt": "<strong>Nuvem híbrida</strong> está certa: combina ambientes de nuvem pública e privada/on-premises, permitindo que a empresa mantenha dados sensíveis localmente e use a nuvem pública para capacidade extra sob demanda. Esse padrão de 'estourar' cargas para a nuvem em picos é chamado de <strong>cloud bursting</strong>. <strong>Pública pura</strong> está errada: a empresa quer manter os sistemas internos no próprio datacenter, não migrar tudo. <strong>Privada pura</strong> está errada: ela não teria a elasticidade da nuvem pública para o pico sazonal. <strong>Edge computing</strong> está errado: refere-se a processar dados perto da origem (dispositivos/IoT), não a combinar datacenter próprio com nuvem pública. Mnemônico: híbrida = 'o melhor dos dois mundos' (controle local + elasticidade pública).",
       "explanation_en": "<strong>Hybrid cloud</strong> is correct: it combines public and private/on-premises environments, letting the company keep sensitive data local and use the public cloud for extra on-demand capacity. This pattern of overflowing workloads to the cloud during peaks is called <strong>cloud bursting</strong>. <strong>Pure public cloud</strong> is wrong: the company wants to keep internal systems in its own datacenter, not move everything. <strong>Pure private cloud</strong> is wrong: it would not have the public cloud's elasticity for the seasonal peak. <strong>Edge computing</strong> is wrong: it refers to processing data near its source (devices/IoT), not combining an owned datacenter with public cloud. Mnemonic: hybrid = 'best of both worlds' (local control + public elasticity).",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-define-cloud-models"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d1-127",
@@ -4498,7 +4498,7 @@
       ],
       "explanation_pt": "<strong>Multicloud</strong> está certa: é o uso de dois ou mais provedores de nuvem pública ao mesmo tempo, geralmente para evitar o 'vendor lock-in', atender requisitos regionais ou usar o melhor serviço de cada provedor. <strong>Nuvem híbrida</strong> está errada: ela combina nuvem pública com infraestrutura privada/on-premises, não dois provedores públicos entre si. <strong>Nuvem privada</strong> está errada: trata de recursos dedicados a uma única organização, sem relação com usar vários provedores. <strong>Disaster recovery</strong> está errado: é uma estratégia de recuperação após falhas/desastres; embora possa usar multicloud, não é a definição da estratégia descrita. Dica: multi = 'muitos provedores de nuvem'; híbrida = 'nuvem + local'.",
       "explanation_en": "<strong>Multicloud</strong> is correct: it is the use of two or more public cloud providers at the same time, usually to avoid 'vendor lock-in', meet regional requirements or use the best service from each provider. <strong>Hybrid cloud</strong> is wrong: it combines public cloud with private/on-premises infrastructure, not two public providers with each other. <strong>Private cloud</strong> is wrong: it concerns resources dedicated to a single organization, unrelated to using multiple providers. <strong>Disaster recovery</strong> is wrong: it is a recovery strategy after failures/disasters; although it may use multicloud, it is not the definition of the described strategy. Tip: multi = 'many cloud providers'; hybrid = 'cloud + local'.",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-define-cloud-models"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d1-128",
@@ -4550,7 +4550,7 @@
       ],
       "explanation_pt": "<strong>CapEx (despesa de capital)</strong> está certo: é o desembolso inicial de grande porte em ativos físicos (servidores, datacenters, hardware) que são capitalizados e depreciados ao longo do tempo — o modelo típico de infraestrutura on-premises. <strong>OpEx</strong> está errado: OpEx é o gasto contínuo com serviços/operação, deduzido no mesmo período, sem grande investimento inicial — o oposto do descrito. <strong>Modelo de consumo</strong> está errado: refere-se a pagar conforme o uso (um padrão de OpEx na nuvem), não a comprar ativos adiantado. <strong>Custo marginal zero</strong> está errado: não é um conceito de classificação contábil usado no AZ-900. Mnemônico: CapEx = 'Capital/Comprar antecipado (um grande cheque)'; OpEx = 'Operacional (pagamentos recorrentes)'.",
       "explanation_en": "<strong>CapEx (capital expenditure)</strong> is correct: it is the large upfront outlay on physical assets (servers, datacenters, hardware) that are capitalized and depreciated over time — the typical on-premises infrastructure model. <strong>OpEx</strong> is wrong: OpEx is ongoing spend on services/operation, deducted in the same period, without a large upfront investment — the opposite of what is described. <strong>Consumption model</strong> is wrong: it refers to paying as you use (an OpEx pattern in the cloud), not buying assets upfront. <strong>Zero marginal cost</strong> is wrong: it is not an accounting classification concept used in AZ-900. Mnemonic: CapEx = 'Capital/buy upfront (one big check)'; OpEx = 'Operational (recurring payments)'.",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-describe-consumption-based-model"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d1-130",
@@ -4576,7 +4576,7 @@
       ],
       "explanation_pt": "<strong>OpEx (despesa operacional)</strong> está certo: no modelo de consumo da nuvem você paga por serviços conforme os usa, gerando despesas recorrentes e previsíveis em vez de um grande investimento inicial — isso é o deslocamento clássico de CapEx para OpEx que a nuvem promove. <strong>CapEx</strong> está errado: representa justamente o que a empresa está deixando de fazer (comprar hardware adiantado). <strong>Depreciação de ativos</strong> está errada: só se aplica a ativos de capital adquiridos; na nuvem você não é dono do hardware para depreciar. <strong>Investimento imobilizado</strong> está errado: é sinônimo de CapEx em ativos fixos, o oposto do pay-as-you-go. Dica de prova: 'nuvem + pague pelo uso + fatura mensal' = OpEx.",
       "explanation_en": "<strong>OpEx (operational expenditure)</strong> is correct: in the cloud consumption model you pay for services as you use them, producing recurring, predictable expenses instead of a large upfront investment — this is the classic CapEx-to-OpEx shift the cloud enables. <strong>CapEx</strong> is wrong: it represents exactly what the company is ceasing to do (buying hardware upfront). <strong>Asset depreciation</strong> is wrong: it only applies to purchased capital assets; in the cloud you do not own the hardware to depreciate. <strong>Fixed capital investment</strong> is wrong: it is a synonym for CapEx in fixed assets, the opposite of pay-as-you-go. Exam tip: 'cloud + pay for use + monthly bill' = OpEx.",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-describe-consumption-based-model"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d1-131",
@@ -4602,7 +4602,7 @@
       ],
       "explanation_pt": "<strong>Pagar apenas enquanto os recursos existem/são usados</strong> está certo: a essência do modelo de consumo é que você escala para cima quando precisa e para baixo (ou exclui) quando não precisa, pagando somente pelo que consumir — perfeito para cargas efêmeras como testes noturnos. <strong>Valor fixo mensal</strong> está errado: contraria o pay-as-you-go, cuja fatura varia conforme o uso. <strong>Comprar capacidade de pico antecipadamente</strong> está errado: isso descreve o modelo on-premises/CapEx, que a nuvem justamente evita. <strong>Depreciação acelerada</strong> está errada: depreciação se aplica a ativos próprios; em recursos de nuvem alugados não há depreciação. Benefício-chave: na nuvem você evita pagar por capacidade ociosa.",
       "explanation_en": "<strong>Paying only while the resources exist/are used</strong> is correct: the essence of the consumption model is that you scale up when you need and down (or delete) when you do not, paying only for what you consume — perfect for ephemeral workloads like overnight tests. <strong>Fixed monthly amount</strong> is wrong: it contradicts pay-as-you-go, whose bill varies with usage. <strong>Buying peak capacity upfront</strong> is wrong: that describes the on-premises/CapEx model the cloud specifically avoids. <strong>Accelerated depreciation</strong> is wrong: depreciation applies to owned assets; rented cloud resources are not depreciated. Key benefit: in the cloud you avoid paying for idle capacity.",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-describe-consumption-based-model"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d1-132",
@@ -4655,7 +4655,7 @@
       ],
       "explanation_pt": "O <strong>TCO</strong> soma todos os custos diretos e indiretos de possuir e operar a infraestrutura. <strong>Hardware de servidores</strong> (certo): comprar e substituir servidores é um grande custo on-premises que desaparece na nuvem pública, pois o provedor é dono do hardware. <strong>Eletricidade, refrigeração e espaço</strong> (certo): energia, climatização e imóvel do datacenter são custos operacionais que a empresa deixa de pagar diretamente ao usar a nuvem. <strong>Consumo de serviços do Azure</strong> (errado): esse é o custo da própria nuvem; faz parte do lado 'nuvem' da comparação, não do que é eliminado do on-premises. <strong>Imposto de renda</strong> (errado): não é um componente de TCO de infraestrutura; independe de onde a carga roda. Use a Calculadora de TCO do Azure para estimar esses ganhos.",
       "explanation_en": "<strong>TCO</strong> sums all direct and indirect costs of owning and operating the infrastructure. <strong>Server hardware</strong> (correct): buying and replacing servers is a major on-premises cost that disappears in public cloud, since the provider owns the hardware. <strong>Electricity, cooling and space</strong> (correct): datacenter power, climate control and real estate are operational costs the company stops paying directly when using the cloud. <strong>Azure service consumption</strong> (wrong): that is the cost of the cloud itself; it belongs to the 'cloud' side of the comparison, not to what is eliminated from on-premises. <strong>Income taxes</strong> (wrong): not an infrastructure TCO component; it is independent of where the workload runs. Use the Azure TCO Calculator to estimate these savings.",
-      "reference": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management"
+      "reference": "https://azure.microsoft.com/pricing/tco/calculator/"
     },
     {
       "id": "ext-d1-134",
@@ -4677,7 +4677,7 @@
       ],
       "explanation_pt": "<strong>Verdadeiro.</strong> No modelo de consumo (pay-as-you-go), você paga apenas pelo que usa e pode escalar para cima nos picos e para baixo nos vales, pagando somente o necessário. No modelo on-premises tradicional, seria preciso provisionar (e pagar) a capacidade de pico o tempo todo, deixando recursos caros ociosos na maior parte do tempo. Essa elasticidade combinada à cobrança por uso é um dos maiores benefícios econômicos da nuvem e reforça o deslocamento de CapEx para OpEx. Lembre: na nuvem você 'aluga elasticidade' em vez de 'comprar para o pico'.",
       "explanation_en": "<strong>True.</strong> In the consumption (pay-as-you-go) model you pay only for what you use and can scale up during peaks and down during troughs, paying only what is needed. In the traditional on-premises model you would have to provision (and pay for) peak capacity at all times, leaving expensive resources idle most of the time. This elasticity combined with usage-based billing is one of the cloud's biggest economic benefits and reinforces the CapEx-to-OpEx shift. Remember: in the cloud you 'rent elasticity' instead of 'buying for the peak'.",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-describe-consumption-based-model"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d1-135",
@@ -4704,7 +4704,7 @@
       ],
       "explanation_pt": "<strong>Afirmação 1</strong> (certa): é a definição central — CapEx é o grande investimento inicial em ativos (servidores, datacenter), enquanto OpEx são gastos operacionais recorrentes pagos conforme o uso. <strong>Afirmação 2</strong> (certa): com OpEx/consumo você escala sob demanda, então não precisa adivinhar e comprar a capacidade máxima antecipadamente — reduz o risco de superprovisionar ou ficar sem capacidade. <strong>Afirmação 3</strong> (errada): é o OpEx/nuvem que permite iniciar sem investimento em hardware; o CapEx, por definição, exige o desembolso inicial. <strong>Afirmação 4</strong> (errada): no OpEx/nuvem o provedor é dono do hardware; quem possui e deprecia servidores é o modelo CapEx/on-premises. Mnemônico: CapEx = 'comprar e possuir'; OpEx = 'assinar e usar'.",
       "explanation_en": "<strong>Statement 1</strong> (correct): it is the core definition — CapEx is the large upfront investment in assets (servers, datacenter), while OpEx is recurring operational spend paid as you use. <strong>Statement 2</strong> (correct): with OpEx/consumption you scale on demand, so you do not have to guess and buy maximum capacity in advance — reducing the risk of over-provisioning or running short. <strong>Statement 3</strong> (wrong): it is OpEx/cloud that lets you start with no hardware investment; CapEx, by definition, requires the upfront outlay. <strong>Statement 4</strong> (wrong): in OpEx/cloud the provider owns the hardware; owning and depreciating servers belongs to the CapEx/on-premises model. Mnemonic: CapEx = 'buy and own'; OpEx = 'subscribe and use'.",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-describe-consumption-based-model"
+      "reference": "https://learn.microsoft.com/training/modules/describe-cloud-compute/"
     },
     {
       "id": "ext-d2-100",
@@ -4859,7 +4859,7 @@
       ],
       "explanation_pt": "<strong>Correta (0):</strong> Assinaturas são um limite de faturamento; separá-las permite faturas e gestão de custos distintas por departamento, projeto ou ambiente. <strong>Correta (1):</strong> Muitos limites/quotas do Azure (ex.: número de vCPUs por região) são aplicados por assinatura; criar assinaturas adicionais é uma forma legítima de escalar além desses limites. <strong>(2) Errada:</strong> Isolamento físico entre datacenters é provido por zonas de disponibilidade, não por assinaturas. <strong>(3) Errada:</strong> Um recurso pertence a exatamente uma assinatura (e um grupo de recursos); não pode estar em duas ao mesmo tempo. <strong>(4) Errada:</strong> Assinaturas estão associadas a um locatário do Microsoft Entra ID para autenticação/autorização; criá-las não elimina a necessidade de identidade. <strong>Lembre:</strong> assinatura = limite de faturamento + limite de quotas.",
       "explanation_en": "<strong>Correct (0):</strong> Subscriptions are a billing boundary; separating them enables distinct invoices and cost management per department, project, or environment. <strong>Correct (1):</strong> Many Azure limits/quotas (e.g., vCPUs per region) are enforced per subscription; creating additional subscriptions is a legitimate way to scale beyond them. <strong>(2) Wrong:</strong> Physical isolation between datacenters is provided by availability zones, not subscriptions. <strong>(3) Wrong:</strong> A resource belongs to exactly one subscription (and one resource group); it cannot be in two at once. <strong>(4) Wrong:</strong> Subscriptions are associated with a Microsoft Entra ID tenant for authentication/authorization; creating them doesn't remove the need for identity. <strong>Remember:</strong> subscription = billing boundary + quota boundary.",
-      "reference": "https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/create-subscription"
+      "reference": "https://learn.microsoft.com/training/modules/describe-core-architectural-components-of-azure/"
     },
     {
       "id": "ext-d2-106",
@@ -5276,7 +5276,7 @@
       ],
       "explanation_pt": "As combinações corretas são a primeira e a segunda. <strong>Virtual Machine Scale Sets</strong> realmente serve para gerenciar um grupo de VMs idênticas com escalonamento automático conforme a carga. <strong>Azure Virtual Desktop</strong> é exatamente o serviço para entregar desktops e apps Windows virtuais a usuários remotos. A terceira está errada: <strong>Azure Functions</strong> é serverless, orientado a eventos e sem estado persistente garantido em disco local, portanto não é adequado para hospedar um banco de dados sempre ativo (use um serviço de banco de dados, como o Azure SQL). A quarta está errada: orquestrar centenas de microsserviços é tarefa do <strong>AKS</strong>, não do ACI, que é voltado a contêineres isolados e simples.",
       "explanation_en": "The correct combinations are the first and second. <strong>Virtual Machine Scale Sets</strong> indeed manages a group of identical VMs with automatic scaling based on load. <strong>Azure Virtual Desktop</strong> is exactly the service for delivering virtual Windows desktops and apps to remote users. The third is wrong: <strong>Azure Functions</strong> is serverless, event-driven, and has no guaranteed persistent local-disk state, so it is unsuitable for hosting an always-on database (use a database service like Azure SQL). The fourth is wrong: orchestrating hundreds of microservices is a job for <strong>AKS</strong>, not ACI, which targets simple, isolated containers.",
-      "reference": "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview"
+      "reference": "https://learn.microsoft.com/training/modules/describe-azure-compute-networking-services/"
     },
     {
       "id": "ext-d2-122",
@@ -6287,7 +6287,7 @@
       ],
       "explanation_pt": "A afirmação é <strong>Falsa</strong>. A defesa em profundidade usa <strong>múltiplas camadas</strong> de segurança justamente para que, se uma camada for comprometida, as outras ainda protejam os ativos. As camadas típicas são: segurança física, identidade e acesso, perímetro, rede, computação, aplicativo e, no centro, os <strong>dados</strong>. A ideia nunca é depender de uma única barreira. Mnemônico: pense em uma cebola ou em um castelo com muralhas, fosso e torres — vários obstáculos concêntricos, não um só. Cada camada atrasa ou detém o atacante.",
       "explanation_en": "The statement is <strong>False</strong>. Defense in depth uses <strong>multiple layers</strong> of security precisely so that if one layer is compromised, the others still protect the assets. Typical layers are: physical security, identity and access, perimeter, network, compute, application, and, at the core, <strong>data</strong>. The idea is never to rely on a single barrier. Mnemonic: think of an onion, or a castle with walls, a moat, and towers — several concentric obstacles, not just one. Each layer slows or stops the attacker.",
-      "reference": "https://learn.microsoft.com/en-us/azure/security/fundamentals/defense-in-depth"
+      "reference": "https://learn.microsoft.com/azure/security/fundamentals/overview"
     },
     {
       "id": "ext-d3-112",
@@ -6313,7 +6313,7 @@
       ],
       "explanation_pt": "A <strong>TCO Calculator</strong> foi feita exatamente para <strong>comparar</strong> o custo total de propriedade do ambiente local (hardware, energia, data center, pessoal) com o custo projetado no Azure, mostrando a economia estimada da migração. A <strong>Pricing Calculator</strong> apenas estima o preço de serviços Azure que você configura; não compara com custos locais nem calcula economia. O <strong>Cost Management</strong> monitora e analisa gastos de recursos que <strong>já existem</strong> no Azure (pós-consumo), não faz projeção de migração. O <strong>Azure Advisor</strong> dá recomendações (incluindo de custo) sobre recursos existentes, não estima migração. Mnemônico: <strong>TCO = comparar local x nuvem</strong>; <strong>Pricing = quanto vai custar no Azure</strong>.",
       "explanation_en": "The <strong>TCO Calculator</strong> is designed precisely to <strong>compare</strong> the total cost of ownership of an on-premises environment (hardware, power, datacenter, staff) with the projected cost in Azure, showing estimated migration savings. The <strong>Pricing Calculator</strong> only estimates the price of Azure services you configure; it does not compare to on-prem costs or compute savings. <strong>Cost Management</strong> monitors and analyzes spend on resources that <strong>already exist</strong> in Azure (after consumption), not migration projections. <strong>Azure Advisor</strong> gives recommendations (including cost) on existing resources, not migration estimates. Mnemonic: <strong>TCO = compare on-prem vs cloud</strong>; <strong>Pricing = what it will cost in Azure</strong>.",
-      "reference": "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/"
+      "reference": "https://azure.microsoft.com/pricing/tco/calculator/"
     },
     {
       "id": "ext-d3-113",
@@ -6468,7 +6468,7 @@
       ],
       "explanation_pt": "A afirmação é <strong>Falsa</strong>. Recursos em <strong>preview</strong> são lançados para teste e feedback e, em geral, <strong>não</strong> são cobertos pelos SLAs de produção nem recomendados para cargas críticas; só quando chegam à <strong>disponibilidade geral (GA)</strong> passam a ter suporte completo e cobertura de SLA. Existem previews \"public\" (abertos a todos) e \"private\" (por convite). Mnemônico do ciclo de vida: <strong>Private preview &rarr; Public preview &rarr; GA</strong>, e só a partir do GA você deve confiar o ambiente em produção com SLA garantido.",
       "explanation_en": "The statement is <strong>False</strong>. <strong>Preview</strong> features are released for testing and feedback and generally are <strong>not</strong> covered by production SLAs nor recommended for critical workloads; only when they reach <strong>general availability (GA)</strong> do they get full support and SLA coverage. There are \"public\" previews (open to everyone) and \"private\" previews (by invitation). Lifecycle mnemonic: <strong>Private preview &rarr; Public preview &rarr; GA</strong>, and only from GA onward should you trust production workloads with guaranteed SLA.",
-      "reference": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/preview-features"
+      "reference": "https://azure.microsoft.com/updates/"
     },
     {
       "id": "ext-d3-119",
@@ -6943,7 +6943,7 @@
       ],
       "explanation_pt": "<strong>Gerenciabilidade (manageability)</strong> é o benefício correto. Na nuvem ela tem duas faces: <strong>gerenciamento DA nuvem</strong> (provisionar por templates/IaC, escalar automaticamente conforme regras, monitorar e receber alertas) e <strong>gerenciamento NA nuvem</strong> (portal web, CLI, PowerShell, APIs). O cenário descreve automação de operações = gerenciabilidade. <strong>Alta disponibilidade</strong> trata de manter o sistema no ar, não de automatizar a gestão. <strong>Responsabilidade compartilhada</strong> define quem cuida de quê (cliente x provedor), não automação. <strong>Elasticidade</strong> é só uma parte (ajuste automático de capacidade), mas o enunciado inclui templates e monitoramento, que vão além — o guarda-chuva é a gerenciabilidade.",
       "explanation_en": "<strong>Manageability</strong> is the correct benefit. In the cloud it has two sides: <strong>management OF the cloud</strong> (provision via templates/IaC, scale automatically by rules, monitor and alert) and <strong>management IN the cloud</strong> (web portal, CLI, PowerShell, APIs). The scenario describes operations automation = manageability. <strong>High availability</strong> is about keeping the system up, not automating management. <strong>Shared responsibility</strong> defines who handles what, not automation. <strong>Elasticity</strong> is only one part (automatic capacity adjustment), but the scenario also includes templates and monitoring, so the umbrella is manageability.",
-      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/5-describe-manageability-cloud"
+      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/"
     },
     {
       "id": "ext-d1-137",
@@ -6971,7 +6971,7 @@
       ],
       "explanation_pt": "<strong>Gerenciamento NA nuvem</strong> são as formas de administrar recursos: <strong>portal web</strong> (visual), <strong>CLI/PowerShell</strong> (scripts e automação) e <strong>APIs REST</strong> (integração programática). Todas são responsabilidade e conveniência do cliente. Trocar hardware físico está errado: isso é responsabilidade exclusiva da Microsoft (gerenciamento do datacenter físico), o cliente nunca toca no hardware — esse é justamente um dos pontos de abstração que a nuvem oferece.",
       "explanation_en": "<strong>Management IN the cloud</strong> is the set of ways to administer resources: the <strong>web portal</strong> (visual), <strong>CLI/PowerShell</strong> (scripting and automation), and <strong>REST APIs</strong> (programmatic integration). All are available to the customer. Physically swapping hardware is wrong: that is solely Microsoft's responsibility (physical datacenter management); the customer never touches hardware — that abstraction is one of the key points of the cloud.",
-      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/5-describe-manageability-cloud"
+      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/"
     },
     {
       "id": "ext-d1-138",
@@ -6993,7 +6993,7 @@
       ],
       "explanation_pt": "<strong>Verdadeiro.</strong> O 'gerenciamento DA nuvem' inclui justamente ações automatizadas sobre o ambiente: escalar automaticamente conforme regras/demanda, implantar recursos a partir de templates e monitorar a saúde com alertas e ações automáticas. Isso se distingue do 'gerenciamento NA nuvem' (portal, CLI, PowerShell, APIs — como você interage). Ambos compõem o benefício de <strong>gerenciabilidade</strong>.",
       "explanation_en": "<strong>True.</strong> 'Management OF the cloud' includes exactly these automated actions on the environment: scaling automatically by rules/demand, deploying resources from templates, and monitoring health with alerts and automatic actions. It is distinct from 'management IN the cloud' (portal, CLI, PowerShell, APIs — how you interact). Together they make up the <strong>manageability</strong> benefit.",
-      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/5-describe-manageability-cloud"
+      "reference": "https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/"
     },
     {
       "id": "ext-d2-149",
