@@ -14,7 +14,6 @@ const routes = {
   '/home': 'pages/home.html',
   '/cert/az900': 'pages/cert-az900.html',
   '/cert/az900/quiz': 'pages/cert-az900-quiz.html',
-  '/cert/az900/aprendizado': 'pages/cert-az900-aprendizado.html',
   '/cultivo/mineral-basico': 'pages/cultivo-mineral-basico.html',
   '/cultivo/mineral-avancado': 'pages/cultivo-mineral-avancado.html',
   '/cultivo/diario': 'pages/diario.html',
@@ -38,13 +37,6 @@ const pageInitializers = {
   '/cert/az900/quiz': async () => {
     const mod = await import('./quiz-az900.js');
     mod.initQuiz();
-  },
-  '/cert/az900/aprendizado': async () => {
-    const mod = await import('./quiz-az900.js');
-    mod.initQuiz({
-      bankFile: 'data/az900-questions-extended.json',
-      progressKey: 'study-hub-az900-aprendizado-progress',
-    });
   },
   '/cultivo/diario': async () => {
     const mod = await import('./diario.js');
