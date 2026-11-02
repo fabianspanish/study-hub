@@ -6,7 +6,7 @@
 
 import { loadI18n, mountLangSelector, t, getLang } from './i18n.js';
 
-const STORAGE_PROGRESS = 'study-hub-az900-progress';
+let STORAGE_PROGRESS = 'study-hub-az900-progress';
 const EXAM_QUESTIONS = 60;
 const EXAM_DURATION_MS = 65 * 60 * 1000; // 65 minutos
 const PASSING_PCT = 70;
@@ -20,7 +20,7 @@ let answers = {};         // { qid: { selected: [], correct: bool } }
 let examStartTime = null;
 let examEndTime = null;
 let timerInterval = null;
-let progress = loadProgress();
+let progress = { answered: {}, correct: 0, total_attempts: 0 };
 
 // ============ STORAGE ============
 
@@ -418,7 +418,12 @@ function backToSetup() {
 
 // ============ INIT ============
 
-export async function initQuiz() {
+export async function initQuiz(options = {}) {
+  // Configura banco de questões (default: banco original)
+  const bankFile = options.bankFile || 'data/az900-questions.json';
+  STORAGE_PROGRESS = options.progressKey || 'study-hub-az900-progress';
+  progress = loadProgress();
+
   // Carrega idioma + seletor
   await loadI18n('az900');
   const mount = document.getElementById('quiz-lang-mount');
@@ -436,7 +441,7 @@ export async function initQuiz() {
 
   // Carrega questões
   try {
-    const res = await fetch('data/az900-questions.json');
+    const res = await fetch(bankFile);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     allQuestions = data.questions || [];
