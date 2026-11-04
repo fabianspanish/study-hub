@@ -70,6 +70,16 @@ function getExplanation(q) {
   return getLang() === 'en' ? q.explanation_en : q.explanation_pt;
 }
 
+// Rola para o topo da questão atual, compensando o header fixo
+function scrollToQuizTop() {
+  const el = document.getElementById('quiz-active');
+  if (!el) return;
+  const nav = document.getElementById('topnav');
+  const navH = (nav && getComputedStyle(nav).position === 'fixed') ? nav.offsetHeight : 0;
+  const y = el.getBoundingClientRect().top + window.pageYOffset - navH - 10;
+  window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+}
+
 // ============ UI · STATS ============
 
 function refreshStats() {
@@ -181,6 +191,7 @@ function renderActions() {
       } else {
         currentIdx++;
         renderQuestion();
+        scrollToQuizTop();
       }
     });
   }
@@ -241,6 +252,7 @@ function checkAnswer() {
     } else {
       currentIdx++;
       renderQuestion();
+      scrollToQuizTop();
     }
   });
 

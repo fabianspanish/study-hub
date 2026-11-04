@@ -728,6 +728,9 @@
   .quiz-stats{grid-template-columns:repeat(2,1fr)}
   .quiz-setup{grid-template-columns:1fr;gap:16px}
   .quiz-results-by-domain{grid-template-columns:1fr;gap:10px}
+  /* Botão de ação (Next / Verificar) ocupa a largura do card no mobile */
+  .quiz-actions{margin-top:16px}
+  .quiz-actions .quiz-btn{width:100%;padding:16px 28px;font-size:12px}
   /* Lang selector no quiz: dentro do hero, embaixo */
   .quiz-hero .lang-selector{top:auto;bottom:20px;right:24px}
 }
